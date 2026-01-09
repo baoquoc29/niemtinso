@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ActivitiesPage from './pages/ActivitiesPage';
 import ContactPage from './pages/ContactPage';
 import MembersPage from './pages/MembersPage';
 import LibraryPage from './pages/LibraryPage';
@@ -18,6 +20,8 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/activities" element={<ActivitiesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/members" element={<MembersPage />} />
             <Route path="/library" element={<LibraryPage />} />

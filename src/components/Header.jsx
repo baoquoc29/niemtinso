@@ -8,8 +8,8 @@ const Header = () => {
 
   const menuItems = [
     { name: t.menu.home, href: '/' },
-    { name: t.menu.about, href: '/#about' },
-    { name: t.menu.activities, href: '/#activities' },
+    { name: t.menu.about, href: '/about', isRoute: true },
+    { name: t.menu.activities, href: '/activities', isRoute: true },
     { name: t.menu.library, href: '/library', isRoute: true },
     { name: t.menu.members, href: '/members', isRoute: true },
     { name: t.menu.contact, href: '/contact', isRoute: true },
