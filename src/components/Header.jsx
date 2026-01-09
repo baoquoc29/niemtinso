@@ -13,6 +13,7 @@ const Header = () => {
     { name: t.menu.library, href: '/library', isRoute: true },
     { name: t.menu.members, href: '/members', isRoute: true },
     { name: t.menu.contact, href: '/contact', isRoute: true },
+    { name: t.menu.register, href: '/register', isRoute: true },
   ];
 
   return (
@@ -55,9 +56,12 @@ const Header = () => {
 
           {/* Right Side - Button & Language */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors">
+            <Link
+              to="/register"
+              className="ml-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-full hover:opacity-90"
+            >
               {t.registerButton}
-            </button>
+            </Link>
             <div className="flex items-center space-x-2 text-sm">
               <button 
                 onClick={() => toggleLanguage('vi')}
@@ -122,9 +126,12 @@ const Header = () => {
                   </a>
                 )
               ))}
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-medium w-full transition-colors">
+              <Link
+                to="/register"
+                className="ml-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-full hover:opacity-90 w-full text-center"
+              >
                 {t.registerButton}
-              </button>
+              </Link>
               <div className="flex items-center space-x-2 text-sm justify-center">
                 <button 
                   onClick={() => toggleLanguage('vi')}

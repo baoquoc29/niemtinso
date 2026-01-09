@@ -8,7 +8,7 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import MembersPage from './pages/MembersPage';
 import LibraryPage from './pages/LibraryPage';
-import Register from './pages/Register';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/members" element={<MembersPage />} />
             <Route path="/library" element={<LibraryPage />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
           <Footer />
         </div>
