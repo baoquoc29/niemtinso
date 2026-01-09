@@ -154,6 +154,10 @@ export const translations = {
         event: 'Sự kiện',
       },
     },
+    // Contact
+    contact: {
+      title: 'Thông tin liên hệ',
+    },
     // Footer
     footer: {
       headquarters: 'Trụ sở',
@@ -330,6 +334,10 @@ export const translations = {
         subtitle: 'DTA - Digital Trust Alliance',
         event: 'Event',
       },
+    },
+    // Contact
+    contact: {
+      title: 'Contact Information',
     },
     // Footer
     footer: {

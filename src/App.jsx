@@ -1,25 +1,30 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Programs from './components/Programs';
-import FeaturedProjects from './components/FeaturedProjects';
-import Members from './components/Members';
-import Library from './components/Library';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import MembersPage from './pages/MembersPage';
+import LibraryPage from './pages/LibraryPage';
 
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-white">
-        <Header />
-        <Hero />
-        <Programs />
-        <FeaturedProjects />
-        <Members />
-        <Library />
-        <Footer />
-      </div>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen bg-white">
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/members" element={<MembersPage />} />
+            <Route path="/library" element={<LibraryPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
     </LanguageProvider>
   );
 }

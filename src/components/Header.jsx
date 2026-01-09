@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
@@ -6,12 +7,12 @@ const Header = () => {
   const { language, toggleLanguage, t } = useLanguage();
 
   const menuItems = [
-    { name: t.menu.home, href: '#' },
-    { name: t.menu.about, href: '#' },
-    { name: t.menu.activities, href: '#' },
-    { name: t.menu.library, href: '#' },
-    { name: t.menu.members, href: '#' },
-    { name: t.menu.contact, href: '#' },
+    { name: t.menu.home, href: '/' },
+    { name: t.menu.about, href: '/#about' },
+    { name: t.menu.activities, href: '/#activities' },
+    { name: t.menu.library, href: '/library', isRoute: true },
+    { name: t.menu.members, href: '/members', isRoute: true },
+    { name: t.menu.contact, href: '/contact', isRoute: true },
   ];
 
   return (
@@ -20,25 +21,35 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#">
+            <Link to="/">
               <img 
                 src="/images/DTA_Logo_Final_Color.png" 
                 alt="DTA Logo" 
                 className="h-8 lg:h-10 w-auto object-contain"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 text-sm font-medium transition-colors"
-              >
-                {item.name}
-              </a>
+              item.isRoute ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-700 hover:text-blue-600 text-sm font-medium transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 text-sm font-medium transition-colors"
+                >
+                  {item.name}
+                </a>
+              )
             ))}
           </nav>
 
@@ -92,13 +103,24 @@ const Header = () => {
           <div className="lg:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               {menuItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 text-sm font-medium"
-                >
-                  {item.name}
-                </a>
+                item.isRoute ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-gray-700 hover:text-blue-600 text-sm font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-700 hover:text-blue-600 text-sm font-medium"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-medium w-full transition-colors">
                 {t.registerButton}
