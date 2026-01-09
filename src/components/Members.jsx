@@ -6,12 +6,12 @@ const Members = () => {
   const [activeTab, setActiveTab] = useState('organizations');
 
   const organizations = [
-    { id: 1, name: 'Mobifone', logo: null },
-    { id: 2, name: 'Vinaphone', logo: null },
-    { id: 3, name: 'Viettel', logo: null },
-    { id: 4, name: 'Techcombank', logo: null },
-    { id: 5, name: 'Vietcombank', logo: null },
-    { id: 6, name: 'ABP', logo: null },
+    { id: 1, name: 'Mobifone', logo: '/images/MobiFone_logo.png' },
+    { id: 2, name: 'Vinaphone', logo: '/images/Logo_vinaphone_new.png' },
+    { id: 3, name: 'Viettel', logo: '/images/Logo_Viettel.png' },
+    { id: 4, name: 'Techcombank', logo: '/images/Techcombank_logo.png' },
+    { id: 5, name: 'Vietcombank', logo: '/images/Vietcombank_Logo.png' },
+    { id: 6, name: 'ABP', logo: '/images/logo-login copy.png' },
   ];
 
   const individuals = [
@@ -99,10 +99,16 @@ const Members = () => {
             {organizations.map((org) => (
               <div
                 key={org.id}
-                className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+                className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-md transition-shadow"
               >
                 {org.logo ? (
-                  <img src={org.logo} alt={org.name} className="max-h-12 object-contain" />
+                  <div className="flex items-center justify-center h-full">
+                    <img 
+                      src={org.logo} 
+                      alt={org.name} 
+                      className={`w-auto object-contain ${org.name === 'Vinaphone' ? 'max-h-40' : 'max-h-20'}`}
+                    />
+                  </div>
                 ) : (
                   <span className="text-gray-600 font-semibold text-lg">{org.name}</span>
                 )}
