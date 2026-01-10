@@ -117,11 +117,11 @@ const Programs = () => {
           </div>
 
           {/* Card 2 - Top Right (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px] card-animate">
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-3xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-auto md:h-[240px] lg:h-[230px] card-animate">
             <img 
               src="/images/hd2026-02.jpg" 
               alt="Hành động 2026" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-auto md:h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 
