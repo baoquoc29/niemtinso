@@ -63,243 +63,68 @@ const Programs = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm md:text-base text-gray-600 mb-2 uppercase tracking-wide">
+          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
             {t.programs.sectionSubtitle}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9]">
             {t.programs.sectionTitle}
           </h2>
         </div>
 
         {/* Programs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
-          {/* Card 1 - Large Left (Đại Sứ) */}
+          {/* Card 1 - Large Left (Image Only) */}
           <div className="md:col-span-1 lg:col-span-2 lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
-            <div className={`absolute inset-0 bg-gradient-to-br ${programs[0].gradient}`}></div>
-            <div className="relative p-4 md:p-5 h-full flex flex-col justify-between">
-              <div>
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-xs md:text-sm text-white/80 uppercase tracking-wider">
-                    <div>{t.programs.badge}</div>
-                    <div className="font-bold">{t.programs.action2026}</div>
-                  </div>
-                  {programs[0].badge && (
-                    <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white">
-                      {programs[0].badge}
-                    </div>
-                  )}
-                </div>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight line-clamp-2">
-                  {programs[0].title}
-                </h3>
-                <div className="h-1 w-16 bg-white mb-4"></div>
-                {programs[0].description && (
-                  <p className="text-base md:text-lg text-white/90 mb-4 leading-relaxed line-clamp-2">
-                    {programs[0].description}
-                  </p>
-                )}
-              </div>
-              <div className="flex items-center justify-between">
-                <p className="text-sm md:text-base text-white font-medium">
-                  {programs[0].event}
-                </p>
-                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
-                  <svg className="w-5 h-5 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <img 
+              src="/images/hd2026.jpg" 
+              alt="Hành động 2026" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
 
-          {/* Card 2 - Top Right (Tín Nhiệm) */}
+          {/* Card 2 - Top Right (Image Only) */}
           <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px]">
-            <div className={`absolute inset-0 bg-gradient-to-br ${programs[1].gradient}`}></div>
-            <div className="relative p-4 md:p-5 h-full flex flex-col justify-between">
-              <div>
-                <div className="flex items-start justify-between mb-3">
-                  <div className="text-xs text-white/80 uppercase tracking-wider">
-                    <div>{t.programs.badge}</div>
-                    <div className="font-bold">{t.programs.action2026}</div>
-                  </div>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight line-clamp-1">
-                  {programs[1].title}
-                </h3>
-                {programs[1].subtitle && (
-                  <p className="text-base text-white/90 font-medium mb-2 truncate">
-                    {programs[1].subtitle}
-                  </p>
-                )}
-                {programs[1].description && (
-                  <p className="text-xs md:text-sm text-white/75 leading-relaxed line-clamp-2">
-                    {programs[1].description}
-                  </p>
-                )}
-              </div>
-              <div className="flex items-center justify-between mt-3">
-                <p className="text-xs md:text-sm text-white font-medium">
-                  {programs[1].event}
-                </p>
-                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
-                  <svg className="w-4 h-4 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <img 
+              src="/images/hd2026-02.jpg" 
+              alt="Hành động 2026" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
 
-          {/* Card 3 - Middle Right (Kiểm Chứng) */}
+          {/* Card 3 - Middle Right (Image Only) */}
           <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px]">
-            <div className={`absolute inset-0 bg-gradient-to-br ${programs[2].gradient}`}></div>
-            <div className="relative p-4 md:p-5 h-full flex flex-col justify-between">
-              <div>
-                <div className="flex items-start justify-between mb-3">
-                  <div className="text-xs text-white/80 uppercase tracking-wider">
-                    <div>{t.programs.badge}</div>
-                    <div className="font-bold">{t.programs.action2026}</div>
-                  </div>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight line-clamp-1">
-                  {programs[2].title}
-                </h3>
-                {programs[2].subtitle && (
-                  <p className="text-base text-white/90 font-medium mb-2 truncate">
-                    {programs[2].subtitle}
-                  </p>
-                )}
-                {programs[2].description && (
-                  <p className="text-xs md:text-sm text-white/75 leading-relaxed line-clamp-2">
-                    {programs[2].description}
-                  </p>
-                )}
-              </div>
-              <div className="flex items-center justify-between mt-3">
-                <p className="text-xs md:text-sm text-white font-medium">
-                  {programs[2].event}
-                </p>
-                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
-                  <svg className="w-4 h-4 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <img 
+              src="/images/hd2026-03.jpg" 
+              alt="Hành động 2026" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
 
-          {/* Card 4 - Bottom Right (Không Một Mình) */}
+          {/* Card 4 - Bottom Right (Image Only) */}
           <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px]">
-            <div className={`absolute inset-0 bg-gradient-to-br ${programs[3].gradient}`}></div>
-            <div className="relative p-4 md:p-5 h-full flex flex-col justify-between">
-              <div>
-                <div className="flex items-start justify-between mb-3">
-                  <div className="text-xs text-white/80 uppercase tracking-wider">
-                    <div>{t.programs.badge}</div>
-                    <div className="font-bold">{t.programs.action2026}</div>
-                  </div>
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 leading-tight line-clamp-1">
-                  {programs[3].title}
-                </h3>
-                {programs[3].subtitle && (
-                  <p className="text-sm text-white/90 font-medium mb-2 truncate">
-                    {programs[3].subtitle}
-                  </p>
-                )}
-                {programs[3].description && (
-                  <p className="text-xs md:text-sm text-white/75 leading-relaxed line-clamp-2">
-                    {programs[3].description}
-                  </p>
-                )}
-              </div>
-              <div className="flex items-center justify-between mt-3">
-                <p className="text-xs md:text-sm text-white font-medium">
-                  {programs[3].event}
-                </p>
-                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
-                  <svg className="w-4 h-4 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <img 
+              src="/images/hd2026-04.jpg" 
+              alt="Hành động 2026" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
 
-          {/* Card 5 - Bottom Left (KOL) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[230px] md:h-[220px] lg:h-[210px]">
-            <div className={`absolute inset-0 bg-gradient-to-br ${programs[4].gradient}`}></div>
-            <div className="relative p-4 md:p-5 h-full flex flex-col justify-between">
-              <div>
-                <div className="flex items-start justify-between mb-3">
-                  <div className="text-xs text-white/80 uppercase tracking-wider">
-                    <div>{t.programs.badge}</div>
-                    <div className="font-bold">{t.programs.action2026}</div>
-                  </div>
-                  {programs[4].badge && (
-                    <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white">
-                      {programs[4].badge}
-                    </div>
-                  )}
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight truncate">
-                  {programs[4].title}
-                </h3>
-                {programs[4].subtitle && (
-                  <p className="text-sm text-white/90 font-medium truncate">
-                    {programs[4].subtitle}
-                  </p>
-                )}
-              </div>
-              <div className="flex items-center justify-between mt-3">
-                <p className="text-xs md:text-sm text-white font-medium">
-                  {programs[4].event}
-                </p>
-                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
-                  <svg className="w-4 h-4 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+          {/* Card 5 - Bottom Left (Image Only) */}
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <img 
+              src="/images/hd2026-05.jpg" 
+              alt="Hành động 2026" 
+              className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
 
-          {/* Card 6 - Bottom Right (Digital Trust Awards) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[230px] md:h-[220px] lg:h-[210px]">
-            <div className={`absolute inset-0 bg-gradient-to-br ${programs[5].gradient}`}></div>
-            <div className="relative p-4 md:p-5 h-full flex flex-col justify-between">
-              <div>
-                <div className="flex items-start justify-between mb-3">
-                  <div className="text-xs text-white/80 uppercase tracking-wider">
-                    <div>{t.programs.badge}</div>
-                    <div className="font-bold">{t.programs.action2026}</div>
-                  </div>
-                  {programs[5].badge && (
-                    <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white">
-                      {programs[5].badge}
-                    </div>
-                  )}
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 leading-tight truncate">
-                  {programs[5].title}
-                </h3>
-                {programs[5].description && (
-                  <p className="text-xs md:text-sm text-white/80 leading-relaxed line-clamp-2">
-                    {programs[5].description}
-                  </p>
-                )}
-              </div>
-              <div className="flex items-center justify-between mt-3">
-                <p className="text-xs md:text-sm text-white font-medium">
-                  {programs[5].event}
-                </p>
-                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
-                  <svg className="w-4 h-4 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+          {/* Card 6 - Bottom Right (Image Only) */}
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <img 
+              src="/images/hd2026-06.jpg" 
+              alt="Hành động 2026" 
+              className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
         </div>
       </div>

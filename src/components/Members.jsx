@@ -61,10 +61,10 @@ const Members = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
-          <p className="text-sm md:text-base text-gray-500 mb-2 uppercase tracking-wide">
+          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
             {t.members.subtitle}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
             {t.members.title}
           </h2>
 
@@ -167,17 +167,17 @@ const Members = () => {
 
         {/* Stats Section */}
         <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-blue-900 text-center mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
             {t.members.networkTitle}
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-[#3000d9] mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-gray-600">
+                <div className="text-sm md:text-base text-black">
                   {stat.label}
                 </div>
               </div>

@@ -121,8 +121,8 @@ const ActivitiesPage = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-6 py-2.5 font-medium text-sm transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      ? 'bg-[#3000d9] text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
                   }`}
                 >
                   {tab.label}
@@ -217,7 +217,7 @@ const ActivitiesPage = () => {
 
                     {/* View More Button */}
                     <div className="p-4 pt-0">
-                      <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+                      <button className="w-full bg-[#3000d9] hover:bg-[#2500b0] text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
                         XEM THÊM
                       </button>
                     </div>

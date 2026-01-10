@@ -112,8 +112,8 @@ const MembersPage = () => {
                 onClick={() => setActiveTab('organization')}
                 className={`flex items-center gap-2 px-6 py-3 font-medium text-sm transition-all duration-300 ${
                   activeTab === 'organization'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                    ? 'bg-[#3000d9] text-white'
+                    : 'bg-white text-gray-600 hover:bg-[#3000d9]/10'
                 }`}
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -125,8 +125,8 @@ const MembersPage = () => {
                 onClick={() => setActiveTab('individual')}
                 className={`flex items-center gap-2 px-6 py-3 font-medium text-sm transition-all duration-300 ${
                   activeTab === 'individual'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                    ? 'bg-[#3000d9] text-white'
+                    : 'bg-white text-gray-600 hover:bg-[#3000d9]/10'
                 }`}
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

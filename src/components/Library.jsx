@@ -73,33 +73,33 @@ const Library = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
-          <p className="text-sm md:text-base text-gray-500 mb-2 uppercase tracking-wide">
+          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
             {t.library.subtitle}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
-            {t.library.title}
-          </h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
+          {t.library.title}
+        </h2>
 
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-            {filters.map((filter) => (
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+          {filters.map((filter) => (
               <button
-                key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
-                  activeFilter === filter.id
-                    ? 'bg-blue-900 text-white border-blue-900 shadow-lg'
-                    : 'bg-white text-gray-600 border-gray-300 hover:border-blue-400'
-                }`}
+                  key={filter.id}
+                  onClick={() => setActiveFilter(filter.id)}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
+                      activeFilter === filter.id
+                          ? 'bg-blue-900 text-white border-blue-900 shadow-lg'
+                          : 'bg-white text-gray-600 border-gray-300 hover:border-blue-400'
+                  }`}
               >
                 {filter.label}
               </button>
-            ))}
-          </div>
+          ))}
         </div>
+      </div>
 
-        {/* Library Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8">
+      {/* Library Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8">
           {/* Featured Large Card */}
           {featuredItem && (
             <div className="lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer h-[376px] md:h-[420px] lg:h-[440px]">

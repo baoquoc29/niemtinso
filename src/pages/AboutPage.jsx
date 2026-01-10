@@ -255,8 +255,8 @@ const AboutPage = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-6 py-2.5 font-medium text-sm transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      ? 'bg-[#3000d9] text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
                   }`}
                 >
                   {tab.label}

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
+  const location = useLocation();
 
   const menuItems = [
     { name: t.menu.home, href: '/' },
@@ -33,12 +34,18 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              item.isRoute ? (
+            {menuItems.map((item) => {
+              const isActive = location.pathname === item.href || 
+                (item.href !== '/' && location.pathname.startsWith(item.href));
+              return item.isRoute ? (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-gray-700 hover:text-blue-600 text-sm font-medium transition-colors"
+                  className={`text-sm font-medium transition-colors ${
+                    isActive 
+                      ? 'text-[#3000d9] border-b-2 border-[#3000d9] pb-1' 
+                      : 'text-gray-700 hover:text-[#3000d9]'
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -46,19 +53,23 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 text-sm font-medium transition-colors"
+                  className={`text-sm font-medium transition-colors ${
+                    isActive 
+                      ? 'text-[#3000d9] border-b-2 border-[#3000d9] pb-1' 
+                      : 'text-gray-700 hover:text-[#3000d9]'
+                  }`}
                 >
                   {item.name}
                 </a>
-              )
-            ))}
+              );
+            })}
           </nav>
 
           {/* Right Side - Button & Language */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/register"
-              className="ml-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-full hover:opacity-90"
+              className="ml-4 inline-block px-4 py-2 bg-[#3000d9] text-white rounded-full hover:bg-[#2500b0]"
             >
               {t.registerButton}
             </Link>
@@ -106,12 +117,18 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
-              {menuItems.map((item) => (
-                item.isRoute ? (
+              {menuItems.map((item) => {
+                const isActive = location.pathname === item.href || 
+                  (item.href !== '/' && location.pathname.startsWith(item.href));
+                return item.isRoute ? (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="text-gray-700 hover:text-blue-600 text-sm font-medium"
+                    className={`text-sm font-medium ${
+                      isActive 
+                        ? 'text-[#3000d9] font-semibold' 
+                        : 'text-gray-700 hover:text-[#3000d9]'
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -120,15 +137,19 @@ const Header = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 text-sm font-medium"
+                    className={`text-sm font-medium ${
+                      isActive 
+                        ? 'text-[#3000d9] font-semibold' 
+                        : 'text-gray-700 hover:text-[#3000d9]'
+                    }`}
                   >
                     {item.name}
                   </a>
-                )
-              ))}
+                );
+              })}
               <Link
                 to="/register"
-                className="ml-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-full hover:opacity-90 w-full text-center"
+                className="ml-4 inline-block px-4 py-2 bg-[#3000d9] text-white rounded-full hover:bg-[#2500b0] w-full text-center"
               >
                 {t.registerButton}
               </Link>

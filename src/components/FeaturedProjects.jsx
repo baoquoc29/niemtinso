@@ -119,7 +119,7 @@ const FeaturedProjects = () => {
                 </p>
 
                 {/* Action Button */}
-                <button className="bg-blue-600 hover:bg-blue-700 text-white p-2.5 rounded-full transition-all duration-300 group-hover:translate-x-1 inline-flex items-center justify-center">
+                <button className="bg-[#3000d9] hover:bg-[#2500b0] text-white p-2.5 rounded-full transition-all duration-300 group-hover:translate-x-1 inline-flex items-center justify-center">
                   <svg
                     className="w-5 h-5"
                     fill="none"
