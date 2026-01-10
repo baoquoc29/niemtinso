@@ -48,17 +48,17 @@ const Members = () => {
       id: 1,
       name: 'MC. Khánh Vy',
       role: t.members.individual1.role,
-      description: t.members.individual1.description,
+      description: 'Tạo nội dung giá trị bền vững',
       gradient: 'from-orange-400 via-orange-500 to-yellow-400',
-      image: null,
+      image: '/images/MC_KHANH_VY.png',
     },
     {
       id: 2,
       name: 'Rapper. Đen Vâu',
       role: t.members.individual2.role,
-      description: t.members.individual2.description,
+      description: 'Người truyền cảm hứng tích cực',
       gradient: 'from-red-500 via-red-600 to-pink-500',
-      image: null,
+      image: '/images/RP_DEN_VAU.png',
     },
     {
       id: 3,
@@ -66,7 +66,7 @@ const Members = () => {
       role: t.members.individual3.role,
       description: t.members.individual3.description,
       gradient: 'from-pink-400 via-pink-500 to-rose-400',
-      image: null,
+      image: '/images/HH_BAO_NGOC.png',
     },
     {
       id: 4,
@@ -74,7 +74,7 @@ const Members = () => {
       role: t.members.individual4.role,
       description: t.members.individual4.description,
       gradient: 'from-purple-400 via-purple-500 to-violet-400',
-      image: null,
+      image: '/images/KOL_MEICHAN.png',
     },
   ];
 
@@ -163,15 +163,49 @@ const Members = () => {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Card with gradient */}
-                <div className={`relative overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}>
+                <div 
+                  className={`relative overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
+                  style={
+                    (person.name.includes('Khánh Vy') || person.name.includes('Đen Vâu') || person.name.includes('Bảo Ngọc') || person.name.includes('Meichen')) ? {
+                      backgroundImage: 'url(/images/background_kol_card.png)',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    } : {}
+                  }
+                >
                   {/* Badge */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-800">
-                      {person.name.split('.')[0]}
-                    </span>
-                    <span className="block mt-1 text-white/90 text-xs font-medium">
-                      {person.role}
-                    </span>
+                  <div className="absolute z-10" style={person.name.includes('Khánh Vy') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Đen Vâu') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Bảo Ngọc') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Meichen') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : {top: '16px', left: '16px'}}>
+                    {person.name.includes('Khánh Vy') ? (
+                      <div>
+                        <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">KHÁNH VY</h3>
+                        <p className="text-white font-semibold text-lg drop-shadow-md">MC</p>
+                      </div>
+                    ) : person.name.includes('Đen Vâu') ? (
+                      <div>
+                        <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">ĐEN VÂU</h3>
+                        <p className="text-white font-semibold text-lg drop-shadow-md">RAPPER</p>
+                      </div>
+                    ) : person.name.includes('Bảo Ngọc') ? (
+                      <div>
+                        <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">BẢO NGỌC</h3>
+                        <p className="text-white font-semibold text-lg drop-shadow-md">HOA HẬU</p>
+                      </div>
+                    ) : person.name.includes('Meichen') ? (
+                      <div>
+                        <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">MEICHEN</h3>
+                        <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
+                      </div>
+                    ) : (
+                      <div>
+                        <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-800">
+                          {person.name.split('.')[0]}
+                        </span>
+                        <span className="block mt-1 text-white/90 text-xs font-medium">
+                          {person.role}
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Image placeholder */}
@@ -181,6 +215,13 @@ const Members = () => {
                         src={person.image}
                         alt={person.name}
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        style={(() => {
+                          if (person.name.includes('Khánh Vy')) return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
+                          if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
+                          if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
+                          if (person.name.includes('Meichen')) return { transform: 'translateX(70px) translateY(20px) scale(0.9)' };
+                          return {};
+                        })()}
                       />
                     ) : (
                       <div className="w-32 h-32 mb-8 bg-white/20 rounded-full flex items-center justify-center">
