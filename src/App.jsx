@@ -10,6 +10,7 @@ import ActivitiesPage from './pages/ActivitiesPage';
 import ContactPage from './pages/ContactPage';
 import MembersPage from './pages/MembersPage';
 import LibraryPage from './pages/LibraryPage';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/members" element={<MembersPage />} />
             <Route path="/library" element={<LibraryPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
           <Footer />
         </div>
