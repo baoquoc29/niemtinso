@@ -16,47 +16,47 @@ const Library = () => {
     {
       id: 1,
       type: 'featured',
-      title: t.library.item1.title,
-      subtitle: t.library.item1.subtitle,
-      event: t.library.item1.event,
-      image: null,
+      title: 'Chương trình Người có Ảnh hưởng Niềm Tín',
+      subtitle: 'Hội nghị KOL Toàn quốc lần thứ 2 (KOLs Summit 2026)',
+      event: '',
+      image: '/images/KOL_2025-357.jpg',
       gradient: null,
       category: 'photos',
     },
     {
       id: 2,
       type: 'small',
-      title: t.library.item2.title,
-      subtitle: t.library.item2.subtitle,
-      image: null,
-      gradient: 'from-purple-600 via-blue-500 to-cyan-400',
+      title: 'Chương trình tín nhiệm người có ảnh hưởng',
+      subtitle: '',
+      image: '/images/KOL_2025-367.jpg',
+      gradient: null,
       category: 'photos',
     },
     {
       id: 3,
       type: 'small',
-      title: t.library.item3.title,
-      subtitle: t.library.item3.subtitle,
-      image: null,
-      gradient: 'from-orange-500 via-red-500 to-pink-500',
+      title: 'Chương trình tín nhiệm người có ảnh hưởng',
+      subtitle: '',
+      image: '/images/KOL_2025-451.jpg',
+      gradient: null,
       category: 'photos',
     },
     {
       id: 4,
       type: 'small',
-      title: t.library.item4.title,
-      subtitle: t.library.item4.subtitle,
-      image: null,
-      gradient: 'from-purple-700 via-purple-600 to-blue-500',
+      title: 'Chương trình tín nhiệm người có ảnh hưởng',
+      subtitle: '',
+      image: '/images/KOL_2025-466.jpg',
+      gradient: null,
       category: 'photos',
     },
     {
       id: 5,
       type: 'small',
-      title: t.library.item5.title,
-      subtitle: t.library.item5.subtitle,
-      image: null,
-      gradient: 'from-blue-600 via-purple-600 to-pink-500',
+      title: 'Chương trình tín nhiệm người có ảnh hưởng',
+      subtitle: '',
+      image: '/images/KOL_2025-457.jpg',
+      gradient: null,
       category: 'photos',
     },
   ];
@@ -88,8 +88,8 @@ const Library = () => {
                   onClick={() => setActiveFilter(filter.id)}
                   className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
                       activeFilter === filter.id
-                          ? 'bg-blue-900 text-white border-blue-900 shadow-lg'
-                          : 'bg-white text-gray-600 border-gray-300 hover:border-blue-400'
+                          ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
+                          : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
                   }`}
               >
                 {filter.label}
@@ -120,11 +120,10 @@ const Library = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <p className="text-white/80 text-sm mb-2">{featuredItem.subtitle}</p>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 line-clamp-2">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 line-clamp-2">
                   {featuredItem.title}
                 </h3>
-                <p className="text-white/70 text-sm">{featuredItem.event}</p>
+                <p className="text-white/80 text-sm mb-3">{featuredItem.subtitle}</p>
               </div>
             </div>
           )}
@@ -147,27 +146,19 @@ const Library = () => {
                   <div className={`w-full h-full bg-gradient-to-br ${item.gradient}`}></div>
                 )}
 
-                {/* Badge */}
-                <div className="absolute top-3 left-3">
-                  <span className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-semibold text-gray-800">
-                    KOL
-                  </span>
-                </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
-                {/* Logo/Text Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <div className="text-white text-2xl md:text-3xl font-bold mb-1">KOL</div>
-                    <p className="text-white/80 text-[10px] md:text-xs leading-tight">
-                      với kỳ nguyên<br />vươn mình<br />của dân tộc
-                    </p>
+                {/* Bottom Content with Arrow */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 flex items-end justify-between">
+                  <div className="flex-1">
+                    <p className="text-white text-xs md:text-sm font-medium line-clamp-2">{item.title}</p>
                   </div>
-                </div>
-
-                {/* Bottom Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
-                  <p className="text-white/90 text-xs font-medium line-clamp-1">{item.title}</p>
-                  <p className="text-white/70 text-[10px] line-clamp-1">{item.subtitle}</p>
+                  <button className="flex-shrink-0 ml-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
+                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             ))}

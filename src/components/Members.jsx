@@ -74,8 +74,8 @@ const Members = () => {
               onClick={() => setActiveTab('organizations')}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
                 activeTab === 'organizations'
-                  ? 'bg-purple-600 text-white border-purple-600 shadow-lg'
-                  : 'bg-white text-gray-600 border-gray-300 hover:border-purple-400'
+                  ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
+                  : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
               }`}
             >
               {t.members.tabOrganizations}
@@ -84,8 +84,8 @@ const Members = () => {
               onClick={() => setActiveTab('individuals')}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
                 activeTab === 'individuals'
-                  ? 'bg-purple-600 text-white border-purple-600 shadow-lg'
-                  : 'bg-white text-gray-600 border-gray-300 hover:border-purple-400'
+                  ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
+                  : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
               }`}
             >
               {t.members.tabIndividuals}
