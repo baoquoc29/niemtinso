@@ -70,17 +70,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             {/* Logo */}
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex items-center">
-                <span className="text-3xl font-bold tracking-wider">DTA</span>
-                <div className="ml-2 flex flex-col items-start border-l border-white/30 pl-2">
-                  <div className="flex gap-0.5">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <span className="text-[8px] tracking-wider mt-1 leading-tight">DIGITAL<br/>TRUST<br/>ALLIANCE</span>
-                </div>
-              </div>
+              <img 
+                src="/images/DTA_Logo_Final_White.png" 
+                alt="DTA Logo" 
+                className="h-16 w-auto object-contain"
+              />
             </div>
 
             {/* Contact Info */}
