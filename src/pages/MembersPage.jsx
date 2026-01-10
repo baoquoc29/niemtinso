@@ -33,6 +33,11 @@ const MembersPage = () => {
   const [headerRef, headerVisible] = useScrollAnimation();
   const [tableRef, tableVisible] = useScrollAnimation();
 
+  const tabs = [
+    { id: 'organization', label: 'Hội viên Tổ chức/Doanh nghiệp' },
+    { id: 'individual', label: 'Hội viên cá nhân' }
+  ];
+
   const organizationMembers = [
     {
       id: 1,
@@ -89,41 +94,67 @@ const MembersPage = () => {
   const individualMembers = [
     {
       id: 1,
-      name: 'Nguyễn Văn A',
-      avatar: '/images/members/avatar1.png',
+      name: 'MC Khánh Vy',
+      avatar: '/images/members/khanh-vy.jpg',
     },
     {
       id: 2,
-      name: 'Trần Thị B',
-      avatar: '/images/members/avatar2.png',
+      name: 'Bảo Ngọc',
+      avatar: '/images/members/bao-ngoc.webp',
     },
     {
       id: 3,
-      name: 'Lê Văn C',
-      avatar: '/images/members/avatar3.png',
+      name: 'Đỗ Quang Đăng',
+      avatar: '/images/members/do-quang-dang.jpg',
     },
     {
       id: 4,
-      name: 'Phạm Thị D',
-      avatar: '/images/members/avatar4.png',
+      name: 'Nguyễn Sỹ Tuấn',
+      avatar: '/images/members/nguyen-sy-tuan.jpg',
     },
     {
       id: 5,
-      name: 'Hoàng Văn E',
-      avatar: '/images/members/avatar5.png',
+      name: 'Nguyễn Việt Hoàng',
+      avatar: '/images/members/nguyen-viet-hoang.jpg',
+    },
+    {
+      id: 6,
+      name: 'Tiểu Vy',
+      avatar: '/images/members/tieu-vy.jpg',
+    },
+    {
+      id: 7,
+      name: 'Đen Vâu',
+      avatar: '/images/members/den-vau.jpg',
     },
   ];
 
   return (
     <main className="pt-16">
-      <section className="py-8 md:py-10 bg-gray-50 min-h-screen">
+      <section className="py-8 md:py-10 bg-white min-h-screen">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Tabs */}
           <div 
             ref={headerRef}
             className={`flex justify-center mb-8 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}
           >
-            <div className="inline-flex rounded-lg overflow-hidden shadow-md">
+            <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-6 py-2.5 font-medium text-sm transition-all duration-300 btn-animate ${
+                    activeTab === tab.id
+                      ? 'bg-[#3000d9] text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* <div className="inline-flex rounded-lg overflow-hidden shadow-md">
               <button
                 onClick={() => setActiveTab('organization')}
                 className={`flex items-center gap-2 px-6 py-3 font-medium text-sm transition-all duration-300 ${
@@ -150,7 +181,7 @@ const MembersPage = () => {
                 </svg>
                 {t.membersPage?.tabIndividual || 'HỘI VIÊN CÁ NHÂN'}
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Title */}
