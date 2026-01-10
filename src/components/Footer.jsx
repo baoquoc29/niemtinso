@@ -89,7 +89,6 @@ const Footer = () => {
               <p className="text-sm text-gray-300">38 Phan Đình Phùng, Ba Đình</p>
               <p className="text-sm text-gray-300">Mail : banthuky@niemtinso.vn</p>
               <p className="text-sm text-gray-300">Hotline : 024.626.00.626</p>
-              <p className="text-sm text-gray-300">FB.LN.YT.TW.</p>
             </div>
           </div>
 
@@ -101,7 +100,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-sm text-gray-300 hover:text-white transition-colors duration-200 link-animate"
                   >
                     {link.label}
                   </a>
@@ -118,7 +117,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-sm text-gray-300 hover:text-white transition-colors duration-200 link-animate"
                   >
                     {link.label}
                   </a>
@@ -132,7 +131,7 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-white mb-6">{t.footer.registerMember}</h3>
             <a
               href="#"
-              className="inline-flex items-center gap-2 px-6 py-2.5 border border-white/50 rounded-full text-sm text-white hover:bg-white hover:text-[#0C1B3A] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-2.5 border border-white/50 rounded-full text-sm text-white hover:bg-white hover:text-[#0C1B3A] transition-all duration-300 btn-animate"
             >
               {t.footer.registerButton}
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -149,7 +148,7 @@ const Footer = () => {
                     key={index}
                     href={social.href}
                     aria-label={social.name}
-                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-[#0C1B3A] transition-all duration-300"
+                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-[#0C1B3A] transition-all duration-300 hover:scale-110"
                   >
                     {social.icon}
                   </a>

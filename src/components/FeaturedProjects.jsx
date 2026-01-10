@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Hook để phát hiện scroll
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    observer.observe(element);
+    return () => element && observer.unobserve(element);
+  }, []);
+
+  return [ref, isVisible];
+};
 
 const FeaturedProjects = () => {
   const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('posts');
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [gridRef, gridVisible] = useScrollAnimation();
 
   const projects = [
     {
@@ -44,7 +72,10 @@ const FeaturedProjects = () => {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-12">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
           <p className="text-sm md:text-base text-white/80 mb-2 uppercase tracking-wide">
             {t.projects.subtitle}
           </p>
@@ -56,7 +87,7 @@ const FeaturedProjects = () => {
           <div className="flex flex-wrap justify-center gap-3">
             <button
               onClick={() => setActiveFilter('posts')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 btn-animate ${
                 activeFilter === 'posts'
                   ? 'bg-white text-purple-700 shadow-lg'
                   : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
@@ -66,7 +97,7 @@ const FeaturedProjects = () => {
             </button>
             <button
               onClick={() => setActiveFilter('initiatives')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 btn-animate ${
                 activeFilter === 'initiatives'
                   ? 'bg-white text-purple-700 shadow-lg'
                   : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
@@ -78,11 +109,15 @@ const FeaturedProjects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {filteredProjects.map((project) => (
+        <div 
+          ref={gridRef}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+              className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 card-animate"
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Image Placeholder */}
               <div className="relative h-48 md:h-56 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
@@ -139,7 +174,7 @@ const FeaturedProjects = () => {
 
         {/* View More Button */}
         <div className="text-center">
-          <button className="bg-white hover:bg-gray-100 text-purple-700 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 shadow-lg hover:shadow-xl">
+          <button className="bg-white hover:bg-gray-100 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 shadow-lg hover:shadow-xl btn-animate">
             {t.projects.viewMore}
           </button>
         </div>

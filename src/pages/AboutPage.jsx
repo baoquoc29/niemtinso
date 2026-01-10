@@ -1,10 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Hook để phát hiện scroll
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    observer.observe(element);
+    return () => element && observer.unobserve(element);
+  }, []);
+
+  return [ref, isVisible];
+};
 
 const AboutPage = () => {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('introduction');
   const [showModal, setShowModal] = useState(false);
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [contentRef, contentVisible] = useScrollAnimation();
 
   const tabs = [
     { id: 'introduction', label: 'Giới thiệu về liên minh' },
@@ -246,14 +274,17 @@ const AboutPage = () => {
       <section className="py-8 md:py-10 bg-white min-h-screen">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Header with Filter Tabs */}
-          <div className="flex flex-col items-center mb-8 gap-4">
+          <div 
+            ref={headerRef}
+            className={`flex flex-col items-center mb-8 gap-4 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}
+          >
             {/* Filter Tabs */}
             <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-2.5 font-medium text-sm transition-all duration-300 ${
+                  className={`px-6 py-2.5 font-medium text-sm transition-all duration-300 btn-animate ${
                     activeTab === tab.id
                       ? 'bg-[#3000d9] text-white'
                       : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
@@ -266,12 +297,15 @@ const AboutPage = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-12 mt-8">
+          <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-12 mt-8 transition-all duration-700 delay-200 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {currentContent.title}
           </h1>
 
           {/* Content */}
-          <div className="prose max-w-none mt-8">
+          <div 
+            ref={contentRef}
+            className={`prose max-w-none mt-8 transition-all duration-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          >
             {currentContent.content}
           </div>
         </div>
@@ -281,7 +315,7 @@ const AboutPage = () => {
       {/* Structure Image Modal */}
       {showModal && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 animate-fade-in"
           onClick={() => setShowModal(false)}
         >
           <div className="relative max-w-7xl max-h-[95vh] w-full h-full flex items-center justify-center">

@@ -115,7 +115,7 @@ const LibraryPage = () => {
       <section className="py-8 md:py-10 bg-white min-h-screen">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Header with Tabs and Button */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4 animate-fade-in-down">
             {/* Tabs */}
             <div className="flex flex-wrap gap-0">
               {tabs.map((tab) => (
@@ -140,7 +140,7 @@ const LibraryPage = () => {
             {currentItems.length > 8 && !showAll && (
               <button 
                 onClick={() => setShowAll(true)}
-                className="bg-[#3000d8] hover:bg-[#2500b0] text-white px-6 py-2.5 text-sm font-medium transition-all duration-300 flex items-center gap-2 self-start md:self-auto"
+                className="bg-white hover:bg-gray-50 border border-[#3000d9] text-[#3000d9] px-6 py-2.5 text-sm font-medium transition-all duration-300 flex items-center gap-2 self-start md:self-auto rounded-full btn-animate"
               >
                 <span>{t.library?.viewMore || 'XEM THÊM'}</span>
               </button>
@@ -152,7 +152,8 @@ const LibraryPage = () => {
             {displayedItems.map((item, index) => (
               <div
                 key={item.id}
-                className="relative aspect-[4/3] bg-black overflow-hidden group cursor-pointer"
+                className="relative aspect-[4/3] bg-black overflow-hidden group cursor-pointer card-animate"
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 {item.image ? (
                   <LazyImage

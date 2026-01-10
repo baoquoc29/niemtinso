@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Hook để phát hiện scroll
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    observer.observe(element);
+    return () => element && observer.unobserve(element);
+  }, []);
+
+  return [ref, isVisible];
+};
 
 const Library = () => {
   const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('photos');
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [gridRef, gridVisible] = useScrollAnimation();
 
   const filters = [
     { id: 'photos', label: t.library.filterPhotos },
@@ -72,7 +100,10 @@ const Library = () => {
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-12">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
           <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
             {t.library.subtitle}
           </p>
@@ -86,7 +117,7 @@ const Library = () => {
               <button
                   key={filter.id}
                   onClick={() => setActiveFilter(filter.id)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border btn-animate ${
                       activeFilter === filter.id
                           ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
                           : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
@@ -99,10 +130,13 @@ const Library = () => {
       </div>
 
       {/* Library Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8">
+      <div 
+        ref={gridRef}
+        className={`grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+      >
           {/* Featured Large Card */}
           {featuredItem && (
-            <div className="lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer h-[376px] md:h-[420px] lg:h-[440px]">
+            <div className="lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer h-[376px] md:h-[420px] lg:h-[440px] card-animate">
               {featuredItem.image ? (
                 <img
                   src={featuredItem.image}
@@ -130,10 +164,11 @@ const Library = () => {
 
           {/* Small Cards Grid */}
           <div className="grid grid-cols-2 gap-4 md:gap-5 h-[376px] md:h-[420px] lg:h-[440px]">
-            {smallItems.map((item) => (
+            {smallItems.map((item, index) => (
               <div
                 key={item.id}
-                className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
+                className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer card-animate"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Background */}
                 {item.image ? (
@@ -167,7 +202,7 @@ const Library = () => {
 
         {/* View More Button */}
         <div className="text-center">
-          <button className="bg-white hover:bg-gray-50 text-blue-900 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border border-gray-300 hover:border-blue-400 shadow-sm hover:shadow-md inline-flex items-center gap-2">
+          <button className="bg-white hover:bg-gray-50 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
             {t.library.viewMore}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

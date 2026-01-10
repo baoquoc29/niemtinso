@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Hook để phát hiện scroll
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    observer.observe(element);
+    return () => element && observer.unobserve(element);
+  }, []);
+
+  return [ref, isVisible];
+};
 
 const ContactPage = () => {
   const { t } = useLanguage();
+  const [mapRef, mapVisible] = useScrollAnimation();
+  const [infoRef, infoVisible] = useScrollAnimation();
 
   const contactInfo = [
     {
@@ -59,7 +87,10 @@ const ContactPage = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Google Map */}
-            <div className="rounded-2xl overflow-hidden shadow-lg h-[400px] lg:h-[500px]">
+            <div 
+              ref={mapRef}
+              className={`rounded-2xl overflow-hidden shadow-lg h-[400px] lg:h-[500px] transition-all duration-700 ${mapVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+            >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0968448849877!2d105.78518731540146!3d21.028825693197976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cd376479b%3A0xbc2e0a93b9129d22!2zRTIgRMawxqFuZyDEkMOsbmggTmdow6ksIFnDqm4gSG_DoCwgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1704844800000!5m2!1svi!2s"
                 width="100%"
@@ -73,8 +104,11 @@ const ContactPage = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="flex flex-col justify-center">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+            <div 
+              ref={infoRef}
+              className={`flex flex-col justify-center transition-all duration-700 delay-200 ${infoVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}
+            >
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#3000d9] mb-8">
                 {t.contact?.title || 'Thông tin liên hệ'}
               </h2>
 

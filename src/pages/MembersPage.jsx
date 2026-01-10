@@ -1,70 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Hook để phát hiện scroll
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    observer.observe(element);
+    return () => element && observer.unobserve(element);
+  }, []);
+
+  return [ref, isVisible];
+};
 
 const MembersPage = () => {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('organization');
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [tableRef, tableVisible] = useScrollAnimation();
 
   const organizationMembers = [
     {
       id: 1,
       name: 'Công ty Cổ phần VNG',
-      website: 'vng.com.vn',
-      email: 'start@vng.com.vn',
+      logo: '/images/members/vng.png',
     },
     {
       id: 2,
       name: 'Ngân hàng TNHH MTV Hong Leong Việt Nam',
-      website: 'hlbank.com.vn',
-      email: 'ask@hlbvn.hongleong.com',
+      logo: '/images/members/hongleong.png',
     },
     {
       id: 3,
       name: 'Cục Công nghệ thông tin, Ngân hàng Nhà nước',
-      website: 'sbv.gov.vn',
-      email: 'cntt@sbv.gov.vn',
+      logo: '/images/members/sbv.png',
     },
     {
       id: 4,
       name: 'Công ty Cổ phần BKAV',
-      website: 'bkav.com',
-      email: 'Bkav@bkav.com',
+      logo: '/images/members/bkav.png',
     },
     {
       id: 5,
       name: 'Công ty Cổ phần thương mại Công nghệ Go Viet',
-      website: 'gojek.com',
-      email: 'carevn@gojek.com',
+      logo: '/images/members/gojek.png',
     },
     {
       id: 6,
       name: 'Trường Đại học Kỹ thuật - Hậu cần Công an nhân dân',
-      website: 'dhkthc.edu.vn',
-      email: 'admin@dhkthc.edu.vn',
+      logo: '/images/members/dhkthc.png',
     },
     {
       id: 7,
       name: 'Tập đoàn Điện lực Việt Nam',
-      website: 'evn.com.vn',
-      email: 'hdpc@evn.com.vn',
+      logo: '/images/members/evn.png',
     },
     {
       id: 8,
       name: 'Tổng công ty Viễn thông MobiFone',
-      website: 'mobifone.vn',
-      email: 'contact@mobifone.vn',
+      logo: '/images/members/mobifone.png',
     },
     {
       id: 9,
       name: 'Công ty Cổ phần FPT',
-      website: 'fpt.com.vn',
-      email: 'contact@fpt.com.vn',
+      logo: '/images/members/fpt.png',
     },
     {
       id: 10,
       name: 'Tập đoàn Công nghiệp - Viễn thông Quân đội',
-      website: 'viettel.com.vn',
-      email: 'cskh@viettel.com.vn',
+      logo: '/images/members/viettel.png',
     },
   ];
 
@@ -72,32 +90,27 @@ const MembersPage = () => {
     {
       id: 1,
       name: 'Nguyễn Văn A',
-      position: 'Chuyên gia An ninh mạng',
-      email: 'nguyenvana@email.com',
+      avatar: '/images/members/avatar1.png',
     },
     {
       id: 2,
       name: 'Trần Thị B',
-      position: 'Nhà sáng tạo nội dung',
-      email: 'tranthib@email.com',
+      avatar: '/images/members/avatar2.png',
     },
     {
       id: 3,
       name: 'Lê Văn C',
-      position: 'KOL Công nghệ',
-      email: 'levanc@email.com',
+      avatar: '/images/members/avatar3.png',
     },
     {
       id: 4,
       name: 'Phạm Thị D',
-      position: 'Influencer',
-      email: 'phamthid@email.com',
+      avatar: '/images/members/avatar4.png',
     },
     {
       id: 5,
       name: 'Hoàng Văn E',
-      position: 'Blogger',
-      email: 'hoangvane@email.com',
+      avatar: '/images/members/avatar5.png',
     },
   ];
 
@@ -106,7 +119,10 @@ const MembersPage = () => {
       <section className="py-8 md:py-10 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Tabs */}
-          <div className="flex justify-center mb-8">
+          <div 
+            ref={headerRef}
+            className={`flex justify-center mb-8 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}
+          >
             <div className="inline-flex rounded-lg overflow-hidden shadow-md">
               <button
                 onClick={() => setActiveTab('organization')}
@@ -138,7 +154,7 @@ const MembersPage = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-10">
+          <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#3000d9] mb-10 transition-all duration-700 delay-200 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {activeTab === 'organization' 
               ? (t.membersPage?.titleOrganization || 'Danh sách Hội viên tổ chức/doanh nghiệp')
               : (t.membersPage?.titleIndividual || 'Danh sách Hội viên cá nhân')
@@ -149,40 +165,32 @@ const MembersPage = () => {
           {activeTab === 'organization' && (
             <>
               {/* Mobile & Tablet View - Card Layout */}
-              <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-4">
-                {organizationMembers.map((member) => (
+              <div 
+                ref={tableRef}
+                className={`lg:hidden grid grid-cols-1 md:grid-cols-2 gap-4 transition-all duration-700 ${tableVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                {organizationMembers.map((member, index) => (
                   <div 
                     key={member.id} 
-                    className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow"
+                    className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-all duration-300 card-animate"
+                    style={{ transitionDelay: `${index * 50}ms` }}
                   >
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                    <div className="flex items-center gap-4">
+                      <span className="flex-shrink-0 w-8 h-8 bg-[#3000d9] text-white rounded-full flex items-center justify-center text-sm font-semibold">
                         {member.id}
                       </span>
-                      <h3 className="text-base font-semibold text-gray-900 leading-tight">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                        {member.logo ? (
+                          <img src={member.logo} alt={member.name} className="w-full h-full object-contain p-1" />
+                        ) : (
+                          <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                          </svg>
+                        )}
+                      </div>
+                      <h3 className="text-base font-semibold text-gray-900 leading-tight flex-1">
                         {member.name}
                       </h3>
-                    </div>
-                    <div className="space-y-3 pl-11">
-                      <div className="flex items-start gap-2">
-                        <svg className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                        </svg>
-                        <a 
-                          href={`https://${member.website}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-blue-600 hover:text-blue-800 hover:underline break-all"
-                        >
-                          {member.website}
-                        </a>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <svg className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <span className="text-sm text-gray-600 break-all">{member.email}</span>
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -194,17 +202,14 @@ const MembersPage = () => {
                   <table className="w-full">
                     <thead>
                       <tr className="border-b border-gray-200">
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-blue-600 w-20">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9] w-20">
                           {t.membersPage?.columnNo || 'STT'}
                         </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-blue-600">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9] w-24">
+                          {t.membersPage?.columnLogo || 'Logo'}
+                        </th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9]">
                           {t.membersPage?.columnName || 'Tên tổ chức'}
-                        </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-blue-600 w-48">
-                          {t.membersPage?.columnWebsite || 'Website'}
-                        </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-blue-600 w-64">
-                          {t.membersPage?.columnEmail || 'Email liên hệ'}
                         </th>
                       </tr>
                     </thead>
@@ -219,21 +224,19 @@ const MembersPage = () => {
                           <td className="px-6 py-4 text-sm text-gray-600 text-center">
                             {member.id}
                           </td>
+                          <td className="px-6 py-4">
+                            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                              {member.logo ? (
+                                <img src={member.logo} alt={member.name} className="w-full h-full object-contain p-1" />
+                              ) : (
+                                <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                              )}
+                            </div>
+                          </td>
                           <td className="px-6 py-4 text-sm text-gray-900 font-medium">
                             {member.name}
-                          </td>
-                          <td className="px-6 py-4 text-sm">
-                            <a 
-                              href={`https://${member.website}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:text-blue-800 hover:underline"
-                            >
-                              {member.website}
-                            </a>
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">
-                            {member.email}
                           </td>
                         </tr>
                       ))}
@@ -254,27 +257,22 @@ const MembersPage = () => {
                     key={member.id} 
                     className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow"
                   >
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                    <div className="flex items-center gap-4">
+                      <span className="flex-shrink-0 w-8 h-8 bg-[#3000d9] text-white rounded-full flex items-center justify-center text-sm font-semibold">
                         {member.id}
                       </span>
-                      <h3 className="text-base font-semibold text-gray-900">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
+                        {member.avatar ? (
+                          <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" />
+                        ) : (
+                          <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        )}
+                      </div>
+                      <h3 className="text-base font-semibold text-gray-900 flex-1">
                         {member.name}
                       </h3>
-                    </div>
-                    <div className="space-y-3 pl-11">
-                      <div className="flex items-start gap-2">
-                        <svg className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <span className="text-sm text-gray-600">{member.position}</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <svg className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <span className="text-sm text-gray-600 break-all">{member.email}</span>
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -286,17 +284,14 @@ const MembersPage = () => {
                   <table className="w-full">
                     <thead>
                       <tr className="border-b border-gray-200">
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-blue-600 w-20">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9] w-20">
                           {t.membersPage?.columnNo || 'STT'}
                         </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-blue-600">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9] w-24">
+                          {t.membersPage?.columnAvatar || 'Ảnh'}
+                        </th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9]">
                           {t.membersPage?.columnMemberName || 'Họ và tên'}
-                        </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-blue-600 w-64">
-                          {t.membersPage?.columnPosition || 'Chức danh'}
-                        </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-blue-600 w-64">
-                          {t.membersPage?.columnEmail || 'Email liên hệ'}
                         </th>
                       </tr>
                     </thead>
@@ -311,14 +306,19 @@ const MembersPage = () => {
                           <td className="px-6 py-4 text-sm text-gray-600 text-center">
                             {member.id}
                           </td>
+                          <td className="px-6 py-4">
+                            <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
+                              {member.avatar ? (
+                                <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" />
+                              ) : (
+                                <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                              )}
+                            </div>
+                          </td>
                           <td className="px-6 py-4 text-sm text-gray-900 font-medium">
                             {member.name}
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">
-                            {member.position}
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">
-                            {member.email}
                           </td>
                         </tr>
                       ))}

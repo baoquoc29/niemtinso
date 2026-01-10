@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Hook để phát hiện scroll
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    observer.observe(element);
+    return () => element && observer.unobserve(element);
+  }, []);
+
+  return [ref, isVisible];
+};
 
 const Programs = () => {
   const { t } = useLanguage();
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [gridRef, gridVisible] = useScrollAnimation();
 
   const programs = [
     {
@@ -62,7 +90,10 @@ const Programs = () => {
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-12 md:mb-16 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
           <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
             {t.programs.sectionSubtitle}
           </p>
@@ -72,9 +103,12 @@ const Programs = () => {
         </div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+        <div 
+          ref={gridRef}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
           {/* Card 1 - Large Left (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+          <div className="md:col-span-1 lg:col-span-2 lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate">
             <img 
               src="/images/hd2026.jpg" 
               alt="Hành động 2026" 
@@ -83,7 +117,7 @@ const Programs = () => {
           </div>
 
           {/* Card 2 - Top Right (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px]">
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px] card-animate">
             <img 
               src="/images/hd2026-02.jpg" 
               alt="Hành động 2026" 
@@ -92,7 +126,7 @@ const Programs = () => {
           </div>
 
           {/* Card 3 - Middle Right (Image Only) */}
-          <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px]">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px] card-animate">
             <img 
               src="/images/hd2026-03.jpg" 
               alt="Hành động 2026" 
@@ -101,7 +135,7 @@ const Programs = () => {
           </div>
 
           {/* Card 4 - Bottom Right (Image Only) */}
-          <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px]">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px] card-animate">
             <img 
               src="/images/hd2026-04.jpg" 
               alt="Hành động 2026" 
@@ -110,7 +144,7 @@ const Programs = () => {
           </div>
 
           {/* Card 5 - Bottom Left (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate">
             <img 
               src="/images/hd2026-05.jpg" 
               alt="Hành động 2026" 
@@ -119,7 +153,7 @@ const Programs = () => {
           </div>
 
           {/* Card 6 - Bottom Right (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate">
             <img 
               src="/images/hd2026-06.jpg" 
               alt="Hành động 2026" 

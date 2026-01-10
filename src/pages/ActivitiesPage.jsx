@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Hook để phát hiện scroll
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    observer.observe(element);
+    return () => element && observer.unobserve(element);
+  }, []);
+
+  return [ref, isVisible];
+};
 
 const ActivitiesPage = () => {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('events');
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [contentRef, contentVisible] = useScrollAnimation();
 
   const tabs = [
     { id: 'events', label: 'Sự kiện' },
@@ -112,7 +140,10 @@ const ActivitiesPage = () => {
       <section className="py-8 md:py-10 bg-white min-h-screen">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Header with Tabs */}
-          <div className="flex flex-col items-center mb-8 gap-4">
+          <div 
+            ref={headerRef}
+            className={`flex flex-col items-center mb-8 gap-4 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}
+          >
             {/* Tabs */}
             <div className="flex flex-wrap gap-0 justify-center">
               {tabs.map((tab) => (
@@ -132,13 +163,20 @@ const ActivitiesPage = () => {
           </div>
 
           {/* Content */}
-          <div className="max-w-7xl mx-auto">
+          <div 
+            ref={contentRef}
+            className={`max-w-7xl mx-auto transition-all duration-700 delay-200 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          >
             {(activeTab === 'events' || activeTab === 'projects') && currentContent.mainArticles && currentContent.mainArticles.length > 0 ? (
               <div className="flex flex-col lg:flex-row gap-8">
                 {/* Main Content - 98% on mobile, ~70% on desktop */}
                 <div className="w-full lg:w-[70%] space-y-8">
-                  {currentContent.mainArticles.map((article) => (
-                    <div key={article.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                  {currentContent.mainArticles.map((article, index) => (
+                    <div 
+                      key={article.id} 
+                      className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 card-animate"
+                      style={{ transitionDelay: `${index * 100}ms` }}
+                    >
                       <div className="flex flex-col md:flex-row">
                         {/* Image */}
                         <div className="md:w-2/5 lg:w-2/5">
@@ -217,7 +255,7 @@ const ActivitiesPage = () => {
 
                     {/* View More Button */}
                     <div className="p-4 pt-0">
-                      <button className="w-full bg-[#3000d9] hover:bg-[#2500b0] text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+                      <button className="w-full bg-white hover:bg-gray-50 border border-[#3000d9] text-[#3000d9] font-semibold py-2 px-4 rounded-lg transition-colors text-sm btn-animate">
                         XEM THÊM
                       </button>
                     </div>

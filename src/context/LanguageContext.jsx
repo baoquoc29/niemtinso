@@ -114,6 +114,18 @@ export const translations = {
         free: 'Miễn Phí Tham Gia',
       },
     },
+    // Members Page
+    membersPage: {
+      tabOrganization: 'HỘI VIÊN TỔ CHỨC/DOANH NGHIỆP',
+      tabIndividual: 'HỘI VIÊN CÁ NHÂN',
+      titleOrganization: 'Danh sách Hội viên tổ chức/doanh nghiệp',
+      titleIndividual: 'Danh sách Hội viên cá nhân',
+      columnNo: 'STT',
+      columnLogo: 'Logo',
+      columnName: 'Tên tổ chức',
+      columnAvatar: 'Ảnh',
+      columnMemberName: 'Họ và tên',
+    },
     // Library
     library: {
       subtitle: 'CÂU CHUYỆN THÀNH CÔNG',
@@ -294,6 +306,18 @@ export const translations = {
         delegates: 'Delegates Attended',
         free: 'Free Participation',
       },
+    },
+    // Members Page
+    membersPage: {
+      tabOrganization: 'ORGANIZATION/ENTERPRISE MEMBERS',
+      tabIndividual: 'INDIVIDUAL MEMBERS',
+      titleOrganization: 'List of Organization/Enterprise Members',
+      titleIndividual: 'List of Individual Members',
+      columnNo: 'No.',
+      columnLogo: 'Logo',
+      columnName: 'Organization Name',
+      columnAvatar: 'Photo',
+      columnMemberName: 'Full Name',
     },
     // Library
     library: {

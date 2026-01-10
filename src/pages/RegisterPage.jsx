@@ -146,10 +146,10 @@ export default function RegisterPage() {
                 <div className="container mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         {/* Main content */}
-                        <div className="lg:col-span-2 bg-white rounded-lg p-8 shadow-sm">{renderMain(activeTab)}</div>
+                        <div className="lg:col-span-2 bg-white rounded-lg p-8 shadow-sm animate-fade-in-up">{renderMain(activeTab)}</div>
 
                         {/* Sidebar with vertical auto-scroller */}
-                        <aside className="space-y-6">
+                        <aside className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                             <div className="bg-white rounded-lg p-4 shadow-sm">
                                 <h3 className="text-cyan-600 font-semibold mb-4">
                                     {activeTab === "personal" ? "Hội viên cá nhân" : "Hội viên tổ chức/doanh nghiệp"}
@@ -181,7 +181,7 @@ export default function RegisterPage() {
                                 </div>
 
                                 <div className="text-center mt-4">
-                                    <button onClick={() => setScrollIndex((s) => s + 1)} className="bg-cyan-400 text-white px-4 py-2 rounded text-sm">
+                                    <button onClick={() => setScrollIndex((s) => s + 1)} className="bg-white border border-[#3000d9] text-[#3000d9] px-4 py-2 rounded text-sm hover:bg-gray-50 btn-animate">
                                         XEM THÊM
                                     </button>
                                 </div>

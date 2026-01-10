@@ -1,9 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Hook để phát hiện scroll
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    observer.observe(element);
+    return () => element && observer.unobserve(element);
+  }, []);
+
+  return [ref, isVisible];
+};
 
 const Members = () => {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('organizations');
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [contentRef, contentVisible] = useScrollAnimation();
+  const [statsRef, statsVisible] = useScrollAnimation();
 
   const organizations = [
     { id: 1, name: 'Mobifone', logo: '/images/MobiFone_logo.png' },
@@ -60,7 +89,10 @@ const Members = () => {
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-12">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
           <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
             {t.members.subtitle}
           </p>
@@ -72,7 +104,7 @@ const Members = () => {
           <div className="flex flex-wrap justify-center gap-3">
             <button
               onClick={() => setActiveTab('organizations')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border btn-animate ${
                 activeTab === 'organizations'
                   ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
                   : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
@@ -82,7 +114,7 @@ const Members = () => {
             </button>
             <button
               onClick={() => setActiveTab('individuals')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border btn-animate ${
                 activeTab === 'individuals'
                   ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
                   : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
@@ -95,11 +127,15 @@ const Members = () => {
 
         {/* Organizations Logos */}
         {activeTab === 'organizations' && (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
-            {organizations.map((org) => (
+          <div 
+            ref={contentRef}
+            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 transition-all duration-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          >
+            {organizations.map((org, index) => (
               <div
                 key={org.id}
-                className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-md transition-shadow"
+                className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-md transition-all duration-300 card-animate"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {org.logo ? (
                   <div className="flex items-center justify-center h-full">
@@ -120,10 +156,11 @@ const Members = () => {
         {/* Individuals Cards */}
         {activeTab === 'individuals' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {individuals.map((person) => (
+            {individuals.map((person, index) => (
               <div
                 key={person.id}
-                className="group cursor-pointer"
+                className="group cursor-pointer card-animate"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Card with gradient */}
                 <div className={`relative overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}>
@@ -166,14 +203,21 @@ const Members = () => {
         )}
 
         {/* Stats Section */}
-        <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12">
+        <div 
+          ref={statsRef}
+          className={`bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12 transition-all duration-700 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
           <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
             {t.members.networkTitle}
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div 
+                key={index} 
+                className="text-center"
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
                 <div className="text-4xl md:text-5xl font-bold text-[#3000d9] mb-2">
                   {stat.value}
                 </div>
