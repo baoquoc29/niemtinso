@@ -121,13 +121,91 @@ const FeaturedProjects = () => {
           ref={gridRef}
           className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project, index) => {
+            const [openIndex, setOpenIndex] = useState(null);
+            const open = openIndex === index;
+            return (
+              <div
+                key={project.id}
+                className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 card-animate relative p-1"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                {/* Image Placeholder */}
+                <div className="relative h-48 md:h-56 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden rounded-xl">
+                  {project.image ? (
+                    <>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    {/* Fade bottom */}
+                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 rounded-b-xl bg-gradient-to-b from-transparent to-white" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <svg
+                        className="w-16 h-16 text-gray-400"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-lg md:text-2xl font-bold text-indigo-600 mb-3 leading-tight text-center">
+                    {project.title}
+                  </h3>
+                  
+                  <div
+                    className={`px-6 transition-all duration-500 overflow-hidden duration-1000 ${
+                      open ? "max-h-96 opacity-100" : "max-h-0 opacity-90"
+                    }`}
+                  >
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed text-center">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  {/* Action Button */}
+                  <div className="flex justify-center">
+                    <button onClick={() => setOpenIndex(open ? null : index)} className="flex bg-[#3000d9] hover:bg-[#2500b0] text-white p-2.5 rounded-full transition-all duration-300 group-hover:translate-x-1 items-center justify-center">
+                      <svg
+                        className={`w-5 h-5 transition-transform duration-300 ${
+                          open ? "rotate-90" : "-rotate-90"
+                        }`}
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              )
+          })}
+
+
+
+          {/* {filteredProjects.map((project, index) => (
             <div
               key={project.id}
               className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 card-animate relative p-1"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Image Placeholder */}
               <div className="relative h-48 md:h-56 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden rounded-xl">
                 {project.image ? (
                   <>
@@ -136,7 +214,6 @@ const FeaturedProjects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  {/* Fade bottom */}
                   <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 rounded-b-xl bg-gradient-to-b from-transparent to-white" />
                   </>
                 ) : (
@@ -156,7 +233,6 @@ const FeaturedProjects = () => {
                 )}
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <h3 className="text-lg md:text-2xl font-bold text-indigo-600 mb-3 leading-tight text-center">
                   {project.title}
@@ -172,7 +248,6 @@ const FeaturedProjects = () => {
                   </p>
                 </div>
 
-                {/* Action Button */}
                 <div className="flex justify-center">
                   <button onClick={() => setOpen(!open)} className="flex bg-[#3000d9] hover:bg-[#2500b0] text-white p-2.5 rounded-full transition-all duration-300 group-hover:translate-x-1 items-center justify-center">
                     <svg
@@ -190,7 +265,7 @@ const FeaturedProjects = () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
 
         {/* View More Button */}
