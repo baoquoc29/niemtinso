@@ -159,12 +159,13 @@ const Members = () => {
             {individuals.map((person, index) => (
               <div
                 key={person.id}
-                className="group cursor-pointer card-animate"
+                className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Card with gradient */}
                 <div 
-                  className={`relative overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
+                  // className={`relative overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
+                  className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
                   style={
                     (person.name.includes('Khánh Vy') || person.name.includes('Đen Vâu') || person.name.includes('Bảo Ngọc') || person.name.includes('Meichen')) ? {
                       backgroundImage: 'url(/images/background_kol_card.png)',
@@ -211,6 +212,7 @@ const Members = () => {
                   {/* Image placeholder */}
                   <div className="absolute inset-0 flex items-end justify-center">
                     {person.image ? (
+                      <>
                       <img
                         src={person.image}
                         alt={person.name}
@@ -223,6 +225,8 @@ const Members = () => {
                           return {};
                         })()}
                       />
+                      <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                      </>
                     ) : (
                       <div className="w-32 h-32 mb-8 bg-white/20 rounded-full flex items-center justify-center">
                         <svg className="w-16 h-16 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -234,7 +238,7 @@ const Members = () => {
                 </div>
 
                 {/* Info */}
-                <div className="text-center">
+                <div className="text-center py-2">
                   <h3 className="font-bold text-gray-900 mb-1">{person.name}</h3>
                   <p className="text-sm text-gray-500 line-clamp-2">{person.description}</p>
                 </div>

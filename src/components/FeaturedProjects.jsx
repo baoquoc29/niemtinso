@@ -44,14 +44,14 @@ const FeaturedProjects = () => {
     },
     {
       id: 2,
-      image: '/images/khong1minh/khong1minh9.jpg',
+      image: '/images/khong1minh/khong1minh1.jfif',
       title: t.projects.project2.title,
       description: t.projects.project2.description,
       category: 'posts',
     },
     {
       id: 3,
-      image: '/images/main.jpg',
+      image: '/images/conguochanoi/conguochanoi.jpg',
       title: t.projects.project3.title,
       description: t.projects.project3.description,
       category: 'posts',
@@ -146,7 +146,7 @@ const FeaturedProjects = () => {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Image Placeholder */}
-                <div className="relative h-48 md:h-56 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden rounded-xl">
+                <div className="relative h-48 md:h-72 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden rounded-xl">
                   {project.image ? (
                     <>
                     <img
@@ -155,7 +155,7 @@ const FeaturedProjects = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     {/* Fade bottom */}
-                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 rounded-b-xl bg-gradient-to-b from-transparent to-white" />
+                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
                     </>
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
