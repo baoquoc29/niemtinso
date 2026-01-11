@@ -143,7 +143,7 @@ const MembersPage = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-2.5 font-medium text-sm transition-all duration-300 btn-animate ${
+                  className={`px-6 py-2.5 font-medium text-sm rounded-full transition-all duration-300 btn-animate ${
                     activeTab === tab.id
                       ? 'bg-[#3000d9] text-white'
                       : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'

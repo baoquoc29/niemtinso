@@ -145,12 +145,12 @@ const ActivitiesPage = () => {
             className={`flex flex-col items-center mb-8 gap-4 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}
           >
             {/* Tabs */}
-            <div className="flex flex-wrap gap-0 justify-center">
+            <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-2.5 font-medium text-sm transition-all duration-300 ${
+                  className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 btn-animate ${
                     activeTab === tab.id
                       ? 'bg-[#3000d9] text-white'
                       : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
