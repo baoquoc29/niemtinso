@@ -178,7 +178,7 @@ export const translations = {
       registerMember: 'Đăng Ký Thành Viên',
       registerButton: 'Đăng ký ngay',
       connectWithUs: 'Kết nối với DTA nhiều hơn tại đây',
-      copyright: '2025 LIÊN MINH NIỀM TIN SỐ © Bản quyền thuộc về Hiệp hội An ninh mạng quốc gia',
+      copyright: '2025 LIÊN MINH NIỀM TIN SỐ',
       quickLinks: {
         home: 'Trang chủ',
         about: 'Về chúng tôi',

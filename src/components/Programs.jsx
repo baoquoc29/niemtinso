@@ -117,7 +117,8 @@ const Programs = () => {
           </div>
 
           {/* Card 2 - Top Right (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-3xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-auto md:h-[240px] lg:h-[230px] card-animate">
+          {/* <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-3xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-auto md:h-[240px] lg:h-[230px] card-animate"> */}
+            <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-3xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-auto md:h-[240px] lg:h-[320px] card-animate">
             <img 
               src="/images/hd2026-02.jpg" 
               alt="Hành động 2026" 
@@ -126,7 +127,7 @@ const Programs = () => {
           </div>
 
           {/* Card 3 - Middle Right (Image Only) */}
-          <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px] card-animate">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[290px] card-animate">
             <img 
               src="/images/hd2026-03.jpg" 
               alt="Hành động 2026" 
@@ -135,7 +136,8 @@ const Programs = () => {
           </div>
 
           {/* Card 4 - Bottom Right (Image Only) */}
-          <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px] card-animate">
+          {/* <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px] card-animate"> */}
+          <div className=" overflow-hidden rounded-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[290px] card-animate">
             <img 
               src="/images/hd2026-04.jpg" 
               alt="Hành động 2026" 
