@@ -33,6 +33,7 @@ const AboutPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [headerRef, headerVisible] = useScrollAnimation();
   const [contentRef, contentVisible] = useScrollAnimation();
+  const [scale, setScale] = useState(1);
 
   const tabs = [
     { id: 'introduction', label: 'Giới thiệu về liên minh' },
@@ -257,9 +258,20 @@ const AboutPage = () => {
       content: (
         <div className="space-y-8">
           <div className="text-center mb-8">
-            <p className="text-lg text-gray-700">
-              Nội dung đang được cập nhật...
+            <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Ngày 17 tháng 11 năm 2023, Bộ Nội Vụ đã phê duyệt Điều lệ Hiệp hội An ninh mạng quốc gia
             </p>
+          </div>
+          <div className="w-full bg-[#eeeeee] py-16 flex flex-col items-center">
+            <div className='cursor-zoom-in hover:scale-[1.02] transition-transform'>
+              <img src="/images/dieu-le-NCA.png" alt="Điều lệ NCA" className="max-w-[420px] w-full object-contain"/>
+              <a
+                href="#"
+                className="block text-center text-blue-600 text-sm mt-6 hover:underline"
+              >
+                Xem thông tin chi tiết tại đây
+              </a>
+            </div>
           </div>
         </div>
       )

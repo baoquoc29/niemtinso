@@ -63,6 +63,21 @@ const FeaturedProjects = () => {
       description: t.projects.project3.description,
       category: 'initiatives',
     },
+    {
+      id: 5,
+      image: '/images/main.jpg',
+      title: t.projects.project3.title,
+      description: t.projects.project3.description,
+      category: 'initiatives',
+    },
+    {
+      id: 6,
+      image: '/images/main.jpg',
+      title: t.projects.project3.title,
+      description: t.projects.project3.description,
+      category: 'initiatives',
+    },
+    
   ];
 
   const filteredProjects = activeFilter === 'all' 
