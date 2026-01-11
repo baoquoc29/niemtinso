@@ -97,7 +97,7 @@ export const translations = {
       },
       individual2: {
         role: 'RAPPER',
-        description: 'Nguồn khữiêm cảm hứng tích cực',
+        description: 'Nguồn truyền cảm hứng tích cực',
       },
       individual3: {
         role: 'HOA HẬU',

@@ -32,28 +32,36 @@ const FeaturedProjects = () => {
   const [activeFilter, setActiveFilter] = useState('posts');
   const [headerRef, headerVisible] = useScrollAnimation();
   const [gridRef, gridVisible] = useScrollAnimation();
+  const [open, setOpen] = useState(false);
 
   const projects = [
     {
       id: 1,
-      image: null,
+      image: '/images/KOL_2025-451.jpg',
       title: t.projects.project1.title,
       description: t.projects.project1.description,
       category: 'posts',
     },
     {
       id: 2,
-      image: null,
+      image: '/images/khong1minh/khong1minh9.jpg',
       title: t.projects.project2.title,
       description: t.projects.project2.description,
-      category: 'initiatives',
+      category: 'posts',
     },
     {
       id: 3,
-      image: null,
+      image: '/images/main.jpg',
       title: t.projects.project3.title,
       description: t.projects.project3.description,
       category: 'posts',
+    },
+    {
+      id: 4,
+      image: '/images/main.jpg',
+      title: t.projects.project3.title,
+      description: t.projects.project3.description,
+      category: 'initiatives',
     },
   ];
 
@@ -116,17 +124,21 @@ const FeaturedProjects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 card-animate"
+              className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 card-animate relative p-1"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Image Placeholder */}
-              <div className="relative h-48 md:h-56 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
+              <div className="relative h-48 md:h-56 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden rounded-xl">
                 {project.image ? (
+                  <>
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  {/* Fade bottom */}
+                  <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 rounded-b-xl bg-gradient-to-b from-transparent to-white" />
+                  </>
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <svg
@@ -146,27 +158,36 @@ const FeaturedProjects = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 leading-tight">
+                <h3 className="text-lg md:text-2xl font-bold text-indigo-600 mb-3 leading-tight text-center">
                   {project.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
+                
+                <div
+                  className={`px-6 transition-all duration-500 overflow-hidden duration-1000 ${
+                    open ? "max-h-96 opacity-100" : "max-h-0 opacity-90"
+                  }`}
+                >
+                  <p className="text-sm text-gray-600 mb-4 leading-relaxed text-center">
+                    {project.description}
+                  </p>
+                </div>
 
                 {/* Action Button */}
-                <button className="bg-[#3000d9] hover:bg-[#2500b0] text-white p-2.5 rounded-full transition-all duration-300 group-hover:translate-x-1 inline-flex items-center justify-center">
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
+                <div className="flex justify-center">
+                  <button onClick={() => setOpen(!open)} className="flex bg-[#3000d9] hover:bg-[#2500b0] text-white p-2.5 rounded-full transition-all duration-300 group-hover:translate-x-1 items-center justify-center">
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           ))}

@@ -117,7 +117,7 @@ const LibraryPage = () => {
           {/* Header with Tabs and Button */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4 animate-fade-in-down">
             {/* Tabs */}
-            <div className="flex flex-wrap gap-0">
+            <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
