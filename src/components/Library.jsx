@@ -97,7 +97,7 @@ const Library = () => {
   const smallItems = filteredItems.filter((item) => item.type === 'small');
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-6 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div 

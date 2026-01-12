@@ -64,13 +64,12 @@ const AboutPage = () => {
               </svg>
 
               {/* Logo ở giữa */}
-              <div className="absolute z-20 text-center bg-white p-8 rounded-lg shadow-lg">
+              <div className="absolute z-20 text-center  p-8 rounded-lg ">
                 <img 
                   src="/images/DTA_Logo_Final_Color.png" 
                   alt="DTA Logo" 
                   className="w-56 h-56 object-contain mx-auto mb-4"
                 />
-                <h3 className="text-3xl font-bold text-blue-900">LOGO DTA</h3>
               </div>
 
               {/* 1. TÊN GỌI - Góc trái trên (thụt vào) */}
