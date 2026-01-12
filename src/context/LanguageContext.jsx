@@ -18,7 +18,7 @@ export const translations = {
     hero: {
       title1: 'ẢNH HƯỞNG TRÁCH NHIỆM',
       title2: 'DẪN DẮT NIỀM TIN',
-      subtitle: 'KIẾN TẠO NIỀM TIN CÙNG LIÊN MINH NIỀM TIN SỐ NGAY HÔM NAY!KIẾN TẠO NIỀM TIN CÙNG LIÊN MINH NIỀM TIN SỐ NGAY HÔM NAY!',
+      subtitle: 'KIẾN TẠO NIỀM TIN CÙNG LIÊN MINH NIỀM TIN SỐ NGAY HÔM NAY!',
       button: 'Chi tiết',
     },
     // Programs
@@ -209,9 +209,9 @@ export const translations = {
     registerButton: 'Register Member',
     // Hero
     hero: {
-      title1: 'Influential responsibility',
-      title2: 'leading trust',
-      subtitle: 'Our latest model with frontier intelligence built for speed can help you quickly learn, build and plan anything.',
+      title1: 'IMPACT RESPONSIBILITY',
+      title2: 'LEADING TRUST',
+      subtitle: 'BUILD TRUST TOGETHER WITH THE DIGITAL TRUST ALLIANCE TODAY!',
       button: 'Learn More',
     },
     // Programs

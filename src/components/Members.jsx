@@ -70,7 +70,7 @@ const Members = () => {
     },
     {
       id: 4,
-      name: 'KOL Meichen',
+      name: 'KOL Meichan',
       role: t.members.individual4.role,
       description: t.members.individual4.description,
       gradient: 'from-purple-400 via-purple-500 to-violet-400',
@@ -93,7 +93,7 @@ const Members = () => {
           ref={headerRef}
           className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <p className="text-sm md:text-base text-red-500 mb-2 uppercase tracking-wide font-medium">
+          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
             {t.members.subtitle}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
@@ -167,7 +167,7 @@ const Members = () => {
                   <div 
                     className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
                     style={
-                      (person.name.includes('Khánh Vy') || person.name.includes('Đen Vâu') || person.name.includes('Bảo Ngọc') || person.name.includes('Meichen')) ? {
+                      (person.name.includes('Khánh Vy') || person.name.includes('Đen Vâu') || person.name.includes('Bảo Ngọc') || person.name.includes('Meichan')) ? {
                         backgroundImage: 'url(/images/background_kol_card.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
@@ -176,7 +176,7 @@ const Members = () => {
                     }
                   >
                     {/* Badge */}
-                    <div className="absolute z-10" style={person.name.includes('Khánh Vy') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Đen Vâu') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Bảo Ngọc') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Meichen') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : {top: '16px', left: '16px'}}>
+                    <div className="absolute z-10" style={person.name.includes('Khánh Vy') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Đen Vâu') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Bảo Ngọc') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Meichan') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : {top: '16px', left: '16px'}}>
                       {person.name.includes('Khánh Vy') ? (
                         <div>
                           <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">KHÁNH VY</h3>
@@ -192,9 +192,9 @@ const Members = () => {
                           <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">BẢO NGỌC</h3>
                           <p className="text-white font-semibold text-lg drop-shadow-md">HOA HẬU</p>
                         </div>
-                      ) : person.name.includes('Meichen') ? (
+                      ) : person.name.includes('Meichan') ? (
                         <div>
-                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">MEICHEN</h3>
+                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">MEICHAN</h3>
                           <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
                         </div>
                       ) : (
@@ -221,7 +221,7 @@ const Members = () => {
                             if (person.name.includes('Khánh Vy')) return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
                             if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
                             if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
-                            if (person.name.includes('Meichen')) return { transform: 'translateX(70px) translateY(20px) scale(0.8)' };
+                            if (person.name.includes('Meichan')) return { transform: 'translateX(70px) translateY(20px) scale(0.8)' };
                             return {};
                           })()}
                         />
@@ -390,7 +390,7 @@ const Members = () => {
                 <div className="text-4xl md:text-5xl font-bold text-[#3000d9] mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-red-500 font-bold">
+                <div className="text-sm md:text-base text-black font-bold">
                   {stat.label}
                 </div>
               </div>
