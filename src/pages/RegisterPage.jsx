@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function RegisterPage() {
@@ -7,13 +8,54 @@ export default function RegisterPage() {
     const tfn = typeof t === "function" ? t : (k) => (t && t[k]) || k;
 
     const [activeTab, setActiveTab] = useState("personal");
+    const navigate = useNavigate();
 
     // --- Members for personal and organization (separate slides) ---
     const personalMembers = [
-        { id: 1, title: "Nguyễn Văn A", meta: "Chuyên gia CNTT", img: "/src/assets/member-personal1.jpg" },
-        { id: 2, title: "Trần Thị B", meta: "An ninh mạng", img: "/src/assets/member-personal2.jpg" },
-        { id: 3, title: "Lê Văn C", meta: "Chuyên viên bảo mật", img: "/src/assets/member-personal3.jpg" },
-        { id: 4, title: "Phạm Thị D", meta: "Nghiên cứu viên", img: "/src/assets/member-personal4.jpg" },
+        {
+            id: 1,
+            title: 'Khánh Vy',
+            meta: 'MC',
+            img: '/images/members/khanh-vy.jpg',
+            imgStyle: { objectPosition: 'center top', width: '70px', height: '60px', borderRadius: '50%' },
+        },
+        {
+            id: 3,
+            title: 'Đỗ Quang Đăng',
+            meta: 'Biên đạo',
+            img: '/images/members/do-quang-dang.jpg',
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', borderRadius: '50%' },
+        },
+        {
+            id: 4,
+            title: 'Nguyễn Sỹ Tuấn',
+            meta: 'Nghệ sĩ',
+            img: '/images/members/nguyen-sy-tuan.jpg',
+            imgStyle: { objectPosition: 'center top', width: '70px', height: '70px', borderRadius: '50%', transition: 'transform 0.3s' },
+            zoom: true,
+        },
+        {
+            id: 5,
+            title: 'Nguyễn Việt Hoàng',
+            meta: 'Ca sĩ',
+            img: '/images/members/nguyen-viet-hoang.jpg',
+            imgStyle: { objectPosition: 'center top', width: '70px', height: '70px', borderRadius: '50%', transition: 'transform 0.1s' },
+            zoom: true,
+        },
+        {
+            id: 6,
+            title: 'Tiểu Vy',
+            meta: 'Hoa hậu',
+            img: '/images/members/tieu-vy.jpg',
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', borderRadius: '50%' },
+        },
+        {
+            id: 7,
+            title: 'Đen Vâu',
+            meta: 'Rapper',
+            img: '/images/members/den-vau.jpg',
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', borderRadius: '50%' },
+        },
     ];
 
     const orgMembers = [
@@ -170,7 +212,15 @@ export default function RegisterPage() {
                                                 className="flex gap-4 items-start border-b last:border-b-0 pb-3"
                                                 style={{ height: `${itemHeight}px`, listStyle: "none" }}
                                             >
-                                                <img src={item.img} alt="" className="w-20 h-12 object-cover rounded-sm flex-shrink-0 mt-1" />
+                                                <img
+                                                    src={item.img}
+                                                    alt=""
+                                                    className={
+                                                        `object-cover flex-shrink-0 mt-1` +
+                                                        (item.zoom ? ' hover:scale-110 active:scale-95 cursor-pointer' : '')
+                                                    }
+                                                    style={item.imgStyle}
+                                                />
                                                 <div className="flex-1">
                                                     <a href="#" className="text-sm font-medium text-gray-900 hover:underline">{item.title}</a>
                                                     <div className="text-xs text-gray-400 mt-1">{item.meta || item.date}</div>
@@ -181,9 +231,26 @@ export default function RegisterPage() {
                                 </div>
 
                                 <div className="text-center mt-4">
-                                    <button onClick={() => setScrollIndex((s) => s + 1)} className="bg-white border border-[#3000d9] text-[#3000d9] px-4 py-2 rounded text-sm hover:bg-gray-50 btn-animate">
-                                        XEM THÊM
-                                    </button>
+                                    {activeTab === "personal" && (
+                                        <button
+                                            onClick={() => {
+                                                navigate("/members", { state: { tab: "individual" } });
+                                            }}
+                                            className="bg-white border border-[#3000d9] text-[#3000d9] px-4 py-2 rounded text-sm hover:bg-gray-50 btn-animate"
+                                        >
+                                            XEM THÊM
+                                        </button>
+                                    )}
+                                    {activeTab === "organization" && (
+                                        <button
+                                            onClick={() => {
+                                                navigate("/members", { state: { tab: "organization" } });
+                                            }}
+                                            className="bg-white border border-[#3000d9] text-[#3000d9] px-4 py-2 rounded text-sm hover:bg-gray-50 btn-animate"
+                                        >
+                                            XEM THÊM
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         </aside>

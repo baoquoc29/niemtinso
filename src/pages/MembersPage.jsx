@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 // Hook để phát hiện scroll
@@ -29,9 +30,17 @@ const useScrollAnimation = () => {
 
 const MembersPage = () => {
   const { t } = useLanguage();
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState('organization');
   const [headerRef, headerVisible] = useScrollAnimation();
   const [tableRef, tableVisible] = useScrollAnimation();
+
+  // Nếu có state từ điều hướng, tự động chuyển tab
+  useEffect(() => {
+    if (location.state && location.state.tab === 'individual') {
+      setActiveTab('individual');
+    }
+  }, [location.state]);
 
   const tabs = [
     { id: 'organization', label: 'Hội viên Tổ chức/Doanh nghiệp' },
@@ -96,36 +105,45 @@ const MembersPage = () => {
       id: 1,
       name: 'MC Khánh Vy',
       avatar: '/images/members/khanh-vy.jpg',
+      avatarStyle: { objectPosition: 'center ', width: '70px', height: '60px', borderRadius: '12px' },
     },
     {
       id: 2,
       name: 'Bảo Ngọc',
       avatar: '/images/members/bao-ngoc.webp',
+      avatarStyle: { objectPosition: 'center', width: '60px', height: '80px', borderRadius: '16px' },
     },
     {
       id: 3,
       name: 'Đỗ Quang Đăng',
       avatar: '/images/members/do-quang-dang.jpg',
+      avatarStyle: { objectPosition: 'center', width: '80px', height: '60px', borderRadius: '8px' },
     },
     {
       id: 4,
       name: 'Nguyễn Sỹ Tuấn',
       avatar: '/images/members/nguyen-sy-tuan.jpg',
+      avatarStyle: { objectPosition: 'center', width: '70px', height: '70px', borderRadius: '50%', transition: 'transform 0.4s' },
+      zoom: true,
     },
     {
       id: 5,
       name: 'Nguyễn Việt Hoàng',
       avatar: '/images/members/nguyen-viet-hoang.jpg',
+      avatarStyle: { objectPosition: 'center top', width: '70px', height: '70px', borderRadius: '16px', transition: 'transform 0.4s' },
+      zoom: true,
     },
     {
       id: 6,
       name: 'Tiểu Vy',
       avatar: '/images/members/tieu-vy.jpg',
+      avatarStyle: { objectPosition: 'center', width: '70px', height: '70px', borderRadius: '12px' },
     },
     {
       id: 7,
       name: 'Đen Vâu',
       avatar: '/images/members/den-vau.jpg',
+      avatarStyle: { objectPosition: 'center', width: '80px', height: '60px', borderRadius: '8px' },
     },
   ];
 
@@ -294,7 +312,15 @@ const MembersPage = () => {
                       </span>
                       <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
                         {member.avatar ? (
-                          <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" />
+                          <img
+                            src={member.avatar}
+                            alt={member.name}
+                            className={
+                              'object-cover flex-shrink-0 mt-1' +
+                              (member.zoom ? ' hover:scale-110 active:scale-95 cursor-pointer' : '')
+                            }
+                            style={member.avatarStyle}
+                          />
                         ) : (
                           <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -340,7 +366,7 @@ const MembersPage = () => {
                           <td className="px-6 py-4">
                             <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
                               {member.avatar ? (
-                                <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" />
+                                <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" style={member.avatarStyle} />
                               ) : (
                                 <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />

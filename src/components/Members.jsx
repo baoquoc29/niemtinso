@@ -155,96 +155,220 @@ const Members = () => {
 
         {/* Individuals Cards */}
         {activeTab === 'individuals' && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {individuals.map((person, index) => (
-              <div
-                key={person.id}
-                className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                {/* Card with gradient */}
-                <div 
-                  // className={`relative overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
-                  className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
-                  style={
-                    (person.name.includes('Khánh Vy') || person.name.includes('Đen Vâu') || person.name.includes('Bảo Ngọc') || person.name.includes('Meichen')) ? {
-                      backgroundImage: 'url(/images/background_kol_card.png)',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat'
-                    } : {}
-                  }
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {individuals.map((person, index) => (
+                <div
+                  key={person.id}
+                  className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white"
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  {/* Badge */}
-                  <div className="absolute z-10" style={person.name.includes('Khánh Vy') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Đen Vâu') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Bảo Ngọc') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Meichen') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : {top: '16px', left: '16px'}}>
-                    {person.name.includes('Khánh Vy') ? (
-                      <div>
-                        <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">KHÁNH VY</h3>
-                        <p className="text-white font-semibold text-lg drop-shadow-md">MC</p>
-                      </div>
-                    ) : person.name.includes('Đen Vâu') ? (
-                      <div>
-                        <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">ĐEN VÂU</h3>
-                        <p className="text-white font-semibold text-lg drop-shadow-md">RAPPER</p>
-                      </div>
-                    ) : person.name.includes('Bảo Ngọc') ? (
-                      <div>
-                        <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">BẢO NGỌC</h3>
-                        <p className="text-white font-semibold text-lg drop-shadow-md">HOA HẬU</p>
-                      </div>
-                    ) : person.name.includes('Meichen') ? (
-                      <div>
-                        <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">MEICHEN</h3>
-                        <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
-                      </div>
-                    ) : (
-                      <div>
-                        <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-800">
-                          {person.name.split('.')[0]}
-                        </span>
-                        <span className="block mt-1 text-white/90 text-xs font-medium">
-                          {person.role}
-                        </span>
-                      </div>
-                    )}
+                  {/* Card with gradient */}
+                  <div 
+                    className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
+                    style={
+                      (person.name.includes('Khánh Vy') || person.name.includes('Đen Vâu') || person.name.includes('Bảo Ngọc') || person.name.includes('Meichen')) ? {
+                        backgroundImage: 'url(/images/background_kol_card.png)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                      } : {}
+                    }
+                  >
+                    {/* Badge */}
+                    <div className="absolute z-10" style={person.name.includes('Khánh Vy') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Đen Vâu') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Bảo Ngọc') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Meichen') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : {top: '16px', left: '16px'}}>
+                      {person.name.includes('Khánh Vy') ? (
+                        <div>
+                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">KHÁNH VY</h3>
+                          <p className="text-white font-semibold text-lg drop-shadow-md">MC</p>
+                        </div>
+                      ) : person.name.includes('Đen Vâu') ? (
+                        <div>
+                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">ĐEN VÂU</h3>
+                          <p className="text-white font-semibold text-lg drop-shadow-md">RAPPER</p>
+                        </div>
+                      ) : person.name.includes('Bảo Ngọc') ? (
+                        <div>
+                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">BẢO NGỌC</h3>
+                          <p className="text-white font-semibold text-lg drop-shadow-md">HOA HẬU</p>
+                        </div>
+                      ) : person.name.includes('Meichen') ? (
+                        <div>
+                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">MEICHEN</h3>
+                          <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
+                        </div>
+                      ) : (
+                        <div>
+                          <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-800">
+                            {person.name.split('.')[0]}
+                          </span>
+                          <span className="block mt-1 text-white/90 text-xs font-medium">
+                            {person.role}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Image placeholder */}
+                    <div className="absolute inset-0 flex items-end justify-center">
+                      {person.image ? (
+                        <>
+                        <img
+                          src={person.image}
+                          alt={person.name}
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                          style={(() => {
+                            if (person.name.includes('Khánh Vy')) return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
+                            if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
+                            if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
+                            if (person.name.includes('Meichen')) return { transform: 'translateX(70px) translateY(20px) scale(0.8)' };
+                            return {};
+                          })()}
+                        />
+                        <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                        </>
+                      ) : (
+                        <div className="w-32 h-32 mb-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <svg className="w-16 h-16 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        </div>
+                      )}
+                    </div>
                   </div>
 
-                  {/* Image placeholder */}
-                  <div className="absolute inset-0 flex items-end justify-center">
-                    {person.image ? (
-                      <>
-                      <img
-                        src={person.image}
-                        alt={person.name}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                        style={(() => {
-                          if (person.name.includes('Khánh Vy')) return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
-                          if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
-                          if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
-                          if (person.name.includes('Meichen')) return { transform: 'translateX(70px) translateY(20px) scale(0.9)' };
-                          return {};
-                        })()}
-                      />
-                      <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
-                      </>
-                    ) : (
-                      <div className="w-32 h-32 mb-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <svg className="w-16 h-16 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                      </div>
-                    )}
+                  {/* Info */}
+                  <div className="text-center py-2">
+                    <h3 className="font-bold text-gray-900 mb-1">{person.name}</h3>
+                    <p className="text-sm text-gray-500 line-clamp-2">{person.description}</p>
                   </div>
                 </div>
-
-                {/* Info */}
+              ))}
+            </div>
+            {/* Mono & Tieu Vy Cards Below */}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 mb-12">
+              {/* MONO Card */}
+              <div className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white w-full max-w-xs">
+                <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-blue-400 via-blue-500 to-cyan-400 h-[280px] md:h-[300px] mb-4"
+                  style={{
+                    backgroundImage: 'url(/images/background_kol_card.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }}>
+                  <div className="absolute z-10" style={{top: '20px', left: '20px', width: '260px', height: '24px'}}>
+                    <div>
+                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">MONO</h3>
+                      <p className="text-white font-semibold text-lg drop-shadow-md">CA SĨ</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 flex items-end justify-center">
+                    <img
+                      src="/images/Mono.png"
+                      alt="MONO"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      style={{ transform: 'translateX(60px) translateY(20px) scale(1.2)' }}
+                    />
+                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                  </div>
+                </div>
                 <div className="text-center py-2">
-                  <h3 className="font-bold text-gray-900 mb-1">{person.name}</h3>
-                  <p className="text-sm text-gray-500 line-clamp-2">{person.description}</p>
+                  <h3 className="font-bold text-gray-900 mb-1">MONO</h3>
+                  <p className="text-sm text-gray-500 line-clamp-2">Ca sĩ trẻ nổi bật với phong cách hiện đại.</p>
                 </div>
               </div>
-            ))}
-          </div>
+              {/* Tieu Vy Card */}
+              <div className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white w-full max-w-xs">
+                <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-pink-400 via-pink-500 to-rose-400 h-[280px] md:h-[300px] mb-4"
+                  style={{
+                    backgroundImage: 'url(/images/background_kol_card.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }}>
+                  <div className="absolute z-10" style={{top: '20px', left: '20px', width: '260px', height: '24px'}}>
+                    <div>
+                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">TIỂU VY</h3>
+                      <p className="text-white font-semibold text-lg drop-shadow-md">HOA HẬU</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 flex items-end justify-center">
+                    <img
+                      src="/images/Tieu_Vy.png"
+                      alt="TIỂU VY"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      style={{ transform: 'translateX(60px) translateY(30px) scale(0.9)' }}
+                    />
+                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                  </div>
+                </div>
+                <div className="text-center py-2">
+                  <h3 className="font-bold text-gray-900 mb-1">TIỂU VY</h3>
+                  <p className="text-sm text-gray-500 line-clamp-2">Hoa hậu Việt Nam, biểu tượng sắc đẹp và trí tuệ trẻ.</p>
+                </div>
+              </div>
+              {/* Nguyen Si Tuan Card */}
+              <div className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white w-full max-w-xs">
+                <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-green-400 via-green-500 to-emerald-400 h-[280px] md:h-[300px] mb-4"
+                  style={{
+                    backgroundImage: 'url(/images/background_kol_card.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }}>
+                  <div className="absolute z-10" style={{top: '20px', left: '20px', width: '260px', height: '24px'}}>
+                    <div>
+                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">NGUYỄN SĨ TUẤN</h3>
+                      <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 flex items-end justify-center">
+                    <img
+                      src="/images/Nguyen_Si_Tuan.png"
+                      alt="NGUYỄN SĨ TUẤN"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      style={{ transform: 'translateX(50px) translateY(20px) scale(0.9)' }}
+                    />
+                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                  </div>
+                </div>
+                <div className="text-center py-2">
+                  <h3 className="font-bold text-gray-900 mb-1">NGUYỄN SĨ TUẤN</h3>
+                  <p className="text-sm text-gray-500 line-clamp-2">KOL nổi bật với nhiều hoạt động cộng đồng.</p>
+                </div>
+              </div>
+              {/* Do Dang Quang Card */}
+              <div className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white w-full max-w-xs">
+                <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-400 h-[280px] md:h-[300px] mb-4"
+                  style={{
+                    backgroundImage: 'url(/images/background_kol_card.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }}>
+                  <div className="absolute z-10" style={{top: '20px', left: '20px', width: '260px', height: '24px'}}>
+                    <div>
+                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">ĐỖ ĐĂNG QUANG</h3>
+                      <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 flex items-end justify-center">
+                    <img
+                      src="/images/Do_Dang_Quang.png"
+                      alt="ĐỖ ĐĂNG QUANG"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      style={{ transform: 'translateX(50px) translateY(-80px) scale(1.5)' }}
+                    />
+                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                  </div>
+                </div>
+                <div className="text-center py-2">
+                  <h3 className="font-bold text-gray-900 mb-1">ĐỖ ĐĂNG QUANG</h3>
+                  <p className="text-sm text-gray-500 line-clamp-2">KOL trẻ năng động, sáng tạo và truyền cảm hứng.</p>
+                </div>
+              </div>
+            </div>
+          </>
         )}
 
         {/* Stats Section */}
