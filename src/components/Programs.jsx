@@ -94,7 +94,7 @@ const Programs = () => {
           ref={headerRef}
           className={`text-center mb-12 md:mb-16 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <p className="text-sm md:text-base text-red-500 mb-2 uppercase tracking-wide font-medium">
+          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
             {t.programs.sectionSubtitle}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9]">
