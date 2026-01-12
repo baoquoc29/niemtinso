@@ -93,7 +93,7 @@ const Members = () => {
           ref={headerRef}
           className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
+          <p className="text-sm md:text-base text-red-500 mb-2 uppercase tracking-wide font-medium">
             {t.members.subtitle}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
@@ -390,7 +390,7 @@ const Members = () => {
                 <div className="text-4xl md:text-5xl font-bold text-[#3000d9] mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-black">
+                <div className="text-sm md:text-base text-red-500 font-bold">
                   {stat.label}
                 </div>
               </div>

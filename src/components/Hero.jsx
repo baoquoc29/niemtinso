@@ -117,7 +117,7 @@ const Hero = () => {
         <div className="min-h-[calc(100vh-5rem)] flex items-center">
           <div className="max-w-xl py-12 lg:py-20">
             {/* Main Heading */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight animate-fade-in-up">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight animate-fade-in-up">
               {t.hero.title1}
               <br />
               {t.hero.title2}

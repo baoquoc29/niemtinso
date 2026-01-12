@@ -16,9 +16,9 @@ export const translations = {
     registerButton: 'Đăng ký thành viên',
     // Hero
     hero: {
-      title1: 'Ảnh hưởng trách nhiệm',
-      title2: 'dẫn dắt niềm tin',
-      subtitle: 'Mô hình mới nhất của chúng tôi với trí thông minh tiên tiến được xây dựng để tăng tốc độ có thể giúp bạn nhanh chóng học hỏi, xây dựng và lên kế hoạch cho bất cứ điều gì.',
+      title1: 'ẢNH HƯỞNG TRÁCH NHIỆM',
+      title2: 'DẪN DẮT NIỀM TIN',
+      subtitle: 'KIẾN TẠO NIỀM TIN CÙNG LIÊN MINH NIỀM TIN SỐ NGAY HÔM NAY!KIẾN TẠO NIỀM TIN CÙNG LIÊN MINH NIỀM TIN SỐ NGAY HÔM NAY!',
       button: 'Chi tiết',
     },
     // Programs
