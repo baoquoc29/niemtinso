@@ -87,17 +87,14 @@ const Programs = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-8 md:py-12 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div 
           ref={headerRef}
-          className={`text-center mb-12 md:mb-16 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`text-center mb-6 md:mb-8 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
-            {t.programs.sectionSubtitle}
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9]">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#3000d9]">
             {t.programs.sectionTitle}
           </h2>
         </div>
@@ -105,10 +102,10 @@ const Programs = () => {
         {/* Programs Grid */}
         <div 
           ref={gridRef}
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           {/* Card 1 - Large Left (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate">
+          <div className="md:col-span-1 lg:col-span-2 lg:row-span-2 relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[300px] md:h-[350px] lg:h-[400px] bg-white">
             <img 
               src="/images/hd2026.jpg" 
               alt="Hành động 2026" 
@@ -117,17 +114,16 @@ const Programs = () => {
           </div>
 
           {/* Card 2 - Top Right (Image Only) */}
-          {/* <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-3xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-auto md:h-[240px] lg:h-[230px] card-animate"> */}
-            <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-3xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-auto md:h-[240px] lg:h-[320px] card-animate">
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[170px] lg:h-[195px] bg-white">
             <img 
               src="/images/hd2026-02.jpg" 
               alt="Hành động 2026" 
-              className="w-full h-auto md:h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 
           {/* Card 3 - Middle Right (Image Only) */}
-          <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[290px] card-animate">
+          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[170px] lg:h-[195px] bg-white">
             <img 
               src="/images/hd2026-03.jpg" 
               alt="Hành động 2026" 
@@ -136,8 +132,7 @@ const Programs = () => {
           </div>
 
           {/* Card 4 - Bottom Right (Image Only) */}
-          {/* <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[230px] card-animate"> */}
-          <div className=" overflow-hidden rounded-2xl transition-all duration-300 group h-[250px] md:h-[240px] lg:h-[290px] card-animate">
+          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[170px] lg:h-[195px] bg-white">
             <img 
               src="/images/hd2026-04.jpg" 
               alt="Hành động 2026" 
@@ -146,20 +141,20 @@ const Programs = () => {
           </div>
 
           {/* Card 5 - Bottom Left (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate">
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[200px] lg:h-[220px] bg-white">
             <img 
               src="/images/hd2026-05.jpg" 
               alt="Hành động 2026" 
-              className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 
           {/* Card 6 - Bottom Right (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate">
+          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[200px] lg:h-[220px] bg-white">
             <img 
               src="/images/hd2026-06.jpg" 
               alt="Hành động 2026" 
-              className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>

@@ -34,6 +34,8 @@ const MembersPage = () => {
   const [activeTab, setActiveTab] = useState('organization');
   const [headerRef, headerVisible] = useScrollAnimation();
   const [tableRef, tableVisible] = useScrollAnimation();
+  const [visibleOrgCount, setVisibleOrgCount] = useState(9);
+  const [visibleIndCount, setVisibleIndCount] = useState(9);
 
   // Nếu có state từ điều hướng, tự động chuyển tab
   useEffect(() => {
@@ -50,53 +52,83 @@ const MembersPage = () => {
   const organizationMembers = [
     {
       id: 1,
-      name: 'Công ty Cổ phần VNG',
-      logo: '/images/members/vng.png',
+      name: 'Công ty Cổ phần Wind Eco',
+      logo: '/images/company/1.Công ty CP Wind Eco.webp',
     },
     {
       id: 2,
-      name: 'Ngân hàng TNHH MTV Hong Leong Việt Nam',
-      logo: '/images/members/hongleong.png',
+      name: 'Công ty Cổ phần Gió Media (Wind Media)',
+      logo: '/images/company/Công ty CP Gió Media (Wind Media).png',
     },
     {
       id: 3,
-      name: 'Cục Công nghệ thông tin, Ngân hàng Nhà nước',
-      logo: '/images/members/sbv.png',
+      name: 'Công ty Cổ phần IEC Consulting',
+      logo: '/images/company/Công ty CP IEC Consulting.png',
     },
     {
       id: 4,
-      name: 'Công ty Cổ phần BKAV',
-      logo: '/images/members/bkav.png',
+      name: 'Công ty Cổ phần Kênh 28 Entertainment',
+      logo: '/images/company/Công ty CP Kênh 28 Entertainment.webp',
     },
     {
       id: 5,
-      name: 'Công ty Cổ phần thương mại Công nghệ Go Viet',
-      logo: '/images/members/gojek.png',
+      name: 'Công ty Cổ phần Metub Việt Nam',
+      logo: '/images/company/Công ty CP Metub Việt Nam.jpg',
     },
     {
       id: 6,
-      name: 'Trường Đại học Kỹ thuật - Hậu cần Công an nhân dân',
-      logo: '/images/members/dhkthc.png',
+      name: 'Công ty Cổ phần Tập đoàn MCV (MCV Group)',
+      logo: '/images/company/Công ty CP Tập đoàn MCV (MCV Group).jpg',
     },
     {
       id: 7,
-      name: 'Tập đoàn Điện lực Việt Nam',
-      logo: '/images/members/evn.png',
+      name: 'Công ty Cổ phần Tập đoàn Đất Việt (DatViet VAC)',
+      logo: '/images/company/Công ty CP Tập đoàn Đất Việt (DatViet VAC).png',
     },
     {
       id: 8,
-      name: 'Tổng công ty Viễn thông MobiFone',
-      logo: '/images/members/mobifone.png',
+      name: 'Công ty Cổ phần VCCorp',
+      logo: '/images/company/Công ty CP VCCorp.png',
     },
     {
       id: 9,
-      name: 'Công ty Cổ phần FPT',
-      logo: '/images/members/fpt.png',
+      name: 'Công ty Cổ phần dịch vụ quảng cáo & truyền thông SChannel',
+      logo: '/images/company/Công ty CP dịch vụ quảng cáo & truyền thông SChannel.png',
     },
     {
       id: 10,
-      name: 'Tập đoàn Công nghiệp - Viễn thông Quân đội',
-      logo: '/images/members/viettel.png',
+      name: 'Công ty TNHH Orange Agency & Biết Thế Network',
+      logo: '/images/company/Công ty TNHH Orange Agency & Biết Thế Network.jpg',
+    },
+    {
+      id: 11,
+      name: 'Công ty TNHH Shopee',
+      logo: '/images/company/Công ty TNHH Shopee.png',
+    },
+    {
+      id: 12,
+      name: 'Công ty TNHH Thư viện Pháp luật',
+      logo: '/images/company/Công ty TNHH Thư viện Pháp luật.png',
+    },
+    {
+      id: 13,
+      name: 'Công ty TNHH Truyền thông & Giải trí TVH Media',
+      logo: '/images/company/Công ty TNHH Truyền thông & Giải trí TVH Media.jpg',
+    },
+    {
+      id: 14,
+      name: 'Công ty TNHH Truyền thông iSocial Việt Nam',
+      logo: '/images/company/Công ty TNHH Truyền thông iSocial Việt Nam.png',
+    },
+    {
+      id: 15,
+      name: 'Công ty TNHH truyền thông Vitamin Network',
+      logo: '/images/company/Công ty TNHH truyền thông Vitamin Network.jpg',
+    },
+    {
+      id: 16,
+      name: 'Trường TH, THCS & THPT B.School',
+      logo: '/images/company/Trường TH, THCS & THPT B.School.png',
     },
   ];
 
@@ -152,7 +184,7 @@ const MembersPage = () => {
       <section className="py-8 md:py-10 bg-white min-h-screen">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Tabs */}
-          <div 
+          <div
             ref={headerRef}
             className={`flex justify-center mb-8 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}
           >
@@ -161,11 +193,10 @@ const MembersPage = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-2.5 font-medium text-sm rounded-full transition-all duration-300 btn-animate ${
-                    activeTab === tab.id
-                      ? 'bg-[#3000d9] text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
-                  }`}
+                  className={`px-6 py-2.5 font-medium text-sm rounded-full transition-all duration-300 btn-animate ${activeTab === tab.id
+                    ? 'bg-[#3000d9] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -202,42 +233,38 @@ const MembersPage = () => {
             </div> */}
           </div>
 
-          {/* Title */}
-          <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#3000d9] mb-10 transition-all duration-700 delay-200 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            {activeTab === 'organization' 
-              ? (t.membersPage?.titleOrganization || 'Danh sách Hội viên tổ chức/doanh nghiệp')
-              : (t.membersPage?.titleIndividual || 'Danh sách Hội viên cá nhân')
-            }
-          </h1>
+          {/*/!* Title *!/*/}
+          {/*<h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#3000d9] mb-10 transition-all duration-700 delay-200 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>*/}
+          {/*  {activeTab === 'organization' */}
+          {/*    ? (t.membersPage?.titleOrganization || 'Danh sách Hội viên tổ chức/doanh nghiệp')*/}
+          {/*    : (t.membersPage?.titleIndividual || 'Danh sách Hội viên cá nhân')*/}
+          {/*  }*/}
+          {/*</h1>*/}
 
           {/* Organization Members */}
           {activeTab === 'organization' && (
             <>
-              {/* Mobile & Tablet View - Card Layout */}
-              <div 
+              <div
                 ref={tableRef}
-                className={`lg:hidden grid grid-cols-1 md:grid-cols-2 gap-4 transition-all duration-700 ${tableVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 ${tableVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-                {organizationMembers.map((member, index) => (
-                  <div 
-                    key={member.id} 
-                    className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-all duration-300 card-animate"
+                {organizationMembers.slice(0, visibleOrgCount).map((member, index) => (
+                  <div
+                    key={member.id}
+                    className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 card-animate hover:scale-105"
                     style={{ transitionDelay: `${index * 50}ms` }}
                   >
-                    <div className="flex items-center gap-4">
-                      <span className="flex-shrink-0 w-8 h-8 bg-[#3000d9] text-white rounded-full flex items-center justify-center text-sm font-semibold">
-                        {member.id}
-                      </span>
-                      <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                    <div className="flex flex-col items-center gap-4 text-center">
+                      <div className="w-20 h-20 bg-gray-50 rounded-xl flex items-center justify-center overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                         {member.logo ? (
-                          <img src={member.logo} alt={member.name} className="w-full h-full object-contain p-1" />
+                          <img src={member.logo} alt={member.name} className="w-full h-full object-contain p-2" />
                         ) : (
-                          <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg className="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                           </svg>
                         )}
                       </div>
-                      <h3 className="text-base font-semibold text-gray-900 leading-tight flex-1">
+                      <h3 className="text-base font-semibold text-gray-900 leading-tight">
                         {member.name}
                       </h3>
                     </div>
@@ -245,89 +272,55 @@ const MembersPage = () => {
                 ))}
               </div>
 
-              {/* Desktop View - Table Layout */}
-              <div className="hidden lg:block bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-gray-200">
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9] w-20">
-                          {t.membersPage?.columnNo || 'STT'}
-                        </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9] w-24">
-                          {t.membersPage?.columnLogo || 'Logo'}
-                        </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9]">
-                          {t.membersPage?.columnName || 'Tên tổ chức'}
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {organizationMembers.map((member, index) => (
-                        <tr 
-                          key={member.id} 
-                          className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${
-                            index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
-                          }`}
-                        >
-                          <td className="px-6 py-4 text-sm text-gray-600 text-center">
-                            {member.id}
-                          </td>
-                          <td className="px-6 py-4">
-                            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
-                              {member.logo ? (
-                                <img src={member.logo} alt={member.name} className="w-full h-full object-contain p-1" />
-                              ) : (
-                                <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                </svg>
-                              )}
-                            </div>
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-900 font-medium">
-                            {member.name}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+              {/* Load More Button */}
+              {visibleOrgCount < organizationMembers.length && (
+                <div className="flex justify-center mt-8">
+                  <button
+                    onClick={() => setVisibleOrgCount(prev => prev + 10)}
+                    className="px-8 py-3 bg-[#3000d9] text-white font-medium rounded-full hover:bg-[#2400b3] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center gap-2"
+                  >
+                    <span>Xem thêm</span>
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
                 </div>
-              </div>
+              )}
             </>
           )}
 
           {/* Individual Members */}
           {activeTab === 'individual' && (
             <>
-              {/* Mobile & Tablet View - Card Layout */}
-              <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-4">
-                {individualMembers.map((member) => (
-                  <div 
-                    key={member.id} 
-                    className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow"
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {individualMembers.slice(0, visibleIndCount).map((member, index) => (
+                  <div
+                    key={member.id}
+                    className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:scale-105"
                   >
-                    <div className="flex items-center gap-4">
-                      <span className="flex-shrink-0 w-8 h-8 bg-[#3000d9] text-white rounded-full flex items-center justify-center text-sm font-semibold">
-                        {member.id}
-                      </span>
-                      <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
+                    <div className="flex flex-col items-center gap-4 text-center">
+                      <div className="w-24 h-24 bg-gray-50 rounded-2xl flex items-center justify-center overflow-hidden shadow-sm">
                         {member.avatar ? (
                           <img
                             src={member.avatar}
                             alt={member.name}
                             className={
-                              'object-cover flex-shrink-0 mt-1' +
-                              (member.zoom ? ' hover:scale-110 active:scale-95 cursor-pointer' : '')
+                              'object-cover w-full h-full' +
+                              (member.zoom ? ' hover:scale-110 active:scale-95 cursor-pointer transition-transform duration-300' : '')
                             }
-                            style={member.avatarStyle}
+                            style={{
+                              ...member.avatarStyle,
+                              width: '100%',
+                              height: '100%',
+                            }}
                           />
                         ) : (
-                          <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg className="w-12 h-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                           </svg>
                         )}
                       </div>
-                      <h3 className="text-base font-semibold text-gray-900 flex-1">
+                      <h3 className="text-base font-semibold text-gray-900 leading-tight">
                         {member.name}
                       </h3>
                     </div>
@@ -335,54 +328,20 @@ const MembersPage = () => {
                 ))}
               </div>
 
-              {/* Desktop View - Table Layout */}
-              <div className="hidden lg:block bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-gray-200">
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9] w-20">
-                          {t.membersPage?.columnNo || 'STT'}
-                        </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9] w-24">
-                          {t.membersPage?.columnAvatar || 'Ảnh'}
-                        </th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-[#3000d9]">
-                          {t.membersPage?.columnMemberName || 'Họ và tên'}
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {individualMembers.map((member, index) => (
-                        <tr 
-                          key={member.id} 
-                          className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${
-                            index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
-                          }`}
-                        >
-                          <td className="px-6 py-4 text-sm text-gray-600 text-center">
-                            {member.id}
-                          </td>
-                          <td className="px-6 py-4">
-                            <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
-                              {member.avatar ? (
-                                <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" style={member.avatarStyle} />
-                              ) : (
-                                <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
-                              )}
-                            </div>
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-900 font-medium">
-                            {member.name}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+              {/* Load More Button */}
+              {visibleIndCount < individualMembers.length && (
+                <div className="flex justify-center mt-8">
+                  <button
+                    onClick={() => setVisibleIndCount(prev => prev + 10)}
+                    className="px-8 py-3 bg-[#3000d9] text-white font-medium rounded-full hover:bg-[#2400b3] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center gap-2"
+                  >
+                    <span>Xem thêm</span>
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
                 </div>
-              </div>
+              )}
             </>
           )}
         </div>

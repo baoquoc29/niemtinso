@@ -44,7 +44,7 @@ const FeaturedProjects = () => {
     },
     {
       id: 2,
-      image: '/images/khong1minh/khong1minh1.jfif',
+      image: '/images/k1m.webp',
       title: t.projects.project2.title,
       description: t.projects.project2.description,
       category: 'posts',
@@ -99,9 +99,6 @@ const FeaturedProjects = () => {
           ref={headerRef}
           className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide">
-            {t.projects.subtitle}
-          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             {t.projects.title}
           </h2>
@@ -175,8 +172,8 @@ const FeaturedProjects = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-lg md:text-2xl font-bold text-indigo-600 mb-3 leading-tight text-center">
+                <div className="p-6 flex flex-col">
+                  <h3 className="text-lg md:text-2xl font-bold text-indigo-600 mb-3 leading-tight text-center min-h-[4rem] flex items-center justify-center">
                     {project.title}
                   </h3>
                   
@@ -191,11 +188,11 @@ const FeaturedProjects = () => {
                   </div>
 
                   {/* Action Button */}
-                  <div className="flex justify-center">
-                    <button onClick={() => setOpenIndex(open ? null : index)} className="flex bg-[#3000d9] hover:bg-[#2500b0] text-white p-2.5 rounded-full transition-all duration-300 group-hover:translate-x-1 items-center justify-center">
+                  <div className="flex justify-center mt-auto">
+                    <button onClick={() => setOpenIndex(open ? null : index)} className="flex bg-[#3000d9] hover:bg-[#2500b0] text-white p-2.5 rounded-full transition-all duration-300 items-center justify-center">
                       <svg
                         className={`w-5 h-5 transition-transform duration-300 ${
-                          open ? "rotate-90" : "-rotate-90"
+                          open ? "rotate-180" : "rotate-0"
                         }`}
                         fill="none"
                         strokeLinecap="round"
@@ -204,7 +201,7 @@ const FeaturedProjects = () => {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path d="M9 5l7 7-7 7" />
+                        <path d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                   </div>

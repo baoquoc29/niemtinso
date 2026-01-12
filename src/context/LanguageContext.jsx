@@ -68,11 +68,11 @@ export const translations = {
     projects: {
       subtitle: 'CÂU CHUYỆN THÀNH CÔNG',
       title: 'DỰ ÁN NỔI BẬT',
-      filterPosts: 'Các bài viết',
-      filterInitiatives: 'Các Hội viên phát động',
+      filterPosts: 'Do Liên minh khởi xướng',
+      filterInitiatives: 'Do Thành viên khởi xướng',
       viewMore: 'Xem thêm',
       project1: {
-        title: 'HỘI NGHỊ KOL TOÀN QUỐC - "KOL với kỳ nguyện viên mình của dân tộc"',
+        title: 'KOL với kỉ nguyên vươn mình của dân tộc',
         description: 'Sự kiện quy tụ dự thảo đầu tiên tổ chức tại Việt Nam nhằm viện tụ các KOL cùng bàn về vai trò, trách nhiệm trong cộng đồng.',
       },
       project2: {
@@ -261,11 +261,11 @@ export const translations = {
     projects: {
       subtitle: 'SUCCESS STORIES',
       title: 'FEATURED PROJECTS',
-      filterPosts: 'Posts',
-      filterInitiatives: 'Member Initiatives',
+      filterPosts: 'Initiated by Alliance',
+      filterInitiatives: 'Initiated by Member',
       viewMore: 'View More',
       project1: {
-        title: 'NATIONAL KOL CONFERENCE - "KOL with nation\'s aspirations"',
+        title: 'KOL in the Era of the Nation’s Rise',
         description: 'The first event organized in Vietnam bringing together KOLs to discuss their roles and responsibilities in the community.',
       },
       project2: {

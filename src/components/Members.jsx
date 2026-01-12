@@ -93,9 +93,6 @@ const Members = () => {
           ref={headerRef}
           className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <p className="text-sm md:text-base text-black mb-2 uppercase tracking-wide font-medium">
-            {t.members.subtitle}
-          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
             {t.members.title}
           </h2>
@@ -134,7 +131,7 @@ const Members = () => {
             {organizations.map((org, index) => (
               <div
                 key={org.id}
-                className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-md transition-all duration-300 card-animate"
+                className=" rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-md transition-all duration-300 card-animate"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {org.logo ? (
