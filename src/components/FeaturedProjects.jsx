@@ -97,19 +97,22 @@ const FeaturedProjects = () => {
         {/* Section Header */}
         <div
           ref={headerRef}
-          className={`text-center mb-8 md:mb-12 transition-all duration-1000 relative ${headerVisible ? 'opacity-100 translate-y-0 scale-100 blur-0' : 'opacity-0 translate-y-12 scale-90 blur-sm'}`}
+          className={`mb-8 md:mb-12 transition-all duration-1000 relative ${headerVisible ? 'opacity-100 translate-y-0 scale-100 blur-0' : 'opacity-0 translate-y-12 scale-90 blur-sm'}`}
         >
-          {/* View More Button - Positioned at top right */}
-          <button className="absolute top-0 right-0 bg-white hover:bg-gray-50 text-[#3000d9] px-6 py-2.5 rounded-full font-medium text-sm md:text-base transition-all duration-300 border border-white shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
-            {t.projects.viewMore}
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            {t.projects.title}
-          </h2>
+          {/* Title and Button Container - Responsive Layout */}
+          <div className="flex justify-between items-center mb-6 md:block md:text-center">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">
+              {t.projects.title}
+            </h2>
+            
+            {/* View More Button - Mobile: right aligned, Desktop: absolute top right */}
+            <button className="bg-white hover:bg-gray-50 text-[#3000d9] px-4 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-xs md:text-base transition-all duration-300 border border-white shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate md:absolute md:top-0 md:right-0 flex-shrink-0">
+              <span className="hidden md:inline">{t.projects.viewMore}</span>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
 
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-3">
