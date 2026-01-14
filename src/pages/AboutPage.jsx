@@ -45,129 +45,75 @@ const AboutPage = () => {
   const tabContent = {
     introduction: {
       title: 'Giới thiệu liên minh',
+
       content: (
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          {/* Main Title */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Kiến tạo, dẫn dắt niềm tin số thông qua hành động và trách nhiệm.
-            </h2>
-          </div>
-
-          {/* Layout với Logo ở giữa và 4 phần theo đường cong - Desktop only */}
-          <div className="hidden lg:block">
-            <div className="relative flex justify-center items-center min-h-[700px]">
-              
-              {/* Đường cong SVG */}
-              <svg width="900" height="700" viewBox="0 0 900 700" className="absolute inset-0 opacity-15">
-                <ellipse cx="450" cy="350" rx="380" ry="280" stroke="#3B82F6" strokeWidth="2" fill="none" strokeDasharray="8,8" />
-              </svg>
-
-              {/* Logo ở giữa */}
-              <div className="absolute z-20 text-center  p-8 rounded-lg ">
-                <img 
-                  src="/images/DTA_Logo_Final_Color.png" 
-                  alt="DTA Logo" 
-                  className="w-56 h-56 object-contain mx-auto mb-4"
-                />
-              </div>
-
-              {/* 1. TÊN GỌI - Góc trái trên (thụt vào) */}
-              <div className="absolute top-12 left-12 w-72 bg-white p-5 rounded-lg shadow-md z-10">
-                <h3 className="text-lg font-bold text-blue-600 mb-3">TÊN GỌI</h3>
-                <div className="space-y-2 text-sm">
-                  <div><span className="font-semibold">Tên tiếng Việt:</span> Liên minh Niềm tin Số.</div>
-                  <div><span className="font-semibold">Tên tiếng Anh:</span> Digital Trust Alliance (DTA).</div>
-                  <div><span className="font-semibold">Tên viết tắt tiếng Anh:</span> DTA</div>
-                  <div><span className="font-semibold">Biểu tượng:</span> Liên minh có biểu tượng (logo) riêng do Hội đồng lãnh đạo quyết định và được đăng ký bảo hộ theo quy định của pháp luật.</div>
+          <div className="max-w-3xl mx-auto py-8 space-y-8">
+            {/* Block 1: TÊN GỌI */}
+            <div className="flex items-center gap-6 py-6">
+              <img src="/images/Thiet_ke_chua_co_ten.png" alt="Tên gọi" className="w-[320px] h-[180px] md:w-[320px] md:h-[180px] flex-shrink-0 object-contain" />
+              <div className="h-full flex items-stretch">
+                <div className="hidden md:block w-px bg-gray-300 mx-6" style={{minHeight: '100%'}}></div>
+                <div>
+                  <h2 className="text-lg md:text-xl font-bold text-blue-900 mb-2">TÊN GỌI</h2>
+                  <div className="space-y-1 text-xs md:text-sm">
+                    <div><span className="font-semibold">Tên tiếng Việt:</span> Liên minh Niềm tin Số.</div>
+                    <div><span className="font-semibold">Tên tiếng Anh:</span> Digital Trust Alliance (DTA).</div>
+                    <div><span className="font-semibold">Tên viết tắt:</span> DTA</div>
+                  </div>
                 </div>
               </div>
-
-              {/* 2. TÍNH CHẤT VÀ ĐỊA VỊ PHÁP LÝ - Phải trên (đẳy ra xa) */}
-              <div className="absolute top-0 right-0 w-72 bg-white p-5 rounded-lg shadow-md z-10">
-                <h3 className="text-lg font-bold text-blue-600 mb-3">TÍNH CHẤT VÀ ĐỊA VỊ PHÁP LÝ</h3>
-                <div className="space-y-2 text-sm">
-                  <div>• Liên minh Niềm tin Số là mạng lưới hợp tác tự nguyện, phi lợi nhuận, không có tư cách pháp nhân.</div>
-                  <div>• Liên minh hoạt động trong khuôn khổ pháp luật Việt Nam, dưới sự bảo trợ của Cục An ninh mạng và Phòng, chống tội phạm sử dụng công nghệ cao, Bộ Công an.</div>
-                </div>
-              </div>
-
-              {/* 3. PHẠM VI HOẠT ĐỘNG - Phải dưới (đẩy ra xa) */}
-              <div className="absolute bottom-0 right-0 w-72 bg-white p-5 rounded-lg shadow-md z-10">
-                <h3 className="text-lg font-bold text-blue-600 mb-3">PHẠM VI HOẠT ĐỘNG</h3>
-                <div className="space-y-2 text-sm">
-                  <div>• Liên minh hoạt động trên phạm vi toàn quốc, đồng thời mở rộng hợp tác khu vực và quốc tế.</div>
-                  <div>• <span className="font-semibold">Lĩnh vực hoạt động gồm:</span> truyền thông, báo chí, nội dung số, thương mại điện tử, công nghệ, an ninh mạng, giáo dục, văn hóa, xã hội.</div>
-                  <div>• <span className="font-semibold">Hình thức hoạt động:</span> tọa đàm, hội nghị, đào tạo, tập huấn, chiến dịch truyền thông, chương trình đồng hành, phản biện chính sách và hợp tác quốc tế.</div>
-                </div>
-              </div>
-
-              {/* 4. NGUYÊN TẮC HOẠT ĐỘNG - Trái dưới (thụt vào, thẳng hàng với 1) */}
-              <div className="absolute bottom-12 left-12 w-72 bg-white p-5 rounded-lg shadow-md z-10">
-                <h3 className="text-lg font-bold text-blue-600 mb-3">NGUYÊN TẮC HOẠT ĐỘNG</h3>
-                <div className="space-y-2 text-sm">
-                  <div>• <span className="font-semibold">Tự nguyện – Tự quản:</span> Thành viên tham gia trên cơ sở tự nguyện, cùng nhau quản trị, không bị áp đặt.</div>
-                  <div>• <span className="font-semibold">Dân chủ – Bình đẳng – Minh bạch:</span> Thành viên có quyền ngang nhau trong thảo luận, biểu quyết và được tiếp cận thông tin công khai, minh bạch.</div>
-                  <div>• <span className="font-semibold">Phi lợi nhuận:</span> Liên minh không hoạt động vì mục tiêu sinh lợi; mọi nguồn lực huy động nhằm phục vụ lợi ích cộng đồng.</div>
-                  <div>• <span className="font-semibold">Tuân thủ pháp luật Việt Nam:</span> Mọi hoạt động phải phù hợp với Hiến pháp, pháp luật và các quy định hiện hành.</div>
-                  <div>• <span className="font-semibold">Trách nhiệm xã hội – Lan tỏa tích cực:</span> Thành viên hành động có trách nhiệm với cộng đồng, lan tỏa các giá trị tốt đẹp, chống lại tin giả và các hành vi tiêu cực.</div>
-                </div>
-              </div>
-
             </div>
-          </div>
-
-          {/* Mobile responsive - Stack layout */}
-          <div className="lg:hidden space-y-8">
-            <div className="text-center mb-8">
-              <img 
-                src="/images/DTA_Logo_Final_Color.png" 
-                alt="DTA Logo" 
-                className="w-32 h-32 object-contain mx-auto mb-4"
-              />
-              <h3 className="text-xl font-bold text-blue-900">LOGO DTA</h3>
+            {/* Block 2: TÍNH CHẤT & ĐỊA VỊ PHÁP LÝ */}
+            <div className="flex items-center gap-6 py-6">
+              <img src="/images/Phap_li-compressed.jpg" alt="Tính chất & Địa vị pháp lý" className="w-[320px] h-[180px] md:w-[320px] md:h-[180px] flex-shrink-0 object-contain" />
+              <div className="h-full flex items-stretch">
+                <div className="hidden md:block w-px bg-gray-300 mx-6" style={{minHeight: '100%'}}></div>
+                <div>
+                  <h2 className="text-lg md:text-xl font-bold text-blue-900 mb-2">TÍNH CHẤT & ĐỊA VỊ PHÁP LÝ</h2>
+                  <div className="space-y-1 text-xs md:text-sm">
+                    <div>Liên minh Niềm tin Số là mạng lưới hợp tác tự nguyện, phi lợi nhuận, không có tư cách pháp nhân.</div>
+                    <div>Liên minh hoạt động trong khuôn khổ pháp luật Việt Nam, dưới sự bảo trợ của Cục An ninh mạng và Phòng, chống tội phạm sử dụng công nghệ cao, Bộ Công an.</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-bold text-blue-600 mb-3">TÊN GỌI</h3>
-                <div className="space-y-2 text-sm">
-                  <div><span className="font-semibold">Tên tiếng Việt:</span> Liên minh Niềm tin Số.</div>
-                  <div><span className="font-semibold">Tên tiếng Anh:</span> Digital Trust Alliance (DTA).</div>
-                  <div><span className="font-semibold">Tên viết tắt tiếng Anh:</span> DTA</div>
-                  <div><span className="font-semibold">Biểu tượng:</span> Liên minh có biểu tượng (logo) riêng do Hội đồng lãnh đạo quyết định và được đăng ký bảo hộ theo quy định của pháp luật.</div>
+            {/* Block 3: PHẠM VI HOẠT ĐỘNG */}
+            <div className="flex items-center gap-6 py-6">
+              <img src="/images/Muc_tieu.jpg" alt="Phạm vi hoạt động" className="w-[320px] h-[180px] md:w-[320px] md:h-[180px] flex-shrink-0 object-contain" />
+              <div className="h-full flex items-stretch">
+                <div className="hidden md:block w-px bg-gray-300 mx-6" style={{minHeight: '100%'}}></div>
+                <div>
+                  <h2 className="text-lg md:text-xl font-bold text-blue-900 mb-2">PHẠM VI HOẠT ĐỘNG</h2>
+                  <div className="space-y-1 text-xs md:text-sm">
+                    <div>Liên minh hoạt động trên phạm vi toàn quốc, đồng thời mở rộng hợp tác khu vực và quốc tế.</div>
+                    <div><span className="font-semibold">Lĩnh vực hoạt động gồm:</span> truyền thông, báo chí, nội dung số, thương mại điện tử, công nghệ, an ninh mạng, giáo dục, văn hóa, xã hội.</div>
+                    <div><span className="font-semibold">Hình thức hoạt động:</span> tọa đàm, hội nghị, đào tạo, tập huấn, chiến dịch truyền thông, chương trình đồng hành, phản biện chính sách và hợp tác quốc tế.</div>
+                  </div>
                 </div>
               </div>
-
-              <div>
-                <h3 className="text-lg font-bold text-blue-600 mb-3">TÍNH CHẤT VÀ ĐỊA VỊ PHÁP LÝ</h3>
-                <div className="space-y-2 text-sm">
-                  <div>• Liên minh Niềm tin Số là mạng lưới hợp tác tự nguyện, phi lợi nhuận, không có tư cách pháp nhân.</div>
-                  <div>• Liên minh hoạt động trong khuôn khổ pháp luật Việt Nam, dưới sự bảo trợ của Cục An ninh mạng và Phòng, chống tội phạm sử dụng công nghệ cao, Bộ Công an.</div>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold text-blue-600 mb-3">PHẠM VI HOẠT ĐỘNG</h3>
-                <div className="space-y-2 text-sm">
-                  <div>• Liên minh hoạt động trên phạm vi toàn quốc, đồng thời mở rộng hợp tác khu vực và quốc tế.</div>
-                  <div>• <span className="font-semibold">Lĩnh vực hoạt động gồm:</span> truyền thông, báo chí, nội dung số, thương mại điện tử, công nghệ, an ninh mạng, giáo dục, văn hóa, xã hội.</div>
-                  <div>• <span className="font-semibold">Hình thức hoạt động:</span> tọa đàm, hội nghị, đào tạo, tập huấn, chiến dịch truyền thông, chương trình đồng hành, phản biện chính sách và hợp tác quốc tế.</div>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold text-blue-600 mb-3">NGUYÊN TẮC HOẠT ĐỘNG</h3>
-                <div className="space-y-2 text-sm">
-                  <div>• <span className="font-semibold">Tự nguyện – Tự quản:</span> Thành viên tham gia trên cơ sở tự nguyện, cùng nhau quản trị, không bị áp đặt.</div>
-                  <div>• <span className="font-semibold">Dân chủ – Bình đẳng – Minh bạch:</span> Thành viên có quyền ngang nhau trong thảo luận, biểu quyết và được tiếp cận thông tin công khai, minh bạch.</div>
-                  <div>• <span className="font-semibold">Phi lợi nhuận:</span> Liên minh không hoạt động vì mục tiêu sinh lợi; mọi nguồn lực huy động nhằm phục vụ lợi ích cộng đồng.</div>
-                  <div>• <span className="font-semibold">Tuân thủ pháp luật Việt Nam:</span> Mọi hoạt động phải phù hợp với Hiến pháp, pháp luật và các quy định hiện hành.</div>
-                  <div>• <span className="font-semibold">Trách nhiệm xã hội – Lan tỏa tích cực:</span> Thành viên hành động có trách nhiệm với cộng đồng, lan tỏa các giá trị tốt đẹp, chống lại tin giả và các hành vi tiêu cực.</div>
+            </div>
+            {/* Block 4: NGUYÊN TẮC HOẠT ĐỘNG */}
+            <div className="flex items-center gap-6 py-6">
+              <img src="/images/Nguyen_Tac.jpg" alt="Nguyên tắc hoạt động" className="w-[320px] h-[180px] md:w-[320px] md:h-[180px] flex-shrink-0 object-contain" />
+              <div className="h-full flex items-stretch">
+                <div className="hidden md:block w-px bg-gray-300 mx-6" style={{minHeight: '100%'}}></div>
+                <div>
+                  <h2 className="text-lg md:text-xl font-bold text-blue-900 mb-2">NGUYÊN TẮC HOẠT ĐỘNG</h2>
+                  <div className="space-y-1 text-xs md:text-sm">
+                    <div><span className="font-semibold">Tự nguyện – Tự quản:</span> Thành viên tham gia trên cơ sở tự nguyện, cùng nhau quản trị, không bị áp đặt.</div>
+                    <div><span className="font-semibold">Dân chủ – Bình đẳng – Minh bạch:</span> Thành viên có quyền ngang nhau trong thảo luận, biểu quyết và được tiếp cận thông tin công khai, minh bạch.</div>
+                    <div><span className="font-semibold">Phi lợi nhuận:</span> Liên minh không hoạt động vì mục tiêu sinh lợi; mọi nguồn lực huy động nhằm phục vụ lợi ích cộng đồng.</div>
+                    <div><span className="font-semibold">Tuân thủ pháp luật Việt Nam:</span> Mọi hoạt động phải phù hợp với Hiến pháp, pháp luật và các quy định hiện hành.</div>
+                    <div><span className="font-semibold">Trách nhiệm xã hội – Lan tỏa tích cực:</span> Thành viên hành động có trách nhiệm với cộng đồng, lan tỏa các giá trị tốt đẹp, chống lại tin giả và các hành vi tiêu cực.</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+
+      )
 
         </div>
       )
@@ -211,7 +157,7 @@ const AboutPage = () => {
                 <tbody>
                   <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors bg-white">
                     <td className="px-6 py-4 text-sm text-gray-600 text-center">1</td>
-                    <td className="px-6 py-4 text-sm text-gray-900 font-medium">Nguyễn Văn A</td>
+                    <td className="px-6 py-4 text-sm text-gray-900 font-medium">Trung tướng Lê Xuân Minh</td>
                     <td className="px-6 py-4 text-sm text-gray-600">Chủ tịch</td>
                     <td className="px-6 py-4 text-sm text-gray-600">Lãnh đạo chung, định hướng chiến lược</td>
                   </tr>

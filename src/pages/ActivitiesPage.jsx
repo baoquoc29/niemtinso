@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useNavigate } from 'react-router-dom';
+
 
 // Hook để phát hiện scroll
 const useScrollAnimation = () => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -19,20 +19,17 @@ const useScrollAnimation = () => {
       },
       { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
-
     observer.observe(element);
     return () => element && observer.unobserve(element);
   }, []);
-
   return [ref, isVisible];
 };
 
 const ActivitiesPage = () => {
-  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('events');
+  const navigate = useNavigate();
   const [headerRef, headerVisible] = useScrollAnimation();
   const [contentRef, contentVisible] = useScrollAnimation();
-
   const tabs = [
     { id: 'events', label: 'Sự kiện' },
     { id: 'projects', label: 'Dự án' },
@@ -44,23 +41,23 @@ const ActivitiesPage = () => {
       mainArticles: [
         {
           id: 1,
-          title: 'Hiệp hội An ninh mạng Quốc gia phối hợp với Ngân hàng Nhà nước tổ chức Hội thảo Bảo vệ An ninh tài chính quốc gia trong kỷ nguyên số',
-          image: '/images/event-main-1.jpg',
-          date: '23 tháng 12 năm 2025',
-          content: 'Ngày 23/12/2025, Hiệp hội An ninh mạng Quốc gia chủ trì tổ chức Hội thảo Bảo vệ An ninh tài chính quốc gia trong kỷ nguyên số nhằm nâng cao năng lực bảo vệ an ninh tài chính quốc gia, đáp ứng yêu cầu phát triển nhanh, bền vững và hội nhập quốc tế.'
+          title: 'Hội nghị Toàn thể Liên minh Niềm Tin Số (DTA) lần thứ I',
+          image: '/images/Su_kien_moi_nhat.jpg',
+          date: '10 tháng 01 năm 2026',
+          content: 'Chiều 10/1 tại Hà Nội, Hội nghị Toàn thể Liên minh Niềm Tin Số (Digital Trust Alliance – DTA) lần thứ I đã chính thức diễn ra, đánh dấu cột mốc quan trọng trong tiến trình xây dựng và củng cố niềm tin trên không gian mạng tại Việt Nam. '
         },
         {
           id: 2,
-          title: 'Hoàn thiện nền tảng văn hành, giảm sát thị trường tài sản số trong giai đoạn thí điểm',
+          title: 'Khai mạc Ngày hội An toàn trực tuyến “Không Một Mình”',
           image: '/images/event-main-2.jpg',
-          date: '18 tháng 12 năm 2025',
-          content: 'Trong bối cảnh Việt Nam chính thức triển khai thí điểm thị trường tài sản mã hóa, hội thảo "Văn hành và giảm sát thị trường tài sản số" ngày 18/12/2025 tại Hà Nội đã tập trung làm rõ các yêu cầu cốt lõi về văn hành kỹ thuật, an ninh mạng và chế giải sát, nhằm bảo đảm thị trường tài sản số phát triển an toàn, minh bạch và bền vững.'
+          date: '01 tháng 11 năm 2025',
+          content: 'Chiều 01/11/2025, tại phố đi bộ hồ Hoàn Kiếm, Hà Nội, Ngày hội An toàn trực tuyến “Không Một Mình” chính thức được khai mạc, chung tay hướng tới một không gian mạng an toàn, lành mạnh cho trẻ em và thanh thiếu niên.'
         },
         {
           id: 3,
-          title: 'Hiệp hội An ninh mạng Quốc gia ra mắt Chi hội phía Nam: Là chân bảo vệ chủ quyền số và kinh tế số Việt Nam',
+          title: 'Hội nghị KOL toàn quốc: Chung tay xây dựng niềm tin số, lan tỏa ảnh hưởng tích cực',
           image: '/images/event-main-3.jpg',
-          date: '09 tháng 12 năm 2025',
+          date: '18 tháng 08 năm 2025',
           content: 'Chi hội An ninh mạng Quốc gia khu vực phía Nam chính thức được thành lập, đánh dấu bước phát triển mới trong việc bảo vệ chủ quyền số và thúc đẩy phát triển kinh tế số tại khu vực.'
         }
       ],
@@ -172,10 +169,15 @@ const ActivitiesPage = () => {
                 {/* Main Content - 98% on mobile, ~70% on desktop */}
                 <div className="w-full lg:w-[70%] space-y-8">
                   {currentContent.mainArticles.map((article, index) => (
-                    <div 
-                      key={article.id} 
-                      className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 card-animate"
+                    <div
+                      key={article.id}
+                      className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 card-animate cursor-pointer"
                       style={{ transitionDelay: `${index * 100}ms` }}
+                      onClick={() => {
+                        if (activeTab === 'events' && article.id === 1) {
+                          navigate('/activities/1');
+                        }
+                      }}
                     >
                       <div className="flex flex-col md:flex-row">
                         {/* Image */}
