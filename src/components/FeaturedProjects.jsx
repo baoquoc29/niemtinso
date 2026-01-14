@@ -287,8 +287,11 @@ const FeaturedProjects = () => {
 
         {/* View More Button */}
         <div className="text-right">
-          <button className="bg-white hover:bg-gray-100 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 shadow-lg hover:shadow-xl btn-animate">
+          <button className="bg-white hover:bg-gray-50 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
             {t.projects.viewMore}
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </button>
         </div>
       </div>
