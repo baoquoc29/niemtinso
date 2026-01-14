@@ -118,15 +118,15 @@ export const translations = {
       viewMore: 'Xem thêm',
       project1: {
         title: 'KOL với kỉ nguyên vươn mình của dân tộc',
-        description: 'Sự kiện quy tụ dự thảo đầu tiên tổ chức tại Việt Nam nhằm viện tụ các KOL cùng bàn về vai trò, trách nhiệm trong cộng đồng.',
+        description: 'Sự kiện quy mô quốc gia đầu tiên tổ chức tại Việt Nam nhằm tạo diễn đàn kết nối cộng đồng KOL với cơ quan quản lý và doanh nghiệp.',
       },
       project2: {
         title: 'Không Một Mình - Cùng nhau an toàn trực tuyến.',
-        description: 'Chương trình hỗ trợ sức khỏe tinh thần và phòng chống tự tử cho giới trẻ thông qua nền tảng số.',
+        description: 'Huy động sức mạnh cộng đồng chung tay bảo vệ trẻ em và thanh thiếu niên trước hành vi dụ dỗ, thao túng, lừa đảo và "bắt cóc online.',
       },
       project3: {
         title: 'Tham gia tổ chức Công Ước Hà Nội 2025.',
-        description: 'Sự kiện quốc tế tập trung vào xây dựng niềm tin số và phát triển bền vững trong kỷ nguyên công nghệ.',
+        description: 'Đồng hành cùng sự kiện lịch sử - Lễ mở ký Công ước Hà Nội về phòng chống tội phạm mạng, khẳng định Việt Nam là trung tâm kết nối niềm tin số toàn cầu.',
       },
     },
     // Members
