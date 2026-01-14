@@ -103,8 +103,16 @@ const Library = () => {
         {/* Section Header */}
         <div
           ref={headerRef}
-          className={`text-center mb-8 md:mb-12 transition-all duration-1000 ${headerVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-90'}`}
+          className={`text-center mb-8 md:mb-12 transition-all duration-1000 relative ${headerVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-90'}`}
         >
+          {/* View More Button - Positioned at top right */}
+          <Link to="/library" className="absolute top-0 right-0 bg-white hover:bg-gray-50 text-[#3000d9] px-6 py-2.5 rounded-full font-medium text-sm md:text-base transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
+            {t.library.viewMore}
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
             {t.library.title}
           </h2>
@@ -208,16 +216,6 @@ const Library = () => {
               );
             })}
           </div>
-        </div>
-
-        {/* View More Button */}
-        <div className="text-right">
-          <Link to="/library" className="bg-white hover:bg-gray-50 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
-            {t.library.viewMore}
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
         </div>
       </div>
     </section>
