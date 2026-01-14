@@ -12,6 +12,7 @@ import MembersPage from './pages/MembersPage';
 import LibraryPage from './pages/LibraryPage';
 import RegisterPage from './pages/RegisterPage';
 import ActivityDetailPage from './pages/ActivityDetailPage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/activities" element={<ActivitiesPage />} />
-            <Route path="/activities/1" element={<ActivityDetailPage />} />
+            <Route path="/activities/:id" element={<ActivityDetailPage />} />
+            <Route path="/projects/:id" element={<ProjectDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/members" element={<MembersPage />} />
             <Route path="/library" element={<LibraryPage />} />

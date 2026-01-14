@@ -174,8 +174,10 @@ const ActivitiesPage = () => {
                       className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 card-animate cursor-pointer"
                       style={{ transitionDelay: `${index * 100}ms` }}
                       onClick={() => {
-                        if (activeTab === 'events' && article.id === 1) {
-                          navigate('/activities/1');
+                        if (activeTab === 'projects') {
+                          navigate(`/projects/${article.id}`);
+                        } else {
+                          navigate(`/activities/${article.id}`);
                         }
                       }}
                     >
@@ -187,7 +189,7 @@ const ActivitiesPage = () => {
                             alt={article.title}
                             className="w-full h-48 md:h-full object-cover"
                             onError={(e) => {
-                              e.target.src = `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"%3E%3Crect width="400" height="300" fill="%23e5e7eb"/%3E%3Ctext x="200" y="150" text-anchor="middle" dy=".3em" font-family="Arial, sans-serif" font-size="16" fill="%236b7280"%3E${activeTab === 'events' ? 'Sự kiện' : 'Dự án'} ${article.id}%3C/text%3E%3C/svg%3E`;
+                              e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e5e7eb'/%3E%3Ctext x='200' y='150' text-anchor='middle' dy='.3em' font-family='Arial, sans-serif' font-size='16' fill='%236b7280'%3E${activeTab === 'events' ? 'Sự kiện' : 'Dự án'} ${article.id}%3C/text%3E%3C/svg%3E`;
                             }}
                           />
                         </div>

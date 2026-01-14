@@ -154,8 +154,11 @@ const AboutPage = () => {
                   <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors bg-white">
                     <td className="px-6 py-4 text-sm text-gray-600 text-center">1</td>
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">Trung tướng Lê Xuân Minh</td>
+                    <td className="px-6 py-4 text-sm text-gray-600">Cục trưởng Cục An ninh mạng và PCTP sử dụng
+công nghệ cao, Bộ Công an
+Phó Chủ tịch Hiệp hội An ninh mạng quốc gia
+</td>
                     <td className="px-6 py-4 text-sm text-gray-600">Chủ tịch</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">Lãnh đạo chung, định hướng chiến lược</td>
                   </tr>
                   <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors bg-gray-50/50">
                     <td className="px-6 py-4 text-sm text-gray-600 text-center">2</td>

@@ -88,7 +88,7 @@ const Members = () => {
   const allIndividuals = [
     {
       id: 1,
-      name: 'MC. Khánh Vy',
+      name: 'KHÁNH VY',
       role: t.members.individual1.role,
       description: 'Tạo nội dung giá trị bền vững',
       gradient: 'from-orange-400 via-orange-500 to-yellow-400',
@@ -96,7 +96,7 @@ const Members = () => {
     },
     {
       id: 2,
-      name: 'Rapper. Đen Vâu',
+      name: 'ĐEN VÂU',
       role: t.members.individual2.role,
       description: 'Người truyền cảm hứng tích cực',
       gradient: 'from-red-500 via-red-600 to-pink-500',
@@ -104,7 +104,7 @@ const Members = () => {
     },
     {
       id: 3,
-      name: 'Hoa hậu Bảo Ngọc',
+      name: 'BẢO NGỌC',
       role: t.members.individual3.role,
       description: t.members.individual3.description,
       gradient: 'from-pink-400 via-pink-500 to-rose-400',
@@ -112,7 +112,7 @@ const Members = () => {
     },
     {
       id: 4,
-      name: 'KOL Meichan',
+      name: 'MEICHAN',
       role: t.members.individual4.role,
       description: t.members.individual4.description,
       gradient: 'from-purple-400 via-purple-500 to-violet-400',
