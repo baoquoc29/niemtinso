@@ -111,10 +111,6 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-
-
-      )
-
         </div>
       )
     },
@@ -299,7 +295,8 @@ Phó Chủ tịch Hiệp hội An ninh mạng quốc gia
             </div>
           </div>
         </div>
-      )}
+      )
+      }
     </>
   );
 };
