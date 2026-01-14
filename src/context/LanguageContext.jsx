@@ -117,7 +117,7 @@ export const translations = {
       filterInitiatives: 'Do Thành viên khởi xướng',
       viewMore: 'Xem thêm',
       project1: {
-        title: 'KOL với kỉ nguyên vươn mình của dân tộc',
+        title: 'KOL với kỷ nguyên vươn mình của dân tộc',
         description: 'Sự kiện quy mô quốc gia đầu tiên tổ chức tại Việt Nam nhằm tạo diễn đàn kết nối cộng đồng KOL với cơ quan quản lý và doanh nghiệp.',
       },
       project2: {

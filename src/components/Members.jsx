@@ -91,15 +91,16 @@ const Members = () => {
       name: 'KHÁNH VY',
       role: t.members.individual1.role,
       description: 'Tạo nội dung giá trị bền vững',
-      gradient: 'from-orange-400 via-orange-500 to-yellow-400',
+      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/MC_KHANH_VY.png',
+
     },
     {
       id: 2,
       name: 'ĐEN VÂU',
       role: t.members.individual2.role,
       description: 'Người truyền cảm hứng tích cực',
-      gradient: 'from-red-500 via-red-600 to-pink-500',
+      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/RP_DEN_VAU.png',
     },
     {
@@ -107,7 +108,7 @@ const Members = () => {
       name: 'BẢO NGỌC',
       role: t.members.individual3.role,
       description: t.members.individual3.description,
-      gradient: 'from-pink-400 via-pink-500 to-rose-400',
+      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/HH_BAO_NGOC.png',
     },
     {
@@ -115,7 +116,7 @@ const Members = () => {
       name: 'MEICHAN',
       role: t.members.individual4.role,
       description: t.members.individual4.description,
-      gradient: 'from-purple-400 via-purple-500 to-violet-400',
+      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/KOL_MEICHAN.png',
     },
     {
@@ -123,7 +124,7 @@ const Members = () => {
       name: 'MONO',
       role: 'CA SĨ',
       description: 'Ca sĩ trẻ nổi bật với phong cách hiện đại.',
-      gradient: 'from-blue-400 via-blue-500 to-cyan-400',
+      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/Mono.png',
       imageStyle: { transform: 'translateX(60px) translateY(20px) scale(1.2)' },
     },
@@ -132,7 +133,7 @@ const Members = () => {
       name: 'TIỂU VY',
       role: 'HOA HẬU',
       description: 'Hoa hậu Việt Nam, biểu tượng sắc đẹp và trí tuệ trẻ.',
-      gradient: 'from-pink-400 via-pink-500 to-rose-400',
+      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/Tieu_Vy.png',
       imageStyle: { transform: 'translateX(60px) translateY(30px) scale(0.9)' },
     },
@@ -141,7 +142,7 @@ const Members = () => {
       name: 'NGUYỄN SĨ TUẤN',
       role: 'KOL',
       description: 'KOL nổi bật với nhiều hoạt động cộng đồng.',
-      gradient: 'from-green-400 via-green-500 to-emerald-400',
+      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/Nguyen_Si_Tuan.png',
       imageStyle: { transform: 'translateX(50px) translateY(20px) scale(0.9)' },
     },
@@ -176,7 +177,7 @@ const Members = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextIndividualSlide();
-    }, 14000); // Change slide every 14 seconds
+    }, 5000); // Change slide every 14 seconds
 
     return () => clearInterval(interval);
   }, [currentIndividualSlide]);
@@ -291,29 +292,6 @@ const Members = () => {
                 );
               })}
             </div>
-
-            {/* Navigation Buttons */}
-            <div className="flex justify-center items-center gap-6">
-              <button
-                onClick={prevSlide}
-                className="bg-[#3000d9] text-white p-2 rounded-full hover:bg-[#2400b0] transition-all duration-300 shadow-md hover:shadow-lg"
-                aria-label="Previous slide"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              <button
-                onClick={nextSlide}
-                className="bg-[#3000d9] text-white p-2 rounded-full hover:bg-[#2400b0] transition-all duration-300 shadow-md hover:shadow-lg"
-                aria-label="Next slide"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
           </div>
         </div>
 
@@ -403,29 +381,6 @@ const Members = () => {
                   </div>
                 );
               })}
-            </div>
-
-            {/* Navigation Buttons */}
-            <div className="flex justify-center items-center gap-6">
-              <button
-                onClick={prevIndividualSlide}
-                className="bg-[#3000d9] text-white p-2 rounded-full hover:bg-[#2400b0] transition-all duration-300 shadow-md hover:shadow-lg"
-                aria-label="Previous slide"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              <button
-                onClick={nextIndividualSlide}
-                className="bg-[#3000d9] text-white p-2 rounded-full hover:bg-[#2400b0] transition-all duration-300 shadow-md hover:shadow-lg"
-                aria-label="Next slide"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
