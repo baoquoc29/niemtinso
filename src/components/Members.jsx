@@ -1,4 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
+// Hook tạo hiệu ứng infinite horizontal scroll cho carousel
+const useInfiniteCarousel = (itemCount, speed = 1) => {
+  const containerRef = useRef(null);
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    let scrollAmount = 0;
+    let frame;
+    const scrollStep = () => {
+      if (!container) return;
+      scrollAmount += speed;
+      if (scrollAmount >= container.scrollWidth / 2) {
+        scrollAmount = 0;
+      }
+      container.scrollLeft = scrollAmount;
+      frame = requestAnimationFrame(scrollStep);
+    };
+    frame = requestAnimationFrame(scrollStep);
+    return () => cancelAnimationFrame(frame);
+  }, [itemCount, speed]);
+  return containerRef;
+};
 import { useLanguage } from '../context/LanguageContext';
 
 // Hook để phát hiện scroll
@@ -29,11 +51,9 @@ const useScrollAnimation = () => {
 
 const Members = () => {
   const { t } = useLanguage();
-  const [activeTab, setActiveTab] = useState('organizations');
   const [headerRef, headerVisible] = useScrollAnimation();
   const [contentRef, contentVisible] = useScrollAnimation();
   const [statsRef, statsVisible] = useScrollAnimation();
-
   const organizations = [
     { id: 1, name: 'Mobifone', logo: '/images/MobiFone_logo.png' },
     { id: 2, name: 'Vinaphone', logo: '/images/Logo_vinaphone_new.png' },
@@ -42,7 +62,6 @@ const Members = () => {
     { id: 5, name: 'Vietcombank', logo: '/images/Vietcombank_Logo.png' },
     { id: 6, name: 'ABP', logo: '/images/logo-login copy.png' },
   ];
-
   const individuals = [
     {
       id: 1,
@@ -76,7 +95,41 @@ const Members = () => {
       gradient: 'from-purple-400 via-purple-500 to-violet-400',
       image: '/images/KOL_MEICHAN.png',
     },
+    {
+      id: 5,
+      name: 'MONO',
+      role: 'Ca sĩ',
+      description: 'Ca sĩ trẻ nổi bật với phong cách hiện đại.',
+      gradient: 'from-blue-400 via-blue-500 to-cyan-400',
+      image: '/images/Mono.png',
+    },
+    {
+      id: 6,
+      name: 'TIỂU VY',
+      role: 'Hoa hậu',
+      description: 'Hoa hậu Việt Nam, biểu tượng sắc đẹp và trí tuệ trẻ.',
+      gradient: 'from-pink-400 via-pink-500 to-rose-400',
+      image: '/images/Tieu_Vy.png',
+    },
+    {
+      id: 7,
+      name: 'NGUYỄN SĨ TUẤN',
+      role: 'KOL',
+      description: 'KOL nổi bật với nhiều hoạt động cộng đồng.',
+      gradient: 'from-green-400 via-green-500 to-emerald-400',
+      image: '/images/Nguyen_Si_Tuan.png',
+    },
+    {
+      id: 8,
+      name: 'ĐỖ ĐĂNG QUANG',
+      role: 'KOL',
+      description: 'KOL trẻ năng động, sáng tạo và truyền cảm hứng.',
+      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
+      image: '/images/Do_Dang_Quang.png',
+    },
   ];
+  const carouselRef = useInfiniteCarousel(individuals.length * 2, 1);
+  const duplicatedIndividuals = [...individuals, ...individuals];
 
   const stats = [
     { value: '100+', label: t.members.stats.kols },
@@ -96,103 +149,96 @@ const Members = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
             {t.members.title}
           </h2>
+        </div>
 
-          {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-3">
-            <button
-              onClick={() => setActiveTab('organizations')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border btn-animate ${
-                activeTab === 'organizations'
-                  ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
-                  : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
-              }`}
-            >
-              {t.members.tabOrganizations}
-            </button>
-            <button
-              onClick={() => setActiveTab('individuals')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border btn-animate ${
-                activeTab === 'individuals'
-                  ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
-                  : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
-              }`}
-            >
-              {t.members.tabIndividuals}
-            </button>
-          </div>
+        {/* Heading Tổ chức/doanh nghiệp */}
+        <div className="flex justify-center mb-4">
+          <span className="px-6 py-2 rounded-full bg-[#3000d9] text-white text-base md:text-lg font-semibold shadow-md select-none pointer-events-none">
+            {t.members.tabOrganizations}
+          </span>
         </div>
 
         {/* Organizations Logos */}
-        {activeTab === 'organizations' && (
-          <div 
-            ref={contentRef}
-            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 transition-all duration-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-          >
-            {organizations.map((org, index) => (
-              <div
-                key={org.id}
-                className=" rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-md transition-all duration-300 card-animate"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                {org.logo ? (
-                  <div className="flex items-center justify-center h-full">
-                    <img 
-                      src={org.logo} 
-                      alt={org.name} 
-                      className={`w-auto object-contain ${org.name === 'Vinaphone' ? 'max-h-40' : 'max-h-20'}`}
-                    />
-                  </div>
-                ) : (
-                  <span className="text-gray-600 font-semibold text-lg">{org.name}</span>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+        <div 
+          ref={contentRef}
+          className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 transition-all duration-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          {organizations.map((org, index) => (
+            <div
+              key={org.id}
+              className="rounded-xl p-6 flex items-center justify-center h-32 hover:shadow-md transition-all duration-300 card-animate"
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              {org.logo ? (
+                <div className="flex items-center justify-center h-full">
+                  <img 
+                    src={org.logo} 
+                    alt={org.name} 
+                    className={`w-auto object-contain ${org.name === 'Vinaphone' ? 'max-h-40' : 'max-h-20'}`}
+                  />
+                </div>
+              ) : (
+                <span className="text-gray-600 font-semibold text-lg">{org.name}</span>
+              )}
+            </div>
+          ))}
+        </div>
 
-        {/* Individuals Cards */}
-        {activeTab === 'individuals' && (
-          <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {individuals.map((person, index) => (
+        {/* Heading Cá nhân */}
+        <div className="flex justify-center mb-4">
+          <span className="px-6 py-2 rounded-full bg-[#3000d9] text-white text-base md:text-lg font-semibold shadow-md select-none pointer-events-none">
+            {t.members.tabIndividuals}
+          </span>
+        </div>
+
+        {/* Infinite Carousel KOL Cards */}
+        <div className="w-full overflow-x-hidden mb-12">
+          <div
+            className="flex flex-row gap-6 animate-marquee-right"
+            style={{ width: 'max-content', minHeight: 340 }}
+          >
+            {duplicatedIndividuals.map((person, index) => {
+              // Các KOL cần đồng bộ background
+              const isSpecialKOL = [
+                'MONO',
+                'TIỂU VY',
+                'NGUYỄN SĨ TUẤN',
+                'ĐỖ ĐĂNG QUANG',
+                'MC. Khánh Vy',
+                'KOL Meichan',
+                'Rapper. Đen Vâu',
+                'Hoa hậu Bảo Ngọc'
+              ].includes(person.name);
+              // Căn chỉnh chữ như Khánh Vy
+              const badgeStyle = isSpecialKOL
+                ? {top: '20px', left: '20px', width: '260px', height: '24px'}
+                : {top: '16px', left: '16px'};
+              // Background cho 4 KOL đặc biệt
+              const cardBgStyle = isSpecialKOL
+                ? {
+                    backgroundImage: 'url(/images/background_kol_card.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                  }
+                : {};
+              return (
                 <div
-                  key={person.id}
-                  className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white"
-                  style={{ transitionDelay: `${index * 100}ms` }}
+                  key={index}
+                  className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white min-w-[260px] max-w-xs w-full relative"
+                  style={{ transitionDelay: `${(index % individuals.length) * 100}ms` }}
                 >
                   {/* Card with gradient */}
                   <div 
                     className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
-                    style={
-                      (person.name.includes('Khánh Vy') || person.name.includes('Đen Vâu') || person.name.includes('Bảo Ngọc') || person.name.includes('Meichan')) ? {
-                        backgroundImage: 'url(/images/background_kol_card.png)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat'
-                      } : {}
-                    }
+                    style={cardBgStyle}
                   >
                     {/* Badge */}
-                    <div className="absolute z-10" style={person.name.includes('Khánh Vy') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Đen Vâu') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Bảo Ngọc') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : person.name.includes('Meichan') ? {top: '20px', left: '20px', width: '260px', height: '24px'} : {top: '16px', left: '16px'}}>
-                      {person.name.includes('Khánh Vy') ? (
+                    <div className="absolute z-10" style={badgeStyle}>
+                      {isSpecialKOL ? (
                         <div>
-                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">KHÁNH VY</h3>
-                          <p className="text-white font-semibold text-lg drop-shadow-md">MC</p>
-                        </div>
-                      ) : person.name.includes('Đen Vâu') ? (
-                        <div>
-                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">ĐEN VÂU</h3>
-                          <p className="text-white font-semibold text-lg drop-shadow-md">RAPPER</p>
-                        </div>
-                      ) : person.name.includes('Bảo Ngọc') ? (
-                        <div>
-                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">BẢO NGỌC</h3>
-                          <p className="text-white font-semibold text-lg drop-shadow-md">HOA HẬU</p>
-                        </div>
-                      ) : person.name.includes('Meichan') ? (
-                        <div>
-                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">MEICHAN</h3>
-                          <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
+                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">{person.name.toUpperCase()}</h3>
+                          <p className="text-white font-semibold text-lg drop-shadow-md">{person.role.toUpperCase()}</p>
                         </div>
                       ) : (
                         <div>
@@ -215,7 +261,11 @@ const Members = () => {
                           alt={person.name}
                           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                           style={(() => {
-                            if (person.name.includes('Khánh Vy')) return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
+                            if (person.name === 'MC. Khánh Vy') return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
+                            if (person.name === 'MONO') return { transform: 'translateX(60px) translateY(20px) scale(1.2)' };
+                            if (person.name === 'TIỂU VY') return { transform: 'translateX(60px) translateY(30px) scale(0.9)' };
+                            if (person.name === 'NGUYỄN SĨ TUẤN') return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
+                            if (person.name === 'ĐỖ ĐĂNG QUANG') return { transform: 'translateX(50px) translateY(-80px) scale(1.5)' };
                             if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
                             if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
                             if (person.name.includes('Meichan')) return { transform: 'translateX(70px) translateY(20px) scale(0.8)' };
@@ -240,133 +290,11 @@ const Members = () => {
                     <p className="text-sm text-gray-500 line-clamp-2">{person.description}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-            {/* Mono & Tieu Vy Cards Below */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 mb-12">
-              {/* MONO Card */}
-              <div className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white w-full max-w-xs">
-                <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-blue-400 via-blue-500 to-cyan-400 h-[280px] md:h-[300px] mb-4"
-                  style={{
-                    backgroundImage: 'url(/images/background_kol_card.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                  }}>
-                  <div className="absolute z-10" style={{top: '20px', left: '20px', width: '260px', height: '24px'}}>
-                    <div>
-                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">MONO</h3>
-                      <p className="text-white font-semibold text-lg drop-shadow-md">CA SĨ</p>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 flex items-end justify-center">
-                    <img
-                      src="/images/Mono.png"
-                      alt="MONO"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      style={{ transform: 'translateX(60px) translateY(20px) scale(1.2)' }}
-                    />
-                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
-                  </div>
-                </div>
-                <div className="text-center py-2">
-                  <h3 className="font-bold text-gray-900 mb-1">MONO</h3>
-                  <p className="text-sm text-gray-500 line-clamp-2">Ca sĩ trẻ nổi bật với phong cách hiện đại.</p>
-                </div>
-              </div>
-              {/* Tieu Vy Card */}
-              <div className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white w-full max-w-xs">
-                <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-pink-400 via-pink-500 to-rose-400 h-[280px] md:h-[300px] mb-4"
-                  style={{
-                    backgroundImage: 'url(/images/background_kol_card.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                  }}>
-                  <div className="absolute z-10" style={{top: '20px', left: '20px', width: '260px', height: '24px'}}>
-                    <div>
-                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">TIỂU VY</h3>
-                      <p className="text-white font-semibold text-lg drop-shadow-md">HOA HẬU</p>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 flex items-end justify-center">
-                    <img
-                      src="/images/Tieu_Vy.png"
-                      alt="TIỂU VY"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      style={{ transform: 'translateX(60px) translateY(30px) scale(0.9)' }}
-                    />
-                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
-                  </div>
-                </div>
-                <div className="text-center py-2">
-                  <h3 className="font-bold text-gray-900 mb-1">TIỂU VY</h3>
-                  <p className="text-sm text-gray-500 line-clamp-2">Hoa hậu Việt Nam, biểu tượng sắc đẹp và trí tuệ trẻ.</p>
-                </div>
-              </div>
-              {/* Nguyen Si Tuan Card */}
-              <div className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white w-full max-w-xs">
-                <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-green-400 via-green-500 to-emerald-400 h-[280px] md:h-[300px] mb-4"
-                  style={{
-                    backgroundImage: 'url(/images/background_kol_card.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                  }}>
-                  <div className="absolute z-10" style={{top: '20px', left: '20px', width: '260px', height: '24px'}}>
-                    <div>
-                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">NGUYỄN SĨ TUẤN</h3>
-                      <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 flex items-end justify-center">
-                    <img
-                      src="/images/Nguyen_Si_Tuan.png"
-                      alt="NGUYỄN SĨ TUẤN"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      style={{ transform: 'translateX(50px) translateY(20px) scale(0.9)' }}
-                    />
-                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
-                  </div>
-                </div>
-                <div className="text-center py-2">
-                  <h3 className="font-bold text-gray-900 mb-1">NGUYỄN SĨ TUẤN</h3>
-                  <p className="text-sm text-gray-500 line-clamp-2">KOL nổi bật với nhiều hoạt động cộng đồng.</p>
-                </div>
-              </div>
-              {/* Do Dang Quang Card */}
-              <div className="group cursor-pointer card-animate pb-4 hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white w-full max-w-xs">
-                <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-400 h-[280px] md:h-[300px] mb-4"
-                  style={{
-                    backgroundImage: 'url(/images/background_kol_card.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                  }}>
-                  <div className="absolute z-10" style={{top: '20px', left: '20px', width: '260px', height: '24px'}}>
-                    <div>
-                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">ĐỖ ĐĂNG QUANG</h3>
-                      <p className="text-white font-semibold text-lg drop-shadow-md">KOL</p>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 flex items-end justify-center">
-                    <img
-                      src="/images/Do_Dang_Quang.png"
-                      alt="ĐỖ ĐĂNG QUANG"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      style={{ transform: 'translateX(50px) translateY(-80px) scale(1.5)' }}
-                    />
-                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
-                  </div>
-                </div>
-                <div className="text-center py-2">
-                  <h3 className="font-bold text-gray-900 mb-1">ĐỖ ĐĂNG QUANG</h3>
-                  <p className="text-sm text-gray-500 line-clamp-2">KOL trẻ năng động, sáng tạo và truyền cảm hứng.</p>
-                </div>
-              </div>
-            </div>
-          </>
-        )}
+              );
+            })}
+          </div>
+        </div>
+        
 
         {/* Stats Section */}
         <div 
@@ -400,3 +328,29 @@ const Members = () => {
 };
 
 export default Members;
+
+/* Tailwind custom animation (bạn cần thêm vào tailwind.config.js):
+  extend: {
+    keyframes: {
+      carousel: {
+        '0%': { transform: 'translateX(0)' },
+        '100%': { transform: 'translateX(-50%)' },
+      },
+    },
+    animation: {
+      carousel: 'carousel 30s linear infinite',
+    },
+  },
+*/
+// Nếu chưa có, thêm vào index.css:
+/*
+@layer utilities {
+  .animate-carousel {
+    animation: carousel 30s linear infinite;
+  }
+  @keyframes carousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+*/
