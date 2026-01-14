@@ -111,10 +111,6 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-
-
-      )
-
         </div>
       )
     },
@@ -296,7 +292,8 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      )}
+      )
+      }
     </>
   );
 };
