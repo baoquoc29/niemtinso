@@ -106,8 +106,8 @@ const Library = () => {
           className={`mb-8 md:mb-12 transition-all duration-1000 relative ${headerVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-90'}`}
         >
           {/* Title and Button Container - Responsive Layout */}
-          <div className="flex justify-between items-center mb-6 md:block md:text-center">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#3000d9]">
+          <div className="flex justify-center items-center mb-6 md:block md:text-center relative">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] text-center flex-1">
               {t.library.title}
             </h2>
             
