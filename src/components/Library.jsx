@@ -100,40 +100,41 @@ const Library = () => {
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div 
+        <div
           ref={headerRef}
-          className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`text-center mb-8 md:mb-12 transition-all duration-1000 ${headerVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-90'}`}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
-          {t.library.title}
-        </h2>
+            {t.library.title}
+          </h2>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-          {filters.map((filter) => (
+          {/* Filter Tabs */}
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+            {filters.map((filter) => (
               <button
-                  key={filter.id}
-                  onClick={() => setActiveFilter(filter.id)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border btn-animate ${
-                      activeFilter === filter.id
-                          ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
-                          : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
+                key={filter.id}
+                onClick={() => setActiveFilter(filter.id)}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border btn-animate ${activeFilter === filter.id
+                  ? 'bg-[#3000d9] text-white border-[#3000d9] shadow-lg'
+                  : 'bg-white text-gray-600 border-gray-300 hover:border-[#3000d9]'
                   }`}
               >
                 {filter.label}
               </button>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Library Grid */}
-      <div 
-        ref={gridRef}
-        className={`grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-      >
+        {/* Library Grid */}
+        <div
+          ref={gridRef}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8"
+        >
           {/* Featured Large Card */}
           {featuredItem && (
-            <div className="lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer h-[376px] md:h-[420px] lg:h-[440px] card-animate">
+            <div className={`lg:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer h-[376px] md:h-[420px] lg:h-[440px] transition-all duration-700 ${gridVisible ? 'opacity-100 translate-x-0 rotate-0 scale-100' : 'opacity-0 -translate-x-12 -rotate-2 scale-95'}`}
+              style={{ transitionDelay: '100ms' }}
+            >
               {featuredItem.image ? (
                 <img
                   src={featuredItem.image}
@@ -161,39 +162,50 @@ const Library = () => {
 
           {/* Small Cards Grid */}
           <div className="grid grid-cols-2 gap-4 md:gap-5 h-[376px] md:h-[420px] lg:h-[440px]">
-            {smallItems.map((item, index) => (
-              <div
-                key={item.id}
-                className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer card-animate"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                {/* Background */}
-                {item.image ? (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div className={`w-full h-full bg-gradient-to-br ${item.gradient}`}></div>
-                )}
+            {smallItems.map((item, index) => {
+              // Diverse animations for small cards
+              const animations = [
+                gridVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-90',
+                gridVisible ? 'opacity-100 translate-x-0 rotate-0' : 'opacity-0 translate-x-8 rotate-3',
+                gridVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75',
+                gridVisible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 -translate-y-8 -rotate-2'
+              ];
+              const animationClass = animations[index % animations.length];
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              return (
+                <div
+                  key={item.id}
+                  className={`relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer transition-all duration-700 ${animationClass}`}
+                  style={{ transitionDelay: `${200 + index * 100}ms` }}
+                >
+                  {/* Background */}
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className={`w-full h-full bg-gradient-to-br ${item.gradient}`}></div>
+                  )}
 
-                {/* Bottom Content with Arrow */}
-                <div className="absolute bottom-0 left-0 right-0 p-3 flex items-end justify-between">
-                  <div className="flex-1">
-                    <p className="text-white text-xs md:text-sm font-medium line-clamp-2">{item.title}</p>
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+                  {/* Bottom Content with Arrow */}
+                  <div className="absolute bottom-0 left-0 right-0 p-3 flex items-end justify-between">
+                    <div className="flex-1">
+                      <p className="text-white text-xs md:text-sm font-medium line-clamp-2">{item.title}</p>
+                    </div>
+                    <button className="flex-shrink-0 ml-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
                   </div>
-                  <button className="flex-shrink-0 ml-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm p-2 rounded-full transition-all duration-300 group-hover:translate-x-1">
-                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

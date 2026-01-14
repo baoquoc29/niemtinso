@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
@@ -96,9 +97,9 @@ const Hero = () => {
     <section className="relative min-h-screen pt-20 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src="/images/background.png" 
-          alt="" 
+        <img
+          src="/images/background.png"
+          alt=""
           className="w-full h-full object-cover"
         />
         {/* Optional overlay for better text readability */}
@@ -129,7 +130,7 @@ const Hero = () => {
             </p>
 
             {/* CTA Button */}
-            <button className="group bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl btn-animate animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <Link to="/register" className="group bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl btn-animate animate-fade-in-up w-fit" style={{ animationDelay: '0.4s' }}>
               <span>{t.hero.button}</span>
               <svg
                 className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
@@ -142,7 +143,7 @@ const Hero = () => {
               >
                 <path d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

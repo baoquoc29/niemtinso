@@ -24,9 +24,54 @@ export const translations = {
     // Programs
     programs: {
       sectionSubtitle: 'CHƯƠNG TRÌNH CỦA CHÚNG TÔI',
-      sectionTitle: 'CHƯƠNG TRÌNH HÀNH ĐỘNG 2026',
+      sectionTitle: '6 Chương trình hành động năm 2026',
+      sectionDescription: 'Các chương trình trọng tâm nhằm xây dựng hệ sinh thái số an toàn, minh bạch và bền vững.',
+      ctaButton: 'Xem Lộ trình hành động 2026',
+      viewDetails: 'Xem chi tiết',
       badge: 'CHƯƠNG TRÌNH',
       action2026: 'HÀNH ĐỘNG 2026',
+      program1: {
+        title: 'Hạ tầng Niềm tin số\n& Định danh tin cậy',
+        items: [
+          'eID, eKYC, Trust Framework',
+          'Ngân hàng, nền tảng số'
+        ]
+      },
+      program2: {
+        title: 'Chuẩn mực Dữ liệu &\nBảo vệ quyền riêng tư',
+        items: [
+          'Data Governance, Privacy',
+          'Doanh nghiệp, cơ quan quản lý'
+        ]
+      },
+      program3: {
+        title: 'AI có trách nhiệm &\nMinh bạch thuật toán',
+        items: [
+          'Responsible AI, Explainable AI',
+          'Tổ chức ứng dụng AI'
+        ]
+      },
+      program4: {
+        title: 'Niềm tin số trong\nTài chính - Ngân hàng',
+        items: [
+          'Chống gian lận, An ninh mạng',
+          'Ngân hàng, Fintech'
+        ]
+      },
+      program5: {
+        title: 'Nâng cao năng lực &\nNhân thực Niềm tin số',
+        items: [
+          'Đào tạo, Truyền thông',
+          'Nhân sự, Cộng đồng'
+        ]
+      },
+      program6: {
+        title: 'Hợp tác - Thí điểm -\nLan tỏa quốc tế',
+        items: [
+          'Sandbox, Đối tác toàn cầu',
+          'Trong & ngoài nước'
+        ]
+      },
       ambassador: {
         title: 'ĐẠI SỨ NIỀM TIN SỐ',
         subtitle: '',
@@ -217,9 +262,54 @@ export const translations = {
     // Programs
     programs: {
       sectionSubtitle: 'OUR PROGRAMS',
-      sectionTitle: 'ACTION PROGRAM 2026',
+      sectionTitle: '6 Action Programs for 2026',
+      sectionDescription: 'Key programs aimed at building a safe, transparent, and sustainable digital ecosystem.',
+      ctaButton: 'View 2026 Action Roadmap',
+      viewDetails: 'View details',
       badge: 'PROGRAM',
       action2026: 'ACTION 2026',
+      program1: {
+        title: 'Digital Trust Infrastructure\n& Trusted Identity',
+        items: [
+          'eID, eKYC, Trust Framework',
+          'Banking, digital platforms'
+        ]
+      },
+      program2: {
+        title: 'Data Standards &\nPrivacy Protection',
+        items: [
+          'Data Governance, Privacy',
+          'Enterprises, regulatory agencies'
+        ]
+      },
+      program3: {
+        title: 'Responsible AI &\nAlgorithm Transparency',
+        items: [
+          'Responsible AI, Explainable AI',
+          'Organizations using AI'
+        ]
+      },
+      program4: {
+        title: 'Digital Trust in\nFinance - Banking',
+        items: [
+          'Fraud prevention, Cybersecurity',
+          'Banks, Fintech'
+        ]
+      },
+      program5: {
+        title: 'Capacity Building &\nDigital Trust Personnel',
+        items: [
+          'Training, Communication',
+          'Personnel, Community'
+        ]
+      },
+      program6: {
+        title: 'Cooperation - Pilot -\nInternational Outreach',
+        items: [
+          'Sandbox, Global partners',
+          'Domestic & international'
+        ]
+      },
       ambassador: {
         title: 'DIGITAL TRUST AMBASSADOR',
         subtitle: '',

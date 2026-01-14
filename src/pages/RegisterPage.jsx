@@ -10,7 +10,7 @@ export default function RegisterPage() {
     const [activeTab, setActiveTab] = useState("personal");
     const navigate = useNavigate();
 
-    // --- Members for personal and organization (separate slides) ---
+
     const personalMembers = [
         {
             id: 1,
@@ -59,10 +59,118 @@ export default function RegisterPage() {
     ];
 
     const orgMembers = [
-        { id: 1, title: "Công ty Cổ phần VNG", meta: "Hội viên tổ chức", img: "/src/assets/member-org1.jpg" },
-        { id: 2, title: "Tập đoàn Viettel", meta: "Hội viên tổ chức", img: "/src/assets/member-org2.jpg" },
-        { id: 3, title: "Ngân hàng HLBVN", meta: "Hội viên tổ chức", img: "/src/assets/member-org3.jpg" },
-        { id: 4, title: "Tổng công ty MobiFone", meta: "Hội viên tổ chức", img: "/src/assets/member-org4.jpg" },
+        {
+            id: 1,
+            title: "Wind Eco",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/1.Công ty CP Wind Eco.webp",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 2,
+            title: "Wind Media",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty CP Gió Media (Wind Media).png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 3,
+            title: "IEC Consulting",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty CP IEC Consulting.png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 4,
+            title: "Kênh 28",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty CP Kênh 28 Entertainment.webp",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 5,
+            title: "Metub Việt Nam",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty CP Metub Việt Nam.jpg",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 6,
+            title: "MCV Group",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty CP Tập đoàn MCV (MCV Group).jpg",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 7,
+            title: "Đất Việt VAC",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty CP Tập đoàn Đất Việt (DatViet VAC).png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 8,
+            title: "VCCorp",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty CP VCCorp.png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 9,
+            title: "SChannel",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty CP dịch vụ quảng cáo & truyền thông SChannel.png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 10,
+            title: "Orange Agency",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty TNHH Orange Agency & Biết Thế Network.jpg",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 11,
+            title: "Shopee",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty TNHH Shopee.png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 12,
+            title: "Thư viện Pháp luật",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty TNHH Thư viện Pháp luật.png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 13,
+            title: "TVH Media",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty TNHH Truyền thông & Giải trí TVH Media.jpg",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 14,
+            title: "iSocial Việt Nam",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty TNHH Truyền thông iSocial Việt Nam.png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 15,
+            title: "Vitamin Network",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Công ty TNHH truyền thông Vitamin Network.jpg",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
+        {
+            id: 16,
+            title: "B.School",
+            meta: "Hội viên tổ chức",
+            img: "/images/company/Trường TH, THCS & THPT B.School.png",
+            imgStyle: { objectPosition: 'center', width: '70px', height: '60px', objectFit: 'contain' }
+        },
     ];
 
     // --- Slider config ---

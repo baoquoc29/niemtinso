@@ -33,9 +33,11 @@ const MembersPage = () => {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState('organization');
   const [headerRef, headerVisible] = useScrollAnimation();
-  const [tableRef, tableVisible] = useScrollAnimation();
+  const [orgTableRef, orgTableVisible] = useScrollAnimation();
+  const [indTableRef, indTableVisible] = useScrollAnimation();
   const [visibleOrgCount, setVisibleOrgCount] = useState(9);
   const [visibleIndCount, setVisibleIndCount] = useState(9);
+  const [forceVisible, setForceVisible] = useState(false);
 
   // Nếu có state từ điều hướng, tự động chuyển tab
   useEffect(() => {
@@ -43,6 +45,14 @@ const MembersPage = () => {
       setActiveTab('individual');
     }
   }, [location.state]);
+
+  // Force visibility after a short delay when tab changes
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setForceVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [activeTab]);
 
   const tabs = [
     { id: 'organization', label: 'Hội viên Tổ chức/Doanh nghiệp' },
@@ -245,8 +255,8 @@ const MembersPage = () => {
           {activeTab === 'organization' && (
             <>
               <div
-                ref={tableRef}
-                className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 ${tableVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                ref={orgTableRef}
+                className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 ${(orgTableVisible || forceVisible) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 {organizationMembers.slice(0, visibleOrgCount).map((member, index) => (
                   <div
@@ -292,7 +302,10 @@ const MembersPage = () => {
           {/* Individual Members */}
           {activeTab === 'individual' && (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div
+                ref={indTableRef}
+                className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-all duration-700 ${(indTableVisible || forceVisible) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
                 {individualMembers.slice(0, visibleIndCount).map((member, index) => (
                   <div
                     key={member.id}

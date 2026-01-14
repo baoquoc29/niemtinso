@@ -34,129 +34,138 @@ const Programs = () => {
 
   const programs = [
     {
-      id: 1,
-      gradient: 'from-blue-900 via-blue-800 to-purple-900',
-      title: t.programs.ambassador.title,
-      subtitle: t.programs.ambassador.subtitle,
-      description: t.programs.ambassador.description,
-      event: t.programs.ambassador.event,
-      badge: 'ĐẠI SỨ AI',
+      id: '01',
+      title: t.programs.program1.title,
+      items: t.programs.program1.items,
+      icon: '🔐'
     },
     {
-      id: 2,
-      gradient: 'from-pink-600 via-red-500 to-orange-500',
-      title: t.programs.trust.title,
-      subtitle: t.programs.trust.subtitle,
-      description: t.programs.trust.description,
-      event: t.programs.trust.event,
+      id: '02',
+      title: t.programs.program2.title,
+      items: t.programs.program2.items,
+      icon: '🗄️'
     },
     {
-      id: 3,
-      gradient: 'from-purple-900 via-purple-700 to-red-600',
-      title: t.programs.verification.title,
-      subtitle: t.programs.verification.subtitle,
-      description: t.programs.verification.description,
-      event: t.programs.verification.event,
+      id: '03',
+      title: t.programs.program3.title,
+      items: t.programs.program3.items,
+      icon: '👁️'
     },
     {
-      id: 4,
-      gradient: 'from-blue-600 via-blue-500 to-cyan-400',
-      title: t.programs.notAlone.title,
-      subtitle: t.programs.notAlone.subtitle,
-      description: t.programs.notAlone.description,
-      event: t.programs.notAlone.event,
+      id: '04',
+      title: t.programs.program4.title,
+      items: t.programs.program4.items,
+      icon: '🏛️'
     },
     {
-      id: 5,
-      gradient: 'from-purple-900 via-yellow-600 to-yellow-500',
-      title: t.programs.kol.title,
-      subtitle: t.programs.kol.subtitle,
-      description: t.programs.kol.description,
-      event: t.programs.kol.event,
-      badge: 'KOL',
+      id: '05',
+      title: t.programs.program5.title,
+      items: t.programs.program5.items,
+      icon: '👥'
     },
     {
-      id: 6,
-      gradient: 'from-red-800 via-red-600 to-orange-500',
-      title: t.programs.awards.title,
-      subtitle: t.programs.awards.subtitle,
-      description: t.programs.awards.description,
-      event: t.programs.awards.event,
-      badge: 'DIGITAL TRUST AWARDS',
-    },
+      id: '06',
+      title: t.programs.program6.title,
+      items: t.programs.program6.items,
+      icon: '🌐'
+    }
   ];
 
   return (
-    <section className="py-8 md:py-12 bg-gray-50">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Section Header */}
-        <div 
-          ref={headerRef}
-          className={`text-center mb-6 md:mb-8 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        <div
+            ref={headerRef}
+            className={`text-center mb-8 md:mb-12 transition-all duration-700 ease-out ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#3000d9]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-4">
             {t.programs.sectionTitle}
           </h2>
+          <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto">
+            {t.programs.sectionDescription}
+          </p>
         </div>
 
         {/* Programs Grid */}
-        <div 
-          ref={gridRef}
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        <div
+            ref={gridRef}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mb-10"
         >
-          {/* Card 1 - Large Left (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 lg:row-span-2 relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[300px] md:h-[350px] lg:h-[400px] bg-white">
-            <img 
-              src="/images/hd2026.jpg" 
-              alt="Hành động 2026" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+          {programs.map((program, index) => (
+              <div
+                  key={program.id}
+                  className={`relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 ease-out overflow-hidden group ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
+                  style={{
+                    transitionDelay: `${index * 100}ms`
+                  }}
+              >
+                {/* Card Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-50"></div>
 
-          {/* Card 2 - Top Right (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[170px] lg:h-[195px] bg-white">
-            <img 
-              src="/images/hd2026-02.jpg" 
-              alt="Hành động 2026" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+                {/* Card Content */}
+                <div className="relative p-6 h-full flex flex-col">
+                  {/* Number Badge */}
+                  <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-3">
+                    {program.id}
+                  </div>
 
-          {/* Card 3 - Middle Right (Image Only) */}
-          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[170px] lg:h-[195px] bg-white">
-            <img 
-              src="/images/hd2026-03.jpg" 
-              alt="Hành động 2026" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+                  {/* Title */}
+                  <h3 className="text-lg md:text-xl font-bold text-[#3000d9] mb-4 whitespace-pre-line leading-tight">
+                    {program.title}
+                  </h3>
 
-          {/* Card 4 - Bottom Right (Image Only) */}
-          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[170px] lg:h-[195px] bg-white">
-            <img 
-              src="/images/hd2026-04.jpg" 
-              alt="Hành động 2026" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+                  {/* Icon */}
+                  {/*<div*/}
+                  {/*    className="absolute top-6 right-6 text-5xl md:text-6xl opacity-70 group-hover:scale-110 transition-transform duration-300">*/}
+                  {/*  {program.icon}*/}
+                  {/*</div>*/}
 
-          {/* Card 5 - Bottom Left (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[200px] lg:h-[220px] bg-white">
-            <img 
-              src="/images/hd2026-05.jpg" 
-              alt="Hành động 2026" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+                  {/* Items List */}
+                  <ul className="space-y-2 mb-6 flex-grow">
+                    {program.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start text-sm text-gray-700">
+                          <span className="text-blue-600 mr-2 mt-1">•</span>
+                          <span>{item}</span>
+                        </li>
+                    ))}
+                  </ul>
 
-          {/* Card 6 - Bottom Right (Image Only) */}
-          <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group card-animate h-[180px] md:h-[200px] lg:h-[220px] bg-white">
-            <img 
-              src="/images/hd2026-06.jpg" 
-              alt="Hành động 2026" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+                  {/* Link */}
+                  <a
+                      href="#"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors duration-300 group/link"
+                  >
+                    {t.programs.viewDetails}
+                    <svg
+                        className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+
+                {/* Hover Effect Border */}
+                <div
+                    className="absolute inset-0 border-2 border-blue-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+          ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center">
+          <button
+              className="bg-white hover:bg-gray-50 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
+            {t.programs.ctaButton}
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
