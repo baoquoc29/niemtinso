@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 // Hook để phát hiện scroll
@@ -211,12 +212,12 @@ const Library = () => {
 
         {/* View More Button */}
         <div className="text-center">
-          <button className="bg-white hover:bg-gray-50 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
+          <Link to="/library" className="bg-white hover:bg-gray-50 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
             {t.library.viewMore}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

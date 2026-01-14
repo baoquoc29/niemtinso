@@ -108,8 +108,8 @@ const FeaturedProjects = () => {
             <button
               onClick={() => setActiveFilter('posts')}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 btn-animate ${activeFilter === 'posts'
-                  ? 'bg-white text-purple-700 shadow-lg'
-                  : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
+                ? 'bg-white text-purple-700 shadow-lg'
+                : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
                 }`}
             >
               {t.projects.filterPosts}
@@ -117,8 +117,8 @@ const FeaturedProjects = () => {
             <button
               onClick={() => setActiveFilter('initiatives')}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 btn-animate ${activeFilter === 'initiatives'
-                  ? 'bg-white text-purple-700 shadow-lg'
-                  : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
+                ? 'bg-white text-purple-700 shadow-lg'
+                : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
                 }`}
             >
               {t.projects.filterInitiatives}
