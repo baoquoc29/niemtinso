@@ -32,7 +32,7 @@ const FeaturedProjects = () => {
   const [activeFilter, setActiveFilter] = useState('posts');
   const [headerRef, headerVisible] = useScrollAnimation();
   const [gridRef, gridVisible] = useScrollAnimation();
-  const [open, setOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null); // ✅ Moved outside map loop
 
   const projects = [
     {
@@ -77,11 +77,11 @@ const FeaturedProjects = () => {
       description: t.projects.project3.description,
       category: 'initiatives',
     },
-    
+
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -95,7 +95,7 @@ const FeaturedProjects = () => {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div 
+        <div
           ref={headerRef}
           className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
@@ -107,21 +107,19 @@ const FeaturedProjects = () => {
           <div className="flex flex-wrap justify-center gap-3">
             <button
               onClick={() => setActiveFilter('posts')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 btn-animate ${
-                activeFilter === 'posts'
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 btn-animate ${activeFilter === 'posts'
                   ? 'bg-white text-purple-700 shadow-lg'
                   : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
-              }`}
+                }`}
             >
               {t.projects.filterPosts}
             </button>
             <button
               onClick={() => setActiveFilter('initiatives')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 btn-animate ${
-                activeFilter === 'initiatives'
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 btn-animate ${activeFilter === 'initiatives'
                   ? 'bg-white text-purple-700 shadow-lg'
                   : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
-              }`}
+                }`}
             >
               {t.projects.filterInitiatives}
             </button>
@@ -129,13 +127,12 @@ const FeaturedProjects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div 
+        <div
           ref={gridRef}
           className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 transition-all duration-700 delay-200 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           {filteredProjects.map((project, index) => {
-            const [openIndex, setOpenIndex] = useState(null);
-            const open = openIndex === index;
+            const open = openIndex === index; // ✅ Now using component-level state
             return (
               <div
                 key={project.id}
@@ -146,13 +143,13 @@ const FeaturedProjects = () => {
                 <div className="relative h-48 md:h-72 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden rounded-xl">
                   {project.image ? (
                     <>
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    {/* Fade bottom */}
-                    <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      {/* Fade bottom */}
+                      <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
                     </>
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -176,11 +173,10 @@ const FeaturedProjects = () => {
                   <h3 className="text-lg md:text-2xl font-bold text-indigo-600 mb-3 leading-tight text-center min-h-[4rem] flex items-center justify-center">
                     {project.title}
                   </h3>
-                  
+
                   <div
-                    className={`px-6 transition-all duration-500 overflow-hidden duration-1000 ${
-                      open ? "max-h-96 opacity-100" : "max-h-0 opacity-90"
-                    }`}
+                    className={`px-6 transition-all duration-500 overflow-hidden duration-1000 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-90"
+                      }`}
                   >
                     <p className="text-sm text-gray-600 mb-4 leading-relaxed text-center">
                       {project.description}
@@ -191,9 +187,8 @@ const FeaturedProjects = () => {
                   <div className="flex justify-center mt-auto">
                     <button onClick={() => setOpenIndex(open ? null : index)} className="flex bg-[#3000d9] hover:bg-[#2500b0] text-white p-2.5 rounded-full transition-all duration-300 items-center justify-center">
                       <svg
-                        className={`w-5 h-5 transition-transform duration-300 ${
-                          open ? "rotate-180" : "rotate-0"
-                        }`}
+                        className={`w-5 h-5 transition-transform duration-300 ${open ? "rotate-180" : "rotate-0"
+                          }`}
                         fill="none"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -207,7 +202,7 @@ const FeaturedProjects = () => {
                   </div>
                 </div>
               </div>
-              )
+            )
           })}
 
 

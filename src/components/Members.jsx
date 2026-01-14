@@ -1,26 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-// Hook tạo hiệu ứng infinite horizontal scroll cho carousel
-const useInfiniteCarousel = (itemCount, speed = 1) => {
-  const containerRef = useRef(null);
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-    let scrollAmount = 0;
-    let frame;
-    const scrollStep = () => {
-      if (!container) return;
-      scrollAmount += speed;
-      if (scrollAmount >= container.scrollWidth / 2) {
-        scrollAmount = 0;
-      }
-      container.scrollLeft = scrollAmount;
-      frame = requestAnimationFrame(scrollStep);
-    };
-    frame = requestAnimationFrame(scrollStep);
-    return () => cancelAnimationFrame(frame);
-  }, [itemCount, speed]);
-  return containerRef;
-};
 import { useLanguage } from '../context/LanguageContext';
 
 // Hook để phát hiện scroll
@@ -65,7 +43,7 @@ const Members = () => {
   const individuals = [
     {
       id: 1,
-      name: 'MC. Khánh Vy',
+      name: 'KHÁNH VY',
       role: t.members.individual1.role,
       description: 'Tạo nội dung giá trị bền vững',
       gradient: 'from-orange-400 via-orange-500 to-yellow-400',
@@ -73,7 +51,7 @@ const Members = () => {
     },
     {
       id: 2,
-      name: 'Rapper. Đen Vâu',
+      name: 'ĐEN VÂU',
       role: t.members.individual2.role,
       description: 'Người truyền cảm hứng tích cực',
       gradient: 'from-red-500 via-red-600 to-pink-500',
@@ -81,7 +59,7 @@ const Members = () => {
     },
     {
       id: 3,
-      name: 'Hoa hậu Bảo Ngọc',
+      name: 'BẢO NGỌC',
       role: t.members.individual3.role,
       description: t.members.individual3.description,
       gradient: 'from-pink-400 via-pink-500 to-rose-400',
@@ -89,7 +67,7 @@ const Members = () => {
     },
     {
       id: 4,
-      name: 'KOL Meichan',
+      name: 'MEICHAN',
       role: t.members.individual4.role,
       description: t.members.individual4.description,
       gradient: 'from-purple-400 via-purple-500 to-violet-400',
@@ -98,7 +76,7 @@ const Members = () => {
     {
       id: 5,
       name: 'MONO',
-      role: 'Ca sĩ',
+      role: 'CA SĨ',
       description: 'Ca sĩ trẻ nổi bật với phong cách hiện đại.',
       gradient: 'from-blue-400 via-blue-500 to-cyan-400',
       image: '/images/Mono.png',
@@ -113,8 +91,8 @@ const Members = () => {
     },
     {
       id: 7,
-      name: 'NGUYỄN SĨ TUẤN',
-      role: 'KOL',
+      name: 'NGUYỄN SỸ TUẤN',
+      role: 'NGHỆ SĨ',
       description: 'KOL nổi bật với nhiều hoạt động cộng đồng.',
       gradient: 'from-green-400 via-green-500 to-emerald-400',
       image: '/images/Nguyen_Si_Tuan.png',
@@ -122,13 +100,13 @@ const Members = () => {
     {
       id: 8,
       name: 'ĐỖ ĐĂNG QUANG',
-      role: 'KOL',
+      role: 'BIÊN ĐẠO',
       description: 'KOL trẻ năng động, sáng tạo và truyền cảm hứng.',
       gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/Do_Dang_Quang.png',
     },
   ];
-  const carouselRef = useInfiniteCarousel(individuals.length * 2, 1);
+  // Duplicate individuals for infinite scroll effect
   const duplicatedIndividuals = [...individuals, ...individuals];
 
   const stats = [
@@ -142,7 +120,7 @@ const Members = () => {
     <section className="py-12 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div 
+        <div
           ref={headerRef}
           className={`text-center mb-8 md:mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
@@ -159,7 +137,7 @@ const Members = () => {
         </div>
 
         {/* Organizations Logos */}
-        <div 
+        <div
           ref={contentRef}
           className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 transition-all duration-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
@@ -171,9 +149,9 @@ const Members = () => {
             >
               {org.logo ? (
                 <div className="flex items-center justify-center h-full">
-                  <img 
-                    src={org.logo} 
-                    alt={org.name} 
+                  <img
+                    src={org.logo}
+                    alt={org.name}
                     className={`w-auto object-contain ${org.name === 'Vinaphone' ? 'max-h-40' : 'max-h-20'}`}
                   />
                 </div>
@@ -198,30 +176,13 @@ const Members = () => {
             style={{ width: 'max-content', minHeight: 340 }}
           >
             {duplicatedIndividuals.map((person, index) => {
-              // Các KOL cần đồng bộ background
-              const isSpecialKOL = [
-                'MONO',
-                'TIỂU VY',
-                'NGUYỄN SĨ TUẤN',
-                'ĐỖ ĐĂNG QUANG',
-                'MC. Khánh Vy',
-                'KOL Meichan',
-                'Rapper. Đen Vâu',
-                'Hoa hậu Bảo Ngọc'
-              ].includes(person.name);
-              // Căn chỉnh chữ như Khánh Vy
-              const badgeStyle = isSpecialKOL
-                ? {top: '20px', left: '20px', width: '260px', height: '24px'}
-                : {top: '16px', left: '16px'};
-              // Background cho 4 KOL đặc biệt
-              const cardBgStyle = isSpecialKOL
-                ? {
-                    backgroundImage: 'url(/images/background_kol_card.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
-                  }
-                : {};
+              // Đồng bộ background cho tất cả KOL
+              const cardBgStyle = {
+                backgroundImage: 'url(/images/background_kol_card.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              };
               return (
                 <div
                   key={index}
@@ -229,50 +190,41 @@ const Members = () => {
                   style={{ transitionDelay: `${(index % individuals.length) * 100}ms` }}
                 >
                   {/* Card with gradient */}
-                  <div 
+                  <div
                     className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px] mb-4`}
                     style={cardBgStyle}
                   >
-                    {/* Badge */}
-                    <div className="absolute z-10" style={badgeStyle}>
-                      {isSpecialKOL ? (
-                        <div>
-                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">{person.name.toUpperCase()}</h3>
-                          <p className="text-white font-semibold text-lg drop-shadow-md">{person.role.toUpperCase()}</p>
-                        </div>
-                      ) : (
-                        <div>
-                          <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-800">
-                            {person.name.split('.')[0]}
-                          </span>
-                          <span className="block mt-1 text-white/90 text-xs font-medium">
-                            {person.role}
-                          </span>
-                        </div>
-                      )}
+                    {/* Name & Role đồng bộ layout */}
+                    <div className="absolute z-10 left-6 top-6 w-[260px]">
+                      <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg mb-1">
+                        {person.name.toUpperCase()}
+                      </h3>
+                      <p className="text-white font-semibold text-lg drop-shadow-md">
+                        {person.role.toUpperCase()}
+                      </p>
                     </div>
 
                     {/* Image placeholder */}
                     <div className="absolute inset-0 flex items-end justify-center">
                       {person.image ? (
                         <>
-                        <img
-                          src={person.image}
-                          alt={person.name}
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                          style={(() => {
-                            if (person.name === 'MC. Khánh Vy') return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
-                            if (person.name === 'MONO') return { transform: 'translateX(60px) translateY(20px) scale(1.2)' };
-                            if (person.name === 'TIỂU VY') return { transform: 'translateX(60px) translateY(30px) scale(0.9)' };
-                            if (person.name === 'NGUYỄN SĨ TUẤN') return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
-                            if (person.name === 'ĐỖ ĐĂNG QUANG') return { transform: 'translateX(50px) translateY(-80px) scale(1.5)' };
-                            if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
-                            if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
-                            if (person.name.includes('Meichan')) return { transform: 'translateX(70px) translateY(20px) scale(0.8)' };
-                            return {};
-                          })()}
-                        />
-                        <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                          <img
+                            src={person.image}
+                            alt={person.name}
+                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            style={(() => {
+                              if (person.name === 'KHÁNH VY') return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
+                              if (person.name === 'MONO') return { transform: 'translateX(50px) translateY(40px) scale(1.2)' };
+                              if (person.name === 'TIỂU VY') return { transform: 'translateX(60px) translateY(40px) scale(0.9)' };
+                              if (person.name === 'NGUYỄN SỸ TUẤN') return { transform: 'translateX(50px) translateY(40px) scale(0.9)' };
+                              if (person.name === 'ĐỖ ĐĂNG QUANG') return { transform: 'translateX(50px) translateY(-40px) scale(1.5)' };
+                              if (person.name.includes('ĐEN VÂU')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
+                              if (person.name.includes('BẢO NGỌC')) return { transform: 'translateX(60px) translateY(0px) scale(1.5)' };
+                              if (person.name.includes('MEICHAN')) return { transform: 'translateX(70px) translateY(30px) scale(0.8)' };
+                              return {};
+                            })()}
+                          />
+                          <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
                         </>
                       ) : (
                         <div className="w-32 h-32 mb-8 bg-white/20 rounded-full flex items-center justify-center">
@@ -294,21 +246,21 @@ const Members = () => {
             })}
           </div>
         </div>
-        
+
 
         {/* Stats Section */}
-        <div 
+        <div
           ref={statsRef}
           className={`bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12 transition-all duration-700 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
             {t.members.networkTitle}
           </h3>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="text-center"
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
