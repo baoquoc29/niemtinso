@@ -125,11 +125,10 @@ const LibraryPage = () => {
                     setActiveTab(tab.id);
                     setShowAll(false);
                   }}
-                  className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 btn-animate ${
-                    activeTab === tab.id
+                  className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 btn-animate ${activeTab === tab.id
                       ? 'bg-[#3000d9] text-white'
                       : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -138,7 +137,7 @@ const LibraryPage = () => {
 
             {/* View More Button */}
             {currentItems.length > 8 && !showAll && (
-              <button 
+              <button
                 onClick={() => setShowAll(true)}
                 className="bg-white hover:bg-gray-50 border border-[#3000d9] text-[#3000d9] px-6 py-2.5 text-sm font-medium transition-all duration-300 flex items-center gap-2 self-start md:self-auto rounded-full btn-animate"
               >
@@ -164,7 +163,7 @@ const LibraryPage = () => {
                 ) : (
                   <div className="w-full h-full bg-black flex items-center justify-center">
                     <span className="text-white text-xl md:text-2xl font-bold">
-                      ẢNH {index + 1}
+                      {t.library?.filterPhotos || 'IMAGE'} {index + 1}
                     </span>
                   </div>
                 )}

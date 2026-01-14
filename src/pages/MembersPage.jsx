@@ -55,8 +55,8 @@ const MembersPage = () => {
   }, [activeTab]);
 
   const tabs = [
-    { id: 'organization', label: 'Hội viên Tổ chức/Doanh nghiệp' },
-    { id: 'individual', label: 'Hội viên cá nhân' }
+    { id: 'organization', label: t.membersPage.tabOrganization },
+    { id: 'individual', label: t.membersPage.tabIndividual }
   ];
 
   const organizationMembers = [
@@ -289,7 +289,7 @@ const MembersPage = () => {
                     onClick={() => setVisibleOrgCount(prev => prev + 10)}
                     className="px-8 py-3 bg-[#3000d9] text-white font-medium rounded-full hover:bg-[#2400b3] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center gap-2"
                   >
-                    <span>Xem thêm</span>
+                    <span>{t.activitiesPage.viewMore}</span>
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -348,7 +348,7 @@ const MembersPage = () => {
                     onClick={() => setVisibleIndCount(prev => prev + 10)}
                     className="px-8 py-3 bg-[#3000d9] text-white font-medium rounded-full hover:bg-[#2400b3] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center gap-2"
                   >
-                    <span>Xem thêm</span>
+                    <span>{t.activitiesPage.viewMore}</span>
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>

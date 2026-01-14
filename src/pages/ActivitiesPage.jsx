@@ -26,118 +26,29 @@ const useScrollAnimation = () => {
 };
 
 const ActivitiesPage = () => {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('events');
   const navigate = useNavigate();
   const [headerRef, headerVisible] = useScrollAnimation();
   const [contentRef, contentVisible] = useScrollAnimation();
+
   const tabs = [
-    { id: 'events', label: 'Sự kiện' },
-    { id: 'projects', label: 'Dự án' },
+    { id: 'events', label: t.activitiesPage.tabs.events },
+    { id: 'projects', label: t.activitiesPage.tabs.projects },
   ];
 
-  const tabContent = {
-    events: {
-      title: 'Sự Kiện Nổi Bật',
-      mainArticles: [
-        {
-          id: 1,
-          title: 'Hội nghị Toàn thể Liên minh Niềm Tin Số (DTA) lần thứ I',
-          image: '/images/Su_kien_moi_nhat.jpg',
-          date: '10 tháng 01 năm 2026',
-          content: 'Chiều 10/1 tại Hà Nội, Hội nghị Toàn thể Liên minh Niềm Tin Số (Digital Trust Alliance – DTA) lần thứ I đã chính thức diễn ra, đánh dấu cột mốc quan trọng trong tiến trình xây dựng và củng cố niềm tin trên không gian mạng tại Việt Nam. '
-        },
-        {
-          id: 2,
-          title: 'Khai mạc Ngày hội An toàn trực tuyến “Không Một Mình”',
-          image: '/images/event-main-2.jpg',
-          date: '01 tháng 11 năm 2025',
-          content: 'Chiều 01/11/2025, tại phố đi bộ hồ Hoàn Kiếm, Hà Nội, Ngày hội An toàn trực tuyến “Không Một Mình” chính thức được khai mạc, chung tay hướng tới một không gian mạng an toàn, lành mạnh cho trẻ em và thanh thiếu niên.'
-        },
-        {
-          id: 3,
-          title: 'Hội nghị KOL toàn quốc: Chung tay xây dựng niềm tin số, lan tỏa ảnh hưởng tích cực',
-          image: '/images/event-main-3.jpg',
-          date: '18 tháng 08 năm 2025',
-          content: 'Chi hội An ninh mạng Quốc gia khu vực phía Nam chính thức được thành lập, đánh dấu bước phát triển mới trong việc bảo vệ chủ quyền số và thúc đẩy phát triển kinh tế số tại khu vực.'
-        }
-      ],
-      featuredArticles: [
-        {
-          id: 4,
-          title: 'Trao giải Khảo sát An ninh mạng 2025: Hơn 60.000 người dùng chứng...',
-          image: '/images/featured-1.jpg',
-          date: '09 tháng 1 năm 2026'
-        },
-        {
-          id: 5,
-          title: 'An ninh mạng người dùng cá nhân 2025: Giảm tần suất lừa đảo, tăng thách thức',
-          image: '/images/featured-2.jpg',
-          date: '07 tháng 1 năm 2026'
-        },
-        {
-          id: 6,
-          title: 'Hiệp hội An ninh mạng Quốc gia tổ chức Tọa đàm: Bảo vệ dữ liệu cá...',
-          image: '/images/featured-3.jpg',
-          date: '01 tháng 1 năm 2026'
-        }
-      ]
-    },
-    projects: {
-      title: 'Các Dự Án Nổi Bật',
-      mainArticles: [
-        {
-          id: 1,
-          title: 'Dự án xây dựng Trung tâm Giám sát An ninh mạng quốc gia (National Cybersecurity Monitoring Center - NCMC)',
-          image: '/images/project-main-1.jpg',
-          date: '15 tháng 12 năm 2025',
-          content: 'NCMC là dự án trọng điểm quốc gia nhằm xây dựng hệ thống giám sát, cảnh báo sớm và ứng phó với các mối đe dọa an ninh mạng. Trung tâm sẽ được trang bị công nghệ tiên tiến, tích hợp AI và machine learning để phát hiện và phản ứng tự động với các cuộc tấn công mạng.'
-        },
-        {
-          id: 2,
-          title: 'Chương trình đào tạo chuyên gia An ninh mạng cấp cao phối hợp với các trường đại học hàng đầu',
-          image: '/images/project-main-2.jpg',
-          date: '08 tháng 12 năm 2025',
-          content: 'Chương trình hợp tác chiến lược với Đại học Bách khoa Hà Nội, Đại học FPT và các trường đại học uy tín nhằm đào tạo nguồn nhân lực chuyên sâu về an ninh mạng. Dự kiến đào tạo 1000 chuyên gia trong 3 năm với chương trình chuẩn quốc tế.'
-        },
-        {
-          id: 3,
-          title: 'Phát triển nền tảng bảo mật thông tin doanh nghiệp Việt Nam (VietSecure Platform)',
-          image: '/images/project-main-3.jpg',
-          date: '01 tháng 12 năm 2025',
-          content: 'VietSecure Platform là giải pháp bảo mật tổng thể dành cho doanh nghiệp Việt Nam, tích hợp các tính năng phòng chống mã độc, quản lý danh tính, mã hóa dữ liệu và giám sát hệ thống theo thời gian thực.'
-        }
-      ],
-      featuredArticles: [
-        {
-          id: 4,
-          title: 'Khởi động Dự án Mạng lưới Ứng cứu sự cố An ninh mạng Việt Nam...',
-          image: '/images/project-featured-1blob:vscode-file://vscode-app/8510d5ff-df11-4de3-a721-1e1586e68dff.jpg',
-          date: '05 tháng 1 năm 2026'
-        },
-        {
-          id: 5,
-          title: 'Triển khai Hệ thống xác thực sinh học quốc gia: Bảo vệ danh tính số',
-          image: '/images/project-featured-2.jpg',
-          date: '02 tháng 1 năm 2026'
-        },
-        {
-          id: 6,
-          title: 'Dự án Smart City An toàn: Tích hợp An ninh mạng vào đô thị thông minh...',
-          image: '/images/project-featured-3.jpg',
-          date: '28 tháng 12 năm 2025'
-        }
-      ]
-    }
+  const currentContent = {
+    title: activeTab === 'events' ? t.activitiesPage.events.title : t.activitiesPage.projects.title,
+    mainArticles: activeTab === 'events' ? t.activitiesPage.events.articles : t.activitiesPage.projects.articles,
+    featuredArticles: activeTab === 'events' ? t.activitiesPage.events.articles : t.activitiesPage.projects.articles, // Using same articles for featured for now
   };
-
-  const currentContent = tabContent[activeTab];
 
   return (
     <main className="pt-16">
       <section className="py-8 md:py-10 bg-white min-h-screen">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Header with Tabs */}
-          <div 
+          <div
             ref={headerRef}
             className={`flex flex-col items-center mb-8 gap-4 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}
           >
@@ -147,11 +58,10 @@ const ActivitiesPage = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 btn-animate ${
-                    activeTab === tab.id
-                      ? 'bg-[#3000d9] text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
-                  }`}
+                  className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 btn-animate ${activeTab === tab.id
+                    ? 'bg-[#3000d9] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -160,7 +70,7 @@ const ActivitiesPage = () => {
           </div>
 
           {/* Content */}
-          <div 
+          <div
             ref={contentRef}
             className={`max-w-7xl mx-auto transition-all duration-700 delay-200 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
@@ -189,26 +99,26 @@ const ActivitiesPage = () => {
                             alt={article.title}
                             className="w-full h-48 md:h-full object-cover"
                             onError={(e) => {
-                              e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e5e7eb'/%3E%3Ctext x='200' y='150' text-anchor='middle' dy='.3em' font-family='Arial, sans-serif' font-size='16' fill='%236b7280'%3E${activeTab === 'events' ? 'Sự kiện' : 'Dự án'} ${article.id}%3C/text%3E%3C/svg%3E`;
+                              e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e5e7eb'/%3E%3Ctext x='200' y='150' text-anchor='middle' dy='.3em' font-family='Arial, sans-serif' font-size='16' fill='%236b7280'%3E${activeTab === 'events' ? t.activitiesPage.tabs.events : t.activitiesPage.tabs.projects} ${article.id}%3C/text%3E%3C/svg%3E`;
                             }}
                           />
                         </div>
-                        
+
                         {/* Content */}
                         <div className="md:w-3/5 lg:w-3/5 p-6">
                           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 line-clamp-3 hover:text-blue-600 transition-colors cursor-pointer">
                             {article.title}
                           </h2>
-                          
+
                           <div className="flex items-center text-blue-600 text-sm mb-4">
                             <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0h6m-6 0a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V9a2 2 0 00-2-2" />
                             </svg>
                             {article.date}
                           </div>
-                          
+
                           <p className="text-gray-600 leading-relaxed line-clamp-4">
-                            {article.content}
+                            {article.summary || article.content}
                           </p>
                         </div>
                       </div>
@@ -227,26 +137,36 @@ const ActivitiesPage = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                           </svg>
                         </div>
-                        <h3 className="text-white font-bold text-lg">Nổi bật</h3>
+                        <h3 className="text-white font-bold text-lg">{t.activitiesPage.featured}</h3>
                       </div>
                     </div>
 
                     {/* Featured Articles List */}
                     <div className="p-4 space-y-4">
                       {currentContent.featuredArticles.map((article, index) => (
-                        <div key={article.id} className={`flex gap-3 ${index !== currentContent.featuredArticles.length - 1 ? 'pb-4 border-b border-gray-100' : ''}`}>
+                        <div
+                          key={article.id}
+                          className={`flex gap-3 cursor-pointer group ${index !== currentContent.featuredArticles.length - 1 ? 'pb-4 border-b border-gray-100' : ''}`}
+                          onClick={() => {
+                            if (activeTab === 'projects') {
+                              navigate(`/projects/${article.id}`);
+                            } else {
+                              navigate(`/activities/${article.id}`);
+                            }
+                          }}
+                        >
                           <div className="w-20 h-16 flex-shrink-0">
                             <img
                               src={article.image}
                               alt={article.title}
-                              className="w-full h-full object-cover rounded-lg"
+                              className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                               onError={(e) => {
                                 e.target.src = `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="80" height="64" viewBox="0 0 80 64"%3E%3Crect width="80" height="64" fill="%23e5e7eb"/%3E%3Ctext x="40" y="32" text-anchor="middle" dy=".3em" font-family="Arial, sans-serif" font-size="10" fill="%236b7280"%3E${article.id}%3C/text%3E%3C/svg%3E`;
                               }}
                             />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 hover:text-blue-600 transition-colors cursor-pointer mb-1">
+                            <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors mb-1">
                               {article.title}
                             </h4>
                             <p className="text-xs text-gray-500">
@@ -260,7 +180,7 @@ const ActivitiesPage = () => {
                     {/* View More Button */}
                     <div className="p-4 pt-0">
                       <button className="w-full bg-white hover:bg-gray-50 border border-[#3000d9] text-[#3000d9] font-semibold py-2 px-4 rounded-lg transition-colors text-sm btn-animate">
-                        XEM THÊM
+                        {t.activitiesPage.viewMore}
                       </button>
                     </div>
                   </div>
@@ -273,7 +193,7 @@ const ActivitiesPage = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0h6m-6 0a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V9a2 2 0 00-2-2" />
                   </svg>
                 </div>
-                <p className="text-gray-500 text-lg">Chưa có nội dung</p>
+                <p className="text-gray-500 text-lg">{t.activitiesPage.noContent}</p>
               </div>
             )}
           </div>
