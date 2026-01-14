@@ -220,7 +220,7 @@ const Members = () => {
   };
 
   const stats = [
-    { value: '100+', label: t.members.stats.kols },
+    { value: '200+', label: t.members.stats.kols },
     { value: '34', label: t.members.stats.provinces },
     { value: '400+', label: t.members.stats.delegates },
     { value: '100%', label: t.members.stats.free },
@@ -329,7 +329,7 @@ const Members = () => {
                   >
                     {/* Card with gradient */}
                     <div
-                      className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[280px] md:h-[300px]`}
+                      className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[200px] md:h-[220px]`}
                       style={isSpecialCard ? {
                         backgroundImage: 'url(/images/background_kol_card.png)',
                         backgroundSize: 'cover',

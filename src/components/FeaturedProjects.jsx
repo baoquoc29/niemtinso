@@ -286,7 +286,7 @@ const FeaturedProjects = () => {
         </div>
 
         {/* View More Button */}
-        <div className="text-center">
+        <div className="text-right">
           <button className="bg-white hover:bg-gray-100 text-[#3000d9] px-8 py-3 rounded-full font-medium text-base transition-all duration-300 shadow-lg hover:shadow-xl btn-animate">
             {t.projects.viewMore}
           </button>

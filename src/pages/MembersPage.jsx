@@ -284,7 +284,7 @@ const MembersPage = () => {
 
               {/* Load More Button */}
               {visibleOrgCount < organizationMembers.length && (
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-end mt-8">
                   <button
                     onClick={() => setVisibleOrgCount(prev => prev + 10)}
                     className="px-8 py-3 bg-[#3000d9] text-white font-medium rounded-full hover:bg-[#2400b3] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center gap-2"
@@ -343,7 +343,7 @@ const MembersPage = () => {
 
               {/* Load More Button */}
               {visibleIndCount < individualMembers.length && (
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-end mt-8">
                   <button
                     onClick={() => setVisibleIndCount(prev => prev + 10)}
                     className="px-8 py-3 bg-[#3000d9] text-white font-medium rounded-full hover:bg-[#2400b3] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center gap-2"

@@ -24,7 +24,7 @@ export const translations = {
     // Programs
     programs: {
       sectionSubtitle: 'CHƯƠNG TRÌNH CỦA CHÚNG TÔI',
-      sectionTitle: '6 Chương trình hành động năm 2026',
+      sectionTitle: 'CHƯƠNG TRÌNH HÀNH ĐỘNG NĂM 2026',
       sectionDescription: 'Các chương trình trọng tâm nhằm xây dựng hệ sinh thái số an toàn, minh bạch và bền vững.',
       ctaButton: 'Xem Lộ trình hành động 2026',
       viewDetails: 'Xem chi tiết',
@@ -262,7 +262,7 @@ export const translations = {
     // Programs
     programs: {
       sectionSubtitle: 'OUR PROGRAMS',
-      sectionTitle: '6 Action Programs for 2026',
+      sectionTitle: 'Action Programs for 2026',
       sectionDescription: 'Key programs aimed at building a safe, transparent, and sustainable digital ecosystem.',
       ctaButton: 'View 2026 Action Roadmap',
       viewDetails: 'View details',

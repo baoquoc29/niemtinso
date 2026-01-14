@@ -24,9 +24,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/">
-              <img 
-                src="/images/DTA_Logo_Final_Color.png" 
-                alt="DTA Logo" 
+              <img
+                src="/images/DTA_Logo_Final_Color.png"
+                alt="DTA Logo"
                 className="h-8 lg:h-10 w-auto object-contain"
               />
             </Link>
@@ -35,17 +35,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => {
-              const isActive = location.pathname === item.href || 
+              const isActive = location.pathname === item.href ||
                 (item.href !== '/' && location.pathname.startsWith(item.href));
               return item.isRoute ? (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors ${
-                    isActive 
-                      ? 'text-[#3000d9] border-b-2 border-[#3000d9] pb-1' 
+                  className={`text-sm font-medium transition-colors ${isActive
+                      ? 'text-[#3000d9] border-b-2 border-[#3000d9] pb-1'
                       : 'text-gray-700 hover:text-[#3000d9]'
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -53,11 +52,10 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`text-sm font-medium transition-colors ${
-                    isActive 
-                      ? 'text-[#3000d9] border-b-2 border-[#3000d9] pb-1' 
+                  className={`text-sm font-medium transition-colors ${isActive
+                      ? 'text-[#3000d9] border-b-2 border-[#3000d9] pb-1'
                       : 'text-gray-700 hover:text-[#3000d9]'
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </a>
@@ -74,14 +72,14 @@ const Header = () => {
               {t.registerButton}
             </Link>
             <div className="flex items-center space-x-2 text-sm">
-              <button 
+              <button
                 onClick={() => toggleLanguage('vi')}
                 className={`font-medium transition-colors ${language === 'vi' ? 'text-gray-700' : 'text-gray-400 hover:text-blue-600'}`}
               >
                 VIE
               </button>
               <span className="text-gray-300">|</span>
-              <button 
+              <button
                 onClick={() => toggleLanguage('en')}
                 className={`transition-colors ${language === 'en' ? 'text-gray-700' : 'text-gray-400 hover:text-blue-600'}`}
               >
@@ -118,17 +116,16 @@ const Header = () => {
           <div className="py-4 border-t">
             <nav className="flex flex-col space-y-4">
               {menuItems.map((item) => {
-                const isActive = location.pathname === item.href || 
+                const isActive = location.pathname === item.href ||
                   (item.href !== '/' && location.pathname.startsWith(item.href));
                 return item.isRoute ? (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`text-sm font-medium ${
-                      isActive 
-                        ? 'text-[#3000d9] font-semibold' 
+                    className={`text-sm font-medium ${isActive
+                        ? 'text-[#3000d9] font-semibold'
                         : 'text-gray-700 hover:text-[#3000d9]'
-                    }`}
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -137,11 +134,10 @@ const Header = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className={`text-sm font-medium ${
-                      isActive 
-                        ? 'text-[#3000d9] font-semibold' 
+                    className={`text-sm font-medium ${isActive
+                        ? 'text-[#3000d9] font-semibold'
                         : 'text-gray-700 hover:text-[#3000d9]'
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </a>
@@ -154,14 +150,14 @@ const Header = () => {
                 {t.registerButton}
               </Link>
               <div className="flex items-center space-x-2 text-sm justify-center">
-                <button 
+                <button
                   onClick={() => toggleLanguage('vi')}
                   className={`font-medium transition-colors ${language === 'vi' ? 'text-gray-700' : 'text-gray-400 hover:text-blue-600'}`}
                 >
                   VIE
                 </button>
                 <span className="text-gray-300">|</span>
-                <button 
+                <button
                   onClick={() => toggleLanguage('en')}
                   className={`transition-colors ${language === 'en' ? 'text-gray-700' : 'text-gray-400 hover:text-blue-600'}`}
                 >
