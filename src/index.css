@@ -241,3 +241,13 @@ body {
 .link-animate:hover::after {
   width: 100%;
 }
+
+@layer utilities {
+  .animate-marquee-right {
+    animation: marqueeRight 50s linear infinite;
+  }
+  @keyframes marqueeRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
