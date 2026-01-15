@@ -607,7 +607,7 @@ export const translations = {
     // Programs
     programs: {
       sectionSubtitle: 'OUR PROGRAMS',
-      sectionTitle: 'Action Programs for 2026',
+      sectionTitle: 'ACTION PROGRAMS FOR 2026',
       sectionDescription: 'Key programs aimed at building a safe, transparent, and sustainable digital ecosystem.',
       ctaButton: 'View 2026 Action Roadmap',
       viewDetails: 'View details',
