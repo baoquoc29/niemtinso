@@ -11,13 +11,13 @@ const useScrollAnimation = () => {
     if (!element) return;
 
     const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(element);
-          }
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
 
     observer.observe(element);
@@ -51,6 +51,18 @@ const Members = () => {
     { id: 14, name: 'iSocial', logo: '/images/company/Công ty TNHH Truyền thông iSocial Việt Nam.png' },
     { id: 15, name: 'Vitamin Network', logo: '/images/company/Công ty TNHH truyền thông Vitamin Network.jpg' },
     { id: 16, name: 'B.School', logo: '/images/company/Trường TH, THCS & THPT B.School.png' },
+    { id: 17, name: 'CyberTrust', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/CyberTrust.jpg' },
+    { id: 18, name: 'Agribank', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo-Agribank-2.png' },
+    { id: 19, name: 'EVN Finance', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo-Cong-Ty-Tai-Chinh-Cp-Dien-Luc.webp' },
+    { id: 20, name: 'MB Bank', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_MB_new.png' },
+    { id: 21, name: 'PVcombank', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_PVcombank.png' },
+    { id: 22, name: 'SHB', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_SHB.jpeg' },
+    { id: 23, name: 'Báo Pháp luật Việt Nam', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_báo_pháp_luật_Việt_Nam.png' },
+    { id: 24, name: 'Người quan sát', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Người quan sát.jpg' },
+    { id: 25, name: 'TikTok', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Tiktok-logo-icon-vector-PNG.avif' },
+    { id: 26, name: 'Yeah1', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Yeah1_2022.webp' },
+    { id: 27, name: 'Zeit Media', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Zeit Media.webp' },
+    { id: 28, name: 'VTV', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Đài truyền hình VN.svg' },
   ];
 
   const allIndividuals = [
@@ -173,10 +185,10 @@ const Members = () => {
   ];
 
   return (
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-12 bg-white">
+      <div className="container mx-auto px-4 lg:px-8">
 
-          <style>{`
+        <style>{`
           @keyframes marqueeRight {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -202,195 +214,193 @@ const Members = () => {
         `}</style>
 
 
-          <div
-              ref={headerRef}
-              className={`text-center mb-8 md:mb-12 transition-all duration-1000 ${
-                  headerVisible ? 'opacity-100 translate-y-0 scale-100 blur-0' : 'opacity-0 translate-y-12 scale-95 blur-sm'
-              }`}
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
-              {t.members.title}
-            </h2>
-          </div>
+        <div
+          ref={headerRef}
+          className={`text-center mb-8 md:mb-12 transition-all duration-1000 ${headerVisible ? 'opacity-100 translate-y-0 scale-100 blur-0' : 'opacity-0 translate-y-12 scale-95 blur-sm'
+            }`}
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3000d9] mb-6">
+            {t.members.title}
+          </h2>
+        </div>
 
 
-          <div
-              ref={orgRef}
-              className={`mb-16 transition-all duration-1000 ${orgVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}
-          >
-            <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
-              {t.members.tabOrganizations}
-            </h3>
+        <div
+          ref={orgRef}
+          className={`mb-16 transition-all duration-1000 ${orgVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
+            {t.members.tabOrganizations}
+          </h3>
 
 
-            <div className="w-full relative overflow-hidden">
-              <div className="flex animate-marquee-right whitespace-nowrap py-2">
-                {trackOrg.map((org, index) => (
-                    <div
-                        key={`org-${org.id}-${index}`}
-                        className="flex-shrink-0 w-[200px] mx-3 group cursor-pointer pb-4 hover:shadow-lg transition-all duration-300 shadow-md rounded-xl bg-white"
-                    >
-                      <div className="rounded-t-xl p-6 flex items-center justify-center h-32 bg-gradient-to-br from-gray-50 to-gray-100">
-                        {org.logo ? (
-                            <div className="flex items-center justify-center h-full w-full">
-                              <img
-                                  src={org.logo}
-                                  alt={org.name}
-                                  loading="lazy"
-                                  className="w-auto max-h-20 object-contain group-hover:scale-110 transition-transform duration-300 pointer-events-none"
-                              />
-                            </div>
-                        ) : (
-                            <span className="text-gray-600 font-semibold text-lg">{org.name}</span>
-                        )}
+          <div className="w-full relative overflow-hidden">
+            <div className="flex animate-marquee-right whitespace-nowrap py-2">
+              {trackOrg.map((org, index) => (
+                <div
+                  key={`org-${org.id}-${index}`}
+                  className="flex-shrink-0 w-[200px] mx-3 group cursor-pointer pb-4 hover:shadow-lg transition-all duration-300 shadow-md rounded-xl bg-white"
+                >
+                  <div className="rounded-t-xl p-6 flex items-center justify-center h-32 bg-gradient-to-br from-gray-50 to-gray-100">
+                    {org.logo ? (
+                      <div className="flex items-center justify-center h-full w-full">
+                        <img
+                          src={org.logo}
+                          alt={org.name}
+                          loading="lazy"
+                          className="w-auto max-h-20 object-contain group-hover:scale-110 transition-transform duration-300 pointer-events-none"
+                        />
                       </div>
+                    ) : (
+                      <span className="text-gray-600 font-semibold text-lg">{org.name}</span>
+                    )}
+                  </div>
 
-                      <div className="text-center py-3 px-2">
-                        <h4 className="font-semibold text-gray-900 text-sm line-clamp-2">{org.name}</h4>
-                      </div>
-                    </div>
-                ))}
-              </div>
+                  <div className="text-center py-3 px-2">
+                    <h4 className="font-semibold text-gray-900 text-sm line-clamp-2">{org.name}</h4>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
 
-          <div
-              ref={individualRef}
-              className={`mb-12 transition-all duration-1000 ${individualVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
-          >
-            <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
-              {t.members.tabIndividuals}
-            </h3>
+        <div
+          ref={individualRef}
+          className={`mb-12 transition-all duration-1000 ${individualVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
+            {t.members.tabIndividuals}
+          </h3>
 
-            {/* ✅ giống KOL: wrapper mask + track inline-flex + duplicate */}
-            <div className="w-full relative overflow-hidden">
-              <div className="flex animate-marquee-left whitespace-nowrap py-2">
-                {trackIndividuals.map((person, index) => {
-                  const isSpecialCard = [
-                    'Khánh Vy',
-                    'Đen Vâu',
-                    'Bảo Ngọc',
-                    'Meichan',
-                    'MONO',
-                    'TIỂU VY',
-                    'NGUYỄN SĨ TUẤN',
-                    'ĐỖ ĐĂNG QUANG',
-                  ].some((name) => person.name.includes(name));
+          {/* ✅ giống KOL: wrapper mask + track inline-flex + duplicate */}
+          <div className="w-full relative overflow-hidden">
+            <div className="flex animate-marquee-left whitespace-nowrap py-2">
+              {trackIndividuals.map((person, index) => {
+                const isSpecialCard = [
+                  'Khánh Vy',
+                  'Đen Vâu',
+                  'Bảo Ngọc',
+                  'Meichan',
+                  'MONO',
+                  'TIỂU VY',
+                  'NGUYỄN SĨ TUẤN',
+                  'ĐỖ ĐĂNG QUANG',
+                ].some((name) => person.name.includes(name));
 
-                  const displayName = person.name.includes('.') ? person.name.split('.')[1].trim().toUpperCase() : person.name.toUpperCase();
-                  const displayRole = person.role.toUpperCase();
-
-                  return (
-                      <div
-                          key={`person-${person.id}-${index}`}
-                          className="flex-shrink-0 w-[280px] mx-3 group cursor-pointer hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white flex flex-col"
-                      >
-                        <div
-                            className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[220px]`}
-                            style={
-                              isSpecialCard
-                                  ? {
-                                    backgroundImage: 'url(/images/background_kol_card.png)',
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    backgroundRepeat: 'no-repeat',
-                                  }
-                                  : {}
-                            }
-                        >
-                          <div className="absolute z-10" style={{ top: '20px', left: '20px', width: '260px', height: '24px' }}>
-                            <div>
-                              <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">{displayName}</h3>
-                              <p className="text-white font-semibold text-lg drop-shadow-md">{displayRole}</p>
-                            </div>
-                          </div>
-
-                          <div className="absolute inset-0 flex items-end justify-center">
-                            {person.image ? (
-                                <>
-                                  <img
-                                      src={person.image}
-                                      alt={person.name}
-                                      loading="lazy"
-                                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                                      style={
-                                          person.imageStyle ||
-                                          (() => {
-                                            if (person.name.includes('Khánh Vy')) return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
-                                            if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
-                                            if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
-                                            if (person.name.includes('Meichan')) return { transform: 'translateX(70px) translateY(20px) scale(0.8)' };
-                                            return {};
-                                          })()
-                                      }
-                                  />
-                                  <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
-                                </>
-                            ) : (
-                                <div className="w-32 h-32 mb-8 bg-white/20 rounded-full flex items-center justify-center">
-                                  <svg className="w-16 h-16 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                  </svg>
-                                </div>
-                            )}
-                          </div>
-                        </div>
-
-                        <div className="text-center py-4 px-2 flex-1 flex flex-col justify-start">
-                          <h3 className="font-bold text-gray-900 mb-2">{person.name}</h3>
-                          <p className="text-sm text-gray-500 line-clamp-2">{person.description}</p>
-                        </div>
-                      </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-
-          <div
-              ref={statsRef}
-              className={`bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12 transition-all duration-1000 ${
-                  statsVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'
-              }`}
-          >
-            <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
-              {t.members.networkTitle}
-            </h3>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-              {stats.map((stat, index) => {
-                const CountUp = ({ value }) => {
-                  const count = useCountAnimation(value);
-                  return <>{typeof count === 'number' ? count : count}</>;
-                };
-
-                const statAnimations = [
-                  statsVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-8 scale-75',
-                  statsVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-8 scale-75',
-                  statsVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-8 scale-75',
-                  statsVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-75',
-                ];
-                const statAnimation = statAnimations[index % statAnimations.length];
+                const displayName = person.name.includes('.') ? person.name.split('.')[1].trim().toUpperCase() : person.name.toUpperCase();
+                const displayRole = person.role.toUpperCase();
 
                 return (
+                  <div
+                    key={`person-${person.id}-${index}`}
+                    className="flex-shrink-0 w-[280px] mx-3 group cursor-pointer hover:shadow-lg transition-all duration-300 shadow-lg rounded-xl bg-white flex flex-col"
+                  >
                     <div
-                        key={index}
-                        className={`text-center transition-all duration-700 ${statAnimation}`}
-                        style={{ transitionDelay: `${200 + index * 100}ms` }}
+                      className={`relative overflow-hidden rounded-t-xl bg-gradient-to-br ${person.gradient} h-[220px]`}
+                      style={
+                        isSpecialCard
+                          ? {
+                            backgroundImage: 'url(/images/background_kol_card.png)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                          }
+                          : {}
+                      }
                     >
-                      <div className="text-4xl md:text-5xl font-bold text-[#3000d9] mb-2">
-                        <CountUp value={stat.value} />
+                      <div className="absolute z-10" style={{ top: '20px', left: '20px', width: '260px', height: '24px' }}>
+                        <div>
+                          <h3 className="text-white font-bold text-2xl leading-tight drop-shadow-lg">{displayName}</h3>
+                          <p className="text-white font-semibold text-lg drop-shadow-md">{displayRole}</p>
+                        </div>
                       </div>
-                      <div className="text-sm md:text-base text-black font-bold">{stat.label}</div>
+
+                      <div className="absolute inset-0 flex items-end justify-center">
+                        {person.image ? (
+                          <>
+                            <img
+                              src={person.image}
+                              alt={person.name}
+                              loading="lazy"
+                              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                              style={
+                                person.imageStyle ||
+                                (() => {
+                                  if (person.name.includes('Khánh Vy')) return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
+                                  if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
+                                  if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
+                                  if (person.name.includes('Meichan')) return { transform: 'translateX(70px) translateY(20px) scale(0.8)' };
+                                  return {};
+                                })()
+                              }
+                            />
+                            <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
+                          </>
+                        ) : (
+                          <div className="w-32 h-32 mb-8 bg-white/20 rounded-full flex items-center justify-center">
+                            <svg className="w-16 h-16 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                          </div>
+                        )}
+                      </div>
                     </div>
+
+                    <div className="text-center py-4 px-2 flex-1 flex flex-col justify-start">
+                      <h3 className="font-bold text-gray-900 mb-2">{person.name}</h3>
+                      <p className="text-sm text-gray-500 line-clamp-2">{person.description}</p>
+                    </div>
+                  </div>
                 );
               })}
             </div>
           </div>
         </div>
-      </section>
+
+
+        <div
+          ref={statsRef}
+          className={`bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12 transition-all duration-1000 ${statsVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'
+            }`}
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-[#3000d9] text-center mb-8">
+            {t.members.networkTitle}
+          </h3>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {stats.map((stat, index) => {
+              const CountUp = ({ value }) => {
+                const count = useCountAnimation(value);
+                return <>{typeof count === 'number' ? count : count}</>;
+              };
+
+              const statAnimations = [
+                statsVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-8 scale-75',
+                statsVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-8 scale-75',
+                statsVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-8 scale-75',
+                statsVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-75',
+              ];
+              const statAnimation = statAnimations[index % statAnimations.length];
+
+              return (
+                <div
+                  key={index}
+                  className={`text-center transition-all duration-700 ${statAnimation}`}
+                  style={{ transitionDelay: `${200 + index * 100}ms` }}
+                >
+                  <div className="text-4xl md:text-5xl font-bold text-[#3000d9] mb-2">
+                    <CountUp value={stat.value} />
+                  </div>
+                  <div className="text-sm md:text-base text-black font-bold">{stat.label}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
