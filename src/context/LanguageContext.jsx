@@ -602,7 +602,7 @@ export const translations = {
       title1: 'IMPACT RESPONSIBILITY',
       title2: 'LEADING TRUST',
       subtitle: 'BUILD TRUST TOGETHER WITH THE DIGITAL TRUST ALLIANCE TODAY!',
-      button: 'Learn More',
+      button: 'Register',
     },
     // Programs
     programs: {
