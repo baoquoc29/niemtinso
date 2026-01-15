@@ -307,7 +307,7 @@ export const translations = {
           {
             id: 2,
             title: 'Khai mạc Ngày hội An toàn trực tuyến “Không Một Mình”',
-            image: '/images/event-main-2.jpg',
+            image: '/images/Images_id_2/image_1.jpg',
             date: '01 tháng 11 năm 2025',
             summary: 'Chiều 01/11/2025, tại phố đi bộ hồ Hoàn Kiếm, Hà Nội, Ngày hội An toàn trực tuyến “Không Một Mình” chính thức được khai mạc, chung tay hướng tới một không gian mạng an toàn, lành mạnh cho trẻ em và thanh thiếu niên.',
             content: `
@@ -317,7 +317,7 @@ export const translations = {
                 </p>
 
                 <div class="my-8">
-                  <img src="/images/event-2-delegates.jpg" alt="Các đại biểu dự Lễ khai mạc" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/Images_id_2/image_1.jpg" alt="Các đại biểu dự Lễ khai mạc" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Các đại biểu dự Lễ khai mạc.</p>
                 </div>
 
@@ -330,7 +330,7 @@ export const translations = {
                 </blockquote>
 
                 <div class="my-8">
-                  <img src="/images/event-2-speech.jpg" alt="Thiếu tướng Lê Xuân Minh phát biểu" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/Images_id_2/image_2.jpg" alt="Thiếu tướng Lê Xuân Minh phát biểu" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Thiếu tướng Lê Xuân Minh, Cục trưởng Cục An ninh mạng và phòng chống tội phạm sử dụng công nghệ cao phát biểu khai mạc.</p>
                 </div>
 
@@ -343,12 +343,12 @@ export const translations = {
                 </p>
 
                 <div class="my-8">
-                  <img src="/images/event-2-ceremony.jpg" alt="Nghi thức khai mạc" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/Images_id_2/image_3.jpg" alt="Nghi thức khai mạc" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Các đại biểu thực hiện nghi thức khai mạc Ngày hội.</p>
                 </div>
 
                 <div class="my-8">
-                  <img src="/images/event-2-flowers.jpg" alt="Tặng hoa tri ân" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/Images_id_2/image_4.jpg" alt="Tặng hoa tri ân" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Ban Tổ chức tặng hoa tri ân các đơn vị đồng hành và KOL đại sứ.</p>
                 </div>
 
@@ -357,7 +357,7 @@ export const translations = {
                 </blockquote>
 
                 <div class="my-8">
-                  <img src="/images/event-2-attendees.jpg" alt="Các đại biểu tại lễ khai mạc" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/Images_id_2/image_5.jpg" alt="Các đại biểu tại lễ khai mạc" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Các đại biểu tại Lễ khai mạc.</p>
                 </div>
 
@@ -368,7 +368,7 @@ export const translations = {
                 </p>
 
                 <div class="my-8">
-                  <img src="/images/event-2-denvau.jpg" alt="Đen Vâu biểu diễn" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/Images_id_2/image_6.jpg" alt="Đen Vâu biểu diễn" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Đen Vâu biểu diễn tại Lễ khai mạc Ngày hội.</p>
                 </div>
 
@@ -382,10 +382,10 @@ export const translations = {
 
                 <div class="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <img src="/images/event-2-exhibition-1.jpg" alt="Không gian triển lãm" class="w-full rounded-lg shadow-md" />
+                    <img src="/images/Images_id_2/image_7.jpg" alt="Không gian triển lãm" class="w-full rounded-lg shadow-md" />
                   </div>
                   <div>
-                    <img src="/images/event-2-exhibition-2.jpg" alt="Trải nghiệm công nghệ" class="w-full rounded-lg shadow-md" />
+                    <img src="/images/Images_id_2/image_8.jpg" alt="Trải nghiệm công nghệ" class="w-full rounded-lg shadow-md" />
                   </div>
                 </div>
                 <p class="text-sm text-gray-600 italic mt-2 text-center mb-8">Tại không gian triển lãm số đa giác quan, khách tham quan sẽ được trải nghiệm hệ thống tương tác ánh sáng, âm thanh và công nghệ ấn tượng.</p>
@@ -395,7 +395,7 @@ export const translations = {
                 </p>
 
                 <div class="my-8">
-                  <img src="/images/event-2-students.jpg" alt="Học sinh biểu diễn" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/Images_id_2/image_9.jpg" alt="Học sinh biểu diễn" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Học sinh, sinh viên thể hiện sự sáng tạo qua âm nhạc, vũ đạo và nội dung số xoay quanh chủ đề "Không Một Mình".</p>
                 </div>
 
@@ -426,7 +426,7 @@ export const translations = {
           {
             id: 3,
             title: 'Hội nghị KOL toàn quốc: Chung tay xây dựng niềm tin số, lan tỏa ảnh hưởng tích cực',
-            image: '/images/event-main-3.jpg',
+            image: '/images/images_id_3/image_1.png',
             date: '18 tháng 08 năm 2025',
             summary: 'Sáng 18/8/2025, Hội nghị KOL toàn quốc đã diễn ra thành công với sự tham gia của gần 300 KOL tiêu biểu, đại diện 34 tỉnh, thành trên cả nước.',
             content: `
@@ -436,7 +436,7 @@ export const translations = {
                 </p>
 
                 <div class="my-8">
-                  <img src="/images/event-3-opening.jpg" alt="Thiếu tướng Lê Xuân Minh phát biểu khai mạc" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/images_id_3/image_1.png" alt="Thiếu tướng Lê Xuân Minh phát biểu khai mạc" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Thiếu tướng Lê Xuân Minh, Cục trưởng Cục An ninh mạng và phòng, chống tội phạm công nghệ cao phát biểu khai mạc.</p>
                 </div>
 
@@ -463,12 +463,12 @@ export const translations = {
                 <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Hành trình và những giá trị</h3>
 
                 <div class="my-8">
-                  <img src="/images/event-3-khanh-vy.jpg" alt="MC Khánh Vy chia sẻ" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/images_id_3/image_2.png" alt="MC Khánh Vy chia sẻ" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">MC Khánh Vy chia sẻ về hành trình trở thành "người nổi tiếng" cũng như trách nhiệm đối với cộng đồng của các KOL.</p>
                 </div>
 
                 <div class="my-8">
-                  <img src="/images/event-3-quang-vinh.jpg" alt="Doanh nhân Đỗ Quang Vinh chia sẻ" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/images_id_3/image_3.png" alt="Doanh nhân Đỗ Quang Vinh chia sẻ" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Doanh nhân Đỗ Quang Vinh (Tập đoàn T&T) chia sẻ tại Hội nghị. Anh cũng được xem là một người nổi tiếng trên mạng xã hội với trang cá nhân có hàng trăm nghìn người theo dõi.</p>
                 </div>
 
@@ -479,7 +479,7 @@ export const translations = {
                 <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Niềm tin và Kỳ vọng</h3>
 
                 <div class="my-8">
-                  <img src="/images/event-3-xuan-bac.jpg" alt="NSND Xuân Bắc chia sẻ" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/images_id_3/image_4.png" alt="NSND Xuân Bắc chia sẻ" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">NSND Xuân Bắc - Cục trưởng Cục Nghệ thuật biểu diễn chia sẻ tại Hội nghị.</p>
                 </div>
 
@@ -494,7 +494,7 @@ export const translations = {
                 </p>
 
                 <div class="my-8">
-                  <img src="/images/event-3-alliance.jpg" alt="Ra mắt Liên minh Niềm tin số" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/images_id_3/image_5.png" alt="Ra mắt Liên minh Niệm tin số" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Các đại biểu tại Hội nghị cùng ấn nút ra mắt Liên minh "Niềm tin số". Liên minh là nơi tập hợp các KOL/KOC uy tín, doanh nghiệp, cơ quan báo chí và nền tảng nhằm lan tỏa giá trị tích cực, dẫn dắt niềm tin, xây dựng chuẩn mực.</p>
                 </div>
 
@@ -507,12 +507,383 @@ export const translations = {
                 </p>
 
                 <div class="my-8">
-                  <img src="/images/event-3-attendees.jpg" alt="Hội nghị thu hút nhiều người có sức ảnh hưởng" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/images_id_3/image_6.png" alt="Hội nghị thu hút nhiều người có sức ảnh hưởng" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Hội nghị thu hút nhiều người có sức ảnh hưởng tham gia.</p>
                 </div>
 
                 <p class="mb-6 leading-relaxed">
                   Hội nghị "KOL với kỷ nguyên vươn mình của dân tộc" khép lại đã để lại dấu ấn sâu đậm, không chỉ ở quy mô và sự góp mặt của nhiều gương mặt tiêu biểu mà còn ở thông điệp nhân văn, chung tay kiến tạo niềm tin, khẳng định sức mạnh ảnh hưởng tích cực và đồng hành cùng dân tộc trong kỷ nguyên vươn mình. Với thành công đạt được, Hội nghị được kỳ vọng sẽ trở thành sự kiện thường niên, là cầu nối để KOL, doanh nghiệp, nền tảng và cơ quan quản lý cùng nhau hợp tác, chia sẻ và định hướng phát triển không gian mạng lành mạnh, bền vững.
+                </p>
+              </div>
+            `
+          },
+          {
+            id: 4,
+            title: 'Chính phủ - cộng đồng - KOL: “Liên minh số” chống tin giả',
+            image: '/images/images_id_4.jpg',
+            date: '25 tháng 08 năm 2025',
+            summary: 'Trong kỷ nguyên số, một cú click, một đoạn video cắt ghép, hay một dòng trạng thái thiếu kiểm chứng cũng đủ để gây chao đảo dư luận. Trước nạn tin giả tràn lan, Singapore đã tìm thấy công thức kết hợp giữa sự cứng rắn của luật pháp, sự bền bỉ của giáo dục và sự mềm mại của KOL. Công thức ấy đang gợi mở cho nhiều nước khác một hướng đi mới: muốn thắng trong cuộc chiến thông tin giả, hãy để KOL tham gia bảo vệ niềm tin số.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  Trong kỷ nguyên số, một cú click, một đoạn video cắt ghép, hay một dòng trạng thái thiếu kiểm chứng cũng đủ để gây chao đảo dư luận. Trước nạn tin giả tràn lan, Singapore đã tìm thấy công thức kết hợp giữa sự cứng rắn của luật pháp, sự bền bỉ của giáo dục và sự mềm mại của KOL. Công thức ấy đang gợi mở cho nhiều nước khác một hướng đi mới: muốn thắng trong cuộc chiến thông tin giả, hãy để KOL tham gia bảo vệ niềm tin số.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Tiếp cận giới trẻ bằng cách “nói” ngôn ngữ của họ</h3>
+
+                <p class="mb-6 leading-relaxed">
+                  Từ năm 2013, Hội đồng Thư viện Quốc gia (NLB) đã khởi động chiến dịch S.U.R.E. (Source, Understand, Research, Evaluate), một khung giáo dục giúp người dân “lọc” thông tin trước khi tin tưởng và chia sẻ. Ban đầu, S.U.R.E. là những buổi ngoại khóa trong trường học, nhưng đến thời đại TikTok, chính phủ nhanh chóng nhận ra rằng, nếu muốn đến được với giới trẻ, cần những gương mặt trẻ và ngôn ngữ mạng xã hội.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/images_id_4.jpg" alt="Chiến dịch Công nghệ số vì cuộc sống" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Chiến dịch Công nghệ số vì cuộc sống có sự tham gia của các KOL và sinh viên đại học. Ảnh: digitalforlife.gov.sg</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Vì thế, các KOL đã được mời tham gia. Thay vì những tờ rơi khô khan, thông điệp S.U.R.E. được gói gọn trong các clip ngắn, các trò chơi thử thách online, hay infographic bắt mắt. Một đoạn video 30 giây giải thích cách kiểm tra nguồn tin có thể thu hút hàng trăm nghìn lượt xem, điều mà bài báo chính thống khó đạt tới.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Không chỉ dừng ở trường học, chiến dịch còn lan ra cộng đồng: các câu lạc bộ thanh niên, gia đình và cả người cao tuổi. Thông điệp được “làm mới” liên tục để phù hợp với từng nhóm công chúng, nhờ sự sáng tạo của các nhà sáng tạo nội dung trẻ.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Singapore không chỉ chống tin giả, mà còn muốn nâng khả năng sử dụng công nghệ và phân tích thông tin cho người dân. Vì vậy, họ đã tung ra Chiến dịch Công nghệ số vì cuộc sống (Digital for Life - DfL). Trong khuôn khổ DfL, nhiều KOL cùng sinh viên từ Đại học Quốc gia Singapore (NUS) trở thành “huấn luyện viên số” cho học sinh tiểu học thuộc gia đình thu nhập thấp. Thay vì những bài giảng cứng nhắc, các em nhỏ được hướng dẫn cách tra cứu thông tin, tránh lừa đảo mạng qua trò chơi và video ngắn do chính những người có ảnh hưởng dẫn dắt.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Luật pháp không thể đứng một mình</h3>
+
+                <p class="mb-6 leading-relaxed">
+                  Singapore nổi tiếng với đạo luật Bảo vệ khỏi thông tin sai lệch và thao túng trực tuyến (POFMA), cho phép chính phủ yêu cầu chỉnh sửa hoặc gỡ bỏ nội dung sai sự thật. Nhưng các nhà hoạch định chính sách hiểu rõ rằng, luật không đủ nhanh để bắt kịp tốc độ lan truyền của tin giả. Thế nên, họ dựng thêm “lá chắn cộng đồng”. Nổi bật là nền tảng CheckMate, nơi tình nguyện viên, từ sinh viên, nhà báo đến chuyên gia công nghệ, cùng nhau kiểm chứng và gắn nhãn cảnh báo. Đặc biệt, nhiều người nổi tiếng, người có ảnh hưởng trong cộng đồng và mạng xã hội đã được huy động để chia sẻ lại nội dung của CheckMate, biến các thông tin kiểm chứng vốn khô khan thành những clip giải thích ngắn gọn, dễ hiểu và lan tỏa rộng rãi. Cách làm này giúp Singapore không chỉ “dập lửa” bằng pháp luật, mà còn “giữ an toàn” bằng sức mạnh cộng đồng.
+                </p>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 my-6 italic text-gray-700">
+                  "Một trong những dấu ấn nổi bật tại Hội nghị “KOL với kỷ nguyên vươn mình của dân tộc” mới đây, là việc ra mắt Liên minh Niệm tin số (Digital Trust Alliance - DTA), sáng kiến tập hợp KOL cùng cơ quan quản lý, nền tảng, doanh nghiệp và báo chí nhằm chung tay chống lại tin giả, hành vi lừa đảo trực tuyến, quảng cáo kém minh bạch và lan tỏa giá trị tích cực, nhân văn trong cộng đồng."
+                </blockquote>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Dùng sức mạnh số để dẹp vùng xám số</h3>
+
+                <p class="mb-6 leading-relaxed">
+                  Tin giả được coi là vùng xám của kỷ nguyên số. Cuộc tổng tuyển cử năm 2025 chứng kiến sự bùng nổ của deepfake và video AI. Một gương mặt chính trị gia có thể bị gắn ghép vào những phát ngôn chưa từng tồn tại. Để ứng phó, Singapore ban hành Đạo luật Bầu cử sửa đổi về bảo đảm tính toàn vẹn của quảng cáo trực tuyến (ELIONA) với mục đích ngăn chặn việc sử dụng deepfakes hoặc các hình thức chỉnh sửa kỹ thuật số (video, ảnh, âm thanh) để tạo ra nội dung sai sự thật về ứng cử viên bầu cử, khiến cử tri nhầm lẫn rằng đó là cảnh hoặc phát ngôn thật.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Nhưng như Bộ trưởng phụ trách Thông tin số thừa nhận, “luật không thể đủ nhanh và đủ mạnh nếu thiếu cộng đồng”. Chính lúc này, các KOL trở thành “lá chắn mềm”: họ nhanh chóng đăng video phản bác, giải thích cơ chế deepfake, hướng dẫn người dân cách phát hiện dấu hiệu giả mạo. Bằng uy tín cá nhân và ngôn ngữ giản dị, những người có ảnh hưởng giúp thông tin chính xác đến tay người dân trước khi tin giả kịp gây hậu quả.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Ở Singapore, các KOL không còn đơn thuần là người quảng bá sản phẩm, mà đang nỗ lực hỗ trợ Chính phủ và Chính phủ cũng hiểu giá trị của họ trong lan tỏa chính sách công, làm những công việc có ích cho cộng đồng. Họ làm điều mà báo chí chính thống hay văn bản pháp luật khó làm, đó là khiến người trẻ lắng nghe, hiểu và hành động.
+                </p>
+
+                <p class="text-right font-bold mt-8 text-gray-900 italic">Tác giả: Đạt Quốc</p>
+              </div>
+            `
+          },
+          {
+            id: 5,
+            title: 'Không gian mạng - trận địa tư tưởng mới',
+            image: '/images/image_id_5.png',
+            date: '25 tháng 08 năm 2025',
+            summary: 'Không gian mạng vốn là nơi giao lưu, chia sẻ thông tin, nhưng ngày nay đã trở thành trận địa tư tưởng nóng bỏng, nơi các thế lực thù địch lợi dụng để gieo rắc tin giả, xuyên tạc và tác động đến nhận thức xã hội.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  Không gian mạng vốn là nơi giao lưu, chia sẻ thông tin, nhưng ngày nay đã trở thành trận địa tư tưởng nóng bỏng, nơi các thế lực thù địch lợi dụng để gieo rắc tin giả, xuyên tạc và tác động đến nhận thức xã hội.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_5.png" alt="Xử lý hình sự đối tượng vi phạm" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Công an tỉnh Lâm Đồng xử lý hình sự đối tượng D.T.N về tội “làm, tàng trữ, phát tán hoặc tuyên truyền thông tin tài liệu, vật phẩm, chống Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam”.</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Trận địa nóng của tư tưởng số</h3>
+                <p class="mb-6 leading-relaxed">
+                  Thống kê của ngành chức năng, tính đến tháng 3/2025, Việt Nam có 79,8 triệu người dùng internet, chiếm 78,8% tổng dân số cả nước, trong đó có 76,2 triệu người tham gia vào các nền tảng mạng xã hội, chiếm 75,2% tổng dân số cả nước. Điều đó cho thấy “xã hội số” đã dần trở thành một phần không thể thiếu trong đời sống của đại bộ phận người Việt Nam.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Theo Bộ Công an, mỗi năm, Việt Nam ghi nhận hàng ngàn vụ tấn công mạng, hàng triệu tin giả, tin sai sự thật lan truyền với tốc độ chóng mặt. Các hành vi chủ yếu gồm: lừa đảo chiếm đoạt tài sản qua mạng; tin giả, tin sai sự thật; tấn công xuyên biên giới; tấn công mạng; xâm phạm quyền riêng tư.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Tại tỉnh Lâm Đồng có không gian phát triển rộng lớn với quy mô diện tích tự nhiên lớn nhất cả nước (trên 24.000 km²), quy mô kinh tế nằm trong top 10 cả nước, hội tụ đủ các yếu tố biển - rừng - biên giới - hải đảo... Với hơn 3,8 triệu dân, Lâm Đồng có đông đồng bào dân tộc thiểu số sinh sống trên địa bàn rộng lớn, tỷ lệ người dân sử dụng mạng xã hội ngày càng cao, nhất là giới trẻ.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Do vậy, chỉ một tin thất thiệt về đất đai, tín ngưỡng hay môi trường cũng có thể lan nhanh, gây tâm lý hoang mang trong cộng đồng. Thực tế cho thấy, những status thiếu kiểm chứng hay một video xuyên tạc được chia sẻ có thể lập tức tạo ra hiệu ứng đám đông. Chính vì vậy, việc giữ vững nền tảng tư tưởng trên không gian mạng ở Lâm Đồng không chỉ là nhiệm vụ chung của cả nước, mà còn mang ý nghĩa đặc biệt quan trọng với sự ổn định, phát triển bền vững của tỉnh.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Quyết liệt bảo vệ nền tảng tư tưởng của Đảng</h3>
+                <p class="mb-6 leading-relaxed">
+                  Thượng tá Vũ Hoàng Anh - Trưởng Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao cho biết: Bám sát Nghị quyết 35 của Bộ Chính trị, các kế hoạch của Công an tỉnh Lâm Đồng, phòng đã chủ động triển khai đồng bộ nhiều biện pháp để bảo vệ nền tảng tư tưởng của Đảng trên không gian mạng.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Nhờ đó, chỉ trong 3 năm (2022 – 2024), phòng đã đấu tranh, xử lý hành chính hơn 200 trường hợp đăng tải thông tin sai sự thật. Đáng chú ý, trong hơn 200 trường hợp bị xử lý có 25 KOL vi phạm. Trong đó, cơ quan chức năng đã xử phạt vi phạm hành chính 22 trường hợp, điển hình như: H.N.M (sản xuất nội dung bẩn, phân biệt vùng miền, miệt thị, chia rẽ khối đoàn kết); N.T.T (tổ chức hoạt động mê tín dị đoan để trục lợi); N.T.T.L (thông qua hoạt động tuyển idol để lôi kéo người livestream quảng cáo đánh bạc…).
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Ngoài ra, phòng đã phối hợp khởi tố 3 bị can về tội “làm, tàng trữ, phát tán hoặc tuyên truyền thông tin, tài liệu, vật phẩm chống Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam”... Những vụ việc này đã gióng lên hồi chuông cảnh báo về trách nhiệm pháp lý của người dùng mạng xã hội, nhất là những cá nhân có sức ảnh hưởng.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_5(1).jpg" alt="Xử lý vi phạm KOL" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Công an tỉnh Lâm Đồng xử lý vi phạm của KOL H.N.M sản xuất nội dung bẩn, phân biệt vùng miền.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed italic">
+                  Theo Thượng tá Vũ Hoàng Anh: “Hiện nay, địa bàn Lâm Đồng có nhiều đặc thù, vừa có lợi thế phát triển, vừa tiềm ẩn nguy cơ bị các thế lực xấu lợi dụng để lan truyền thông tin sai trái. Chúng tôi xác định bảo vệ nền tảng tư tưởng trên không gian mạng là nhiệm vụ chính trị quan trọng, lâu dài. Để giữ vững trận địa này, ngoài sự vào cuộc quyết liệt của lực lượng công an thì rất cần sự chung tay của KOL, quản trị viên fanpage và đặc biệt là ý thức trách nhiệm của từng công dân số.”
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Lan tỏa trách nhiệm công dân số</h3>
+                <p class="mb-6 leading-relaxed">
+                  Đại tá Huỳnh Ngọc Liêm - Phó Giám đốc Công an tỉnh Lâm Đồng nhận định, không gian mạng với những thành tựu vượt bậc của khoa học - công nghệ đã trở thành một phần không thể tách rời trong đời sống hiện nay. Song song với những giá trị tích cực, môi trường số cũng đang bị các đối tượng xấu lợi dụng để phát tán thông tin sai sự thật, xuyên tạc chủ trương của Đảng.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Trong bối cảnh ấy, đội ngũ KOL và quản trị viên các trang, kênh, hội nhóm trên mạng xã hội nổi lên như lực lượng có vai trò đặc biệt quan trọng. Họ không chỉ là những người sáng tạo nội dung mà còn trực tiếp vận hành, quản lý các cộng đồng mạng lớn. Tầm ảnh hưởng này khiến họ trở thành nhân tố gắn liền với công tác bảo đảm an ninh trên không gian mạng ở địa phương.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Thực tế tại Lâm Đồng cho thấy nhiều tín hiệu đáng mừng. Ngày càng nhiều KOL, quản trị viên đã ý thức rõ trách nhiệm của mình, chủ động đồng hành cùng lực lượng chức năng, chia sẻ nguồn tin chính thống, tham gia các chiến dịch truyền thông cộng đồng.
+                </p>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 my-6 italic text-gray-700">
+                  “Đội ngũ KOL và quản trị viên mạng xã hội đã trở thành lực lượng có ảnh hưởng sâu rộng, trực tiếp tác động đến nhận thức và thái độ của cộng đồng. Họ không chỉ tạo trào lưu, định hướng dư luận, mà còn là nhân tố quan trọng gắn với nhiệm vụ bảo đảm an ninh trên không gian mạng địa phương.” <br/>
+                  <span class="font-bold">— Đại tá Huỳnh Ngọc Liêm, Phó Giám đốc Công an tỉnh Lâm Đồng</span>
+                </blockquote>
+
+                <p class="text-right font-bold mt-8 text-gray-900 italic">Tác giả: Thu Hà</p>
+              </div>
+            `
+          },
+          {
+            id: 6,
+            title: 'KOL và lối sống trách nhiệm trên mạng',
+            image: '/images/image_id_6.webp',
+            date: '24 tháng 08 năm 2025',
+            summary: 'Hội nghị "KOL với kỷ nguyên vươn mình của dân tộc" vừa qua mở ra cơ hội mới để các KOL - những người có sức ảnh hưởng lớn - đồng hành với sự phát triển của đất nước, phát huy lợi thế của họ theo cách tích cực nhất.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  Hội nghị "KOL với kỷ nguyên vươn mình của dân tộc" vừa qua mở ra cơ hội mới để các KOL - những người có sức ảnh hưởng lớn - đồng hành với sự phát triển của đất nước, phát huy lợi thế của họ theo cách tích cực nhất.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_6.webp" alt="KOL và trách nhiệm xã hội" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Minh họa: DAD</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Hội nghị do Hiệp hội An ninh mạng quốc gia phối hợp Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao, Bộ Công an tổ chức với sự tham gia của lãnh đạo cơ quan quản lý, doanh nghiệp, nền tảng công nghệ cùng hàng trăm KOL trên cả nước. Hội nghị gửi thông điệp về việc đánh giá đúng vai trò, tiềm năng, điều kiện để KOL đóng góp tốt nhất.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Sức mạnh, quyền lực và giá trị từ KOL</h3>
+                <p class="mb-6 leading-relaxed">
+                  Thực tế cho thấy rõ sức hấp dẫn và "quyền lực" về thông tin từ những KOL trên không gian số. Một dòng trạng thái, một video, một phiên live của những người nổi tiếng, của những chủ kênh, chủ trang mạng có hàng trăm, hàng triệu người theo dõi sẽ tạo hiệu ứng lan tỏa thông tin mạnh mẽ và nhanh chóng. KOL trên mạng đang là một lực lượng đặc biệt, có thể định hướng thông tin, thay đổi nhận thức xã hội về một thông tin hay hiện tượng.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Những gương mặt KOL với hàng triệu lượt theo dõi lại đang trở thành "người dẫn đường" cho tâm thức đám đông. Nhưng câu hỏi đặt ra là: họ sẽ dẫn dắt cộng đồng đi đâu? Điều này tùy thuộc vào trình độ, ý thức và xu hướng chia sẻ thông tin của họ.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Bên cạnh một số KOL truyền cảm hứng sống đẹp, vẫn còn nhiều gương mặt sa vào lối sống hào nhoáng, thực dụng, phát ngôn gây sốc. Có những bức ảnh gieo vào tâm trí hàng triệu người xem những thước đo giá trị méo mó: đó là hào quang, ảo tưởng đến từ khoe khoang, nổi tiếng và nhiều lượt xem đặt lên trên trách nhiệm xã hội.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Chúng ta không thể đòi hỏi KOL phải trở thành thánh nhân. Nhưng điều có thể đòi hỏi sự chia sẻ có ý thức và tích cực bởi mỗi hành động của KOL đều tạo ra tác động xã hội. Phía sau những con số lượt thích, lượt chia sẻ là những tâm hồn đang học cách sống, cách nghĩ. Và ý thức rằng trong một đất nước đang vươn ra biển lớn, những gì đang diễn ra trên mạng cũng là một phần dân trí, một phần hình ảnh quốc gia.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">"Đại sứ" cho những điều tốt đẹp, tử tế</h3>
+                <p class="mb-6 leading-relaxed">
+                  Nếu KOL dùng sức ảnh hưởng để cổ vũ lối sống văn minh, tôn trọng pháp luật, bảo vệ môi trường, khơi dậy niềm tự hào dân tộc thì hàng triệu người trẻ sẽ được tiếp thêm động lực tích cực. Một bài đăng, một phiên lên sóng của họ có thể lan tỏa nhanh hơn những tờ rơi tuyên truyền, một lời kêu gọi của họ có thể gây quỹ cho cộng đồng góp tay làm việc tốt. Sức mạnh ấy, nếu được đặt đúng chỗ sẽ là nguồn lực vô giá cho quốc gia.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Ngược lại, sự buông thả, thiếu trách nhiệm của KOL không chỉ làm hoen ố hình ảnh cá nhân mà còn góp phần làm suy giảm niềm tin xã hội. Không phải ngẫu nhiên mà ở nhiều nước, KOL trở thành "đại sứ" lan tỏa giá trị văn hóa, quảng bá hình ảnh dân tộc ra thế giới. Việt Nam cũng đang cần những gương mặt như thế để góp thêm sức mạnh mềm trong hành trình hội nhập.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Kỷ nguyên vươn mình của dân tộc đòi hỏi mỗi người đều phải đóng góp, bằng cách này hay cách khác. Với KOL, đóng góp không chỉ là tham gia chiến dịch cộng đồng mà trước hết là sống có trách nhiệm với sức ảnh hưởng của mình.
+                </p>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 my-6 italic text-gray-700">
+                  "Một KOL tử tế có thể góp phần cùng lan truyền năng lượng tích cực. Một KOL mưu lợi bất chấp có thể gây ra những vết xước khó lành."
+                </blockquote>
+              </div>
+            `
+          },
+          {
+            id: 7,
+            title: 'KOL và trách nhiệm công dân trong kỷ nguyên số',
+            image: '/images/image_id_7.webp',
+            date: '23 tháng 08 năm 2025',
+            summary: 'Trong kỷ nguyên số, những người có sức ảnh hưởng (KOL) - từ ca sĩ, diễn viên đến doanh nhân, nhà sáng tạo nội dung - đang sở hữu một quyền lực chưa từng có.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  Trong kỷ nguyên số, những người có sức ảnh hưởng (KOL) - từ ca sĩ, diễn viên đến doanh nhân, nhà sáng tạo nội dung - đang sở hữu một quyền lực chưa từng có. Với hàng trăm nghìn, thậm chí hàng triệu người theo dõi, mỗi phát ngôn, hành động của họ đều có thể tạo ra xu hướng và tác động mạnh mẽ đến cộng đồng. Sức ảnh hưởng rộng lớn và nhanh chóng này đặt ra một câu hỏi cấp thiết về trách nhiệm công dân của họ.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_7.webp" alt="KOL và quyền lực thông tin" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Những người có sức ảnh hưởng (KOL) đang sở hữu lợi thế lớn.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Ban đầu, KOL chỉ là người dẫn dắt dư luận, nhưng trong bối cảnh toàn cầu hóa, vai trò của họ đã vượt xa hơn thế. Họ dần trở thành những "người đại diện không chính thức" của quốc gia. Giới trẻ ngày nay tìm đến KOL không chỉ để giải trí mà còn để học hỏi phong cách sống, tư duy và nuôi dưỡng khát vọng. 
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Vì vậy, sức ảnh hưởng của KOL mang tính hai mặt rõ rệt. Một mặt, nhiều KOL đã tận dụng vị thế của mình để lan tỏa những giá trị tốt đẹp như: họ kêu gọi bảo vệ môi trường, khuyến khích văn hóa đọc, truyền cảm hứng khởi nghiệp và chia sẻ những câu chuyện sống tử tế, nhân văn. Những hành động này gieo niềm tin và mở ra hướng đi tích cực cho cộng đồng.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Tuy nhiên, ở chiều ngược lại, không ít người đã chạy theo lợi ích ngắn hạn, gây ra những hệ lụy tiêu cực. Họ quảng cáo sản phẩm kém chất lượng, lan truyền thông tin sai lệch, hoặc dùng chiêu trò gây sốc để thu hút sự chú ý. Những "vạ miệng" hay hành vi phản cảm không chỉ làm hoen ố hình ảnh cá nhân mà còn bào mòn nghiêm trọng niềm tin của công chúng.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Trong bối cảnh đất nước đang vươn lên mạnh mẽ, KOL có thể trở thành một nguồn lực quan trọng, chuyển hóa khát vọng dân tộc thành hành động. Một lời kêu gọi ý nghĩa hay một hành động đẹp được lan tỏa có sức mạnh vượt xa nhiều chiến dịch tuyên truyền tốn kém. 
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Cuối cùng, mỗi KOL đều đứng trước một lựa chọn hoặc chạy theo hào quang ngắn ngủi, hoặc trở thành ngọn đèn bền bỉ soi sáng cho cộng đồng. Lựa chọn đó chính là câu trả lời cho việc họ muốn trở thành một người nổi tiếng đơn thuần, hay một công dân có trách nhiệm với tương lai của đất nước.
+                </p>
+
+                <p class="text-right font-bold mt-8 text-gray-900 italic">Tác giả: Nguyễn Phong Châu (kỹ sư xây dựng)</p>
+              </div>
+            `
+          },
+          {
+            id: 8,
+            title: 'Kỳ vọng từ Liên minh niềm tin số',
+            image: '/images/image_id_8.jpg',
+            date: '23 tháng 08 năm 2025',
+            summary: 'Không gian mạng hiện nay đã trở thành “thế giới thứ hai”, nơi thông tin thật-giả đan xen, tác động trực tiếp đến nhận thức, hành vi xã hội. Trong bối cảnh ấy, sự ra đời của Liên minh niềm tin số được kỳ vọng góp phần định hình văn hóa số trong sạch, lành mạnh, dựa trên niềm tin và trách nhiệm.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  Liên minh quy tụ người có sức ảnh hưởng (KOL), cơ quan quản lý, doanh nghiệp, báo chí để cùng xây dựng chuẩn mực ứng xử, định hướng hoạt động sáng tạo và lan tỏa giá trị tích cực của thông tin. Thực tế cho thấy, không ít KOL đã vì lợi nhuận mà “bán niềm tin” cho quảng cáo thiếu minh bạch.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_8.jpg" alt="Lễ ra mắt Liên minh Niềm tin số" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Người có ảnh hưởng trên không gian mạng tại lễ ra mắt Liên minh Niềm tin số, ngày 18-8-2025. Ảnh: Vnexpress</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Bài học quốc tế đã rất rõ: Ngôi sao truyền hình Kim Kardashian từng bị phạt hơn 1 triệu USD vì quảng bá tiền ảo sai quy định tại Mỹ; nhiều nước như Trung Quốc, Hàn Quốc, Pháp đã siết chặt quản lý, buộc KOL minh bạch quảng cáo, đồng thời chịu trách nhiệm liên đới khi gây thiệt hại cho người tiêu dùng.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Để liên minh thực sự phát huy hiệu quả tại Việt Nam, cần sự vào cuộc đồng bộ. Cơ quan quản lý sớm ban hành quy tắc ứng xử và chế tài đủ mạnh, tham khảo kinh nghiệm quốc tế để vừa quản lý vừa khuyến khích sáng tạo. KOL phải nhận thức rằng uy tín chính là “vốn liếng” lâu dài, muốn bền vững thì sức ảnh hưởng phải gắn liền với trách nhiệm pháp lý và đạo đức.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Thành công của liên minh phụ thuộc vào sự chung tay từ chính sách, ý thức của KOL và thái độ của cộng đồng. Khi mỗi lời nói, mỗi chia sẻ đều có trách nhiệm và giá trị, không gian mạng mới thật sự trở thành môi trường trong sạch, văn minh.
+                </p>
+
+                <p class="text-right font-bold mt-8 text-gray-900 italic">Tác giả: Duy Thành</p>
+              </div>
+            `
+          },
+          {
+            id: 9,
+            title: 'Người nổi tiếng, KOL quảng cáo sai sự thật sẽ chịu trách nhiệm thế nào?',
+            image: '/images/image_id_9.avif',
+            date: '23 Tháng 8, 2025',
+            summary: 'Trong bối cảnh xã hội hiện đại, việc quảng cáo sai sự thật và sử dụng người nổi tiếng, KOL (influencer) để quảng bá sản phẩm không rõ nguồn gốc đã trở thành một vấn đề đáng quan ngại. Để giải quyết vấn đề này, Luật Quảng cáo 2025 đã được ban hành, đặt ra những quy định mới nhằm tăng cường trách nhiệm của người nổi tiếng và doanh nghiệp trong việc quảng bá sản phẩm.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  Trong bối cảnh xã hội hiện đại, việc quảng cáo sai sự thật và sử dụng người nổi tiếng, KOL (influencer) để quảng bá sản phẩm không rõ nguồn gốc đã trở thành một vấn đề đáng quan ngại. Để giải quyết vấn đề này, Luật Quảng cáo 2025 đã được ban hành, đặt ra những quy định mới nhằm tăng cường trách nhiệm của người nổi tiếng và doanh nghiệp trong việc quảng bá sản phẩm.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Một trong điểm mới quan trọng của Luật Quảng cáo 2025 là việc yêu cầu người nổi tiếng và KOL phải chịu trách nhiệm liên đới nếu nội dung quảng cáo sai sự thật. Điều này giúp khắc phục khoảng trống pháp lý tồn tại suốt thời gian dài và tăng cường trách nhiệm của người nổi tiếng và doanh nghiệp trong việc quảng bá sản phẩm. Đồng thời, luật cũng cấm phát hành quảng cáo trên nền tảng vi phạm pháp luật, như trang web giả mạo, ứng dụng không phép, hoặc nền tảng chứa nội dung phản cảm, tin giả.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_9(2).webp" alt="Giải pháp bảo vệ người tiêu dùng" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Cần nhiều giải pháp bảo vệ người tiêu dùng.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Cơ quan lập pháp cũng trao quyền khởi kiện tập thể cho người tiêu dùng, thông qua các tổ chức đại diện. Đây là công cụ pháp lý mạnh mẽ nhằm gia tăng trách nhiệm doanh nghiệp, tạo ra sức ép công khai trước các hành vi quảng cáo gian dối. Theo các chuyên gia kinh tế, cơ chế khởi kiện tập thể này giúp giảm rào cản pháp lý, chi phí tố tụng cho từng cá nhân – vốn là lý do khiến nhiều người tiêu dùng Việt Nam chọn im lặng dù bị ảnh hưởng trực tiếp.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Không chỉ dừng lại ở quản lý nội dung và chủ thể, Luật Quảng cáo 2025 còn bổ sung cơ chế hậu kiểm mạnh, đặc biệt với nhóm sản phẩm có rủi ro cao như thực phẩm chức năng, mỹ phẩm, thuốc, thiết bị y tế. Tất cả nội dung quảng cáo liên quan các nhóm sản phẩm này đều phải được công bố hợp quy, cấp phép trước khi đăng tải, đồng thời không được dùng từ ngữ gây hiểu nhầm như ‘thần dược’, ‘đặc trị’, hay ‘có tác dụng ngay lập tức’.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Các nền tảng kỹ thuật số cũng sẽ phải xây dựng công cụ chặn, báo cáo quảng cáo sai sự thật, tăng khả năng phản hồi của người dùng và hỗ trợ cơ quan chức năng trong giám sát nội dung. Luật Quảng cáo 2025 là minh chứng cho sự chuyển dịch từ ‘quản lý truyền thống’ sang mô hình quản trị không gian số hiện đại, chủ động và minh bạch hơn. Không chỉ là hành lang pháp lý, đây còn là lời cảnh báo dành cho những ai còn mập mờ giữa thật – giả, tận dụng lòng tin để trục lợi.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Khi luật có hiệu lực, quảng cáo không thể là cuộc chơi đơn phương giữa doanh nghiệp và người nổi tiếng. Mỗi lời nói, mỗi hình ảnh, mỗi dòng mô tả… đều phải cân nhắc và chịu trách nhiệm. Đã đến lúc chấm dứt thời ‘ai muốn nói gì thì nói’ trong lĩnh vực quảng cáo. Việc thực hiện Luật Quảng cáo 2025 sẽ giúp tạo ra một môi trường quảng cáo lành mạnh và minh bạch hơn, bảo vệ quyền lợi của người tiêu dùng và tăng cường trách nhiệm của doanh nghiệp.
+                </p>
+              </div>
+            `
+          },
+          {
+            id: 10,
+            title: 'Hội Nghị Kol Toàn Quốc 2025: Lan Tỏa Trách Nhiệm Xã Hội, Khẳng Định Ảnh Hưởng Tích Cực',
+            image: '/images/image_id_10.png',
+            date: '22 tháng 08 năm 2025',
+            summary: 'Ngày 18/8/2025, tại Hà Nội, Hội nghị KOL toàn quốc 2025 lần đầu tiên quy tụ gần 300 gương mặt tiêu biểu từ 34 tỉnh, thành phố, khẳng định trách nhiệm của những người có sức ảnh hưởng đối với cộng đồng.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  Ngày 18/8/2025, tại Hà Nội, Hội nghị KOL toàn quốc 2025 lần đầu tiên được Bộ Công an tổ chức đã quy tụ gần 300 gương mặt tiêu biểu đến từ 34 tỉnh, thành phố trên cả nước. Với chủ đề “KOL với kỷ nguyên vươn mình của dân tộc”, sự kiện không chỉ là dịp tôn vinh vai trò của những người có sức ảnh hưởng (Key Opinion Leader – KOL), mà còn khẳng định ý nghĩa của việc sử dụng ảnh hưởng gắn liền với trách nhiệm xã hội và sự phát triển bền vững của cộng đồng.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Trong số những đại biểu tham dự, anh Phạm Đình Ngãi – Nhà sáng lập Mật hoa dừa Sokfarm (Trà Vinh) – mang đến câu chuyện khởi nghiệp từ những giọt mật hoa dừa bản địa, qua đó góp thêm góc nhìn về trách nhiệm của những cá nhân, thương hiệu có sức ảnh hưởng trong việc kiến tạo giá trị tốt đẹp cho đất nước.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_10(1).png" alt="Anh Phạm Đình Ngãi chia sẻ" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Anh Phạm Đình Ngãi tại Hội nghị KOL toàn quốc 2025.</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">KOL và câu chuyện về trách nhiệm xã hội</h3>
+                <p class="mb-6 leading-relaxed">
+                  Sự bùng nổ của mạng xã hội và truyền thông số đã tạo điều kiện để bất kỳ ai cũng có thể trở thành một KOL theo cách riêng của mình. Tuy nhiên “Ảnh hưởng không nằm ở con số người theo dõi, mà ở chỗ mỗi cá nhân có thể lan tỏa những giá trị tích cực gì cho cộng đồng.”
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Với Founder Sokfarm, hành trình khởi nghiệp từ Trà Vinh chính là minh chứng rõ nét. Từ những ngày đầu chia sẻ về nông dân, về mảnh đất miền Tây, đến khát vọng đưa nông sản Việt Nam vươn xa, anh Ngãi khẳng định rằng mỗi câu chuyện nhỏ đều có thể góp phần hình thành một niềm tin lớn. Sức ảnh hưởng, vì thế, chỉ thật sự có giá trị khi được gắn liền với sự chân thành và trách nhiệm.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Sokfarm: Từ giọt mật hoa dừa đến thương hiệu quốc tế</h3>
+                <p class="mb-6 leading-relaxed">
+                  Khởi đầu từ vùng nguyên liệu dừa bản địa Trà Vinh, Sokfarm tiên phong trong nghiên cứu và sản xuất các sản phẩm từ mật hoa dừa hữu cơ. Doanh nghiệp không chỉ tập trung vào chất lượng sản phẩm và tiêu chuẩn quốc tế, mà còn chú trọng đến trách nhiệm xã hội:
+                </p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                  <li>Tạo việc làm ổn định cho người dân địa phương, đặc biệt là đồng bào Khmer và nữ giới.</li>
+                  <li>Gìn giữ tri thức bản địa, kết hợp phương pháp truyền thống và công nghệ hiện đại.</li>
+                  <li>Đầu tư cho giáo dục cộng đồng, thông qua dự án Sok School – lớp học tiếng Anh miễn phí cho con em công nhân, nông dân quanh nhà máy.</li>
+                </ul>
+
+                <div class="my-8">
+                  <img src="/images/image_id_10(2).png" alt="Sản phẩm Sokfarm" class="w-full rounded-lg shadow-md" />
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Theo anh Ngãi, mỗi hoạt động của Sokfarm đều xuất phát từ niềm tin rằng thương hiệu chỉ bền vững khi đi cùng lợi ích cộng đồng. Và chính những giá trị đó đã giúp Sokfarm đưa mật hoa dừa hữu cơ từ Trà Vinh đến các thị trường khó tính như Mỹ, EU hay Nhật Bản.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Hội nghị KOL toàn quốc – cột mốc quan trọng</h3>
+                <p class="mb-6 leading-relaxed">
+                  Việc Bộ Công an tổ chức Hội nghị KOL toàn quốc 2025 được xem là một cột mốc đặc biệt. Đây là lần đầu tiên những cá nhân, doanh nghiệp, thương hiệu và nhà sáng tạo nội dung cùng ngồi lại trong một diễn đàn chính thống để bàn về vai trò và trách nhiệm của sức ảnh hưởng trong xã hội hiện đại.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Chủ đề “KOL với kỷ nguyên vươn mình của dân tộc” nhấn mạnh rằng ảnh hưởng không chỉ dừng lại ở việc quảng bá thương hiệu hay mang lại giải trí, mà cần được định hướng để góp phần xây dựng một cộng đồng văn minh, lan tỏa các giá trị nhân văn và đóng góp cho sức mạnh mềm quốc gia.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Khi sức mạnh nhỏ tạo thành giá trị lớn</h3>
+                <p class="mb-6 leading-relaxed">
+                  Với anh Phạm Đình Ngãi, câu trả lời nằm ở sự kiên định: “Ảnh hưởng không nằm ở to hay nhỏ, mà nằm ở sự chân thành và trách nhiệm.” Sự kiên trì gieo mầm niềm tin qua từng giọt mật hoa dừa đã giúp chuyển hóa một dự án địa phương thành một câu chuyện truyền cảm hứng mang tầm quốc gia.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_10(4).png" alt="Lan tỏa niềm tin" class="w-full rounded-lg shadow-md" />
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Kết thúc hội nghị, Founder Sokfarm bày tỏ: “Đây là hành trình nơi những người làm ảnh hưởng cùng chung tay kiến tạo một Việt Nam vươn mình mạnh mẽ trong kỷ nguyên số. Khi mỗi người đều chọn cách chia sẻ có trách nhiệm, chúng ta sẽ tạo nên một sức bật chung cho cả dân tộc.”
                 </p>
               </div>
             `
@@ -524,27 +895,71 @@ export const translations = {
         articles: [
           {
             id: 1,
-            title: 'Dự án xây dựng Trung tâm Giám sát An ninh mạng quốc gia (National Cybersecurity Monitoring Center - NCMC)',
-            image: '/images/project-main-1.jpg',
-            date: '15 tháng 12 năm 2025',
-            summary: 'Xây dựng trung tâm điều hành tập trung nhằm giám sát, phát hiện và ứng cứu sự cố an toàn thông tin trên quy mô quốc gia.',
+            title: 'Công bố chương trình "Tín nhiệm người có ảnh hưởng"',
+            image: '/images/project/project_1.jpg',
+            date: '18 tháng 8 năm 2025',
+            summary: 'Liên minh Niềm Tin Số công bố chương trình “Tín nhiệm người có ảnh hưởng”, hướng đến việc thiết lập hệ thống đánh giá uy tín và trách nhiệm xã hội của KOL/KOC. Đây sẽ là công cụ quan trọng giúp công chúng, doanh nghiệp và các nền tảng có cơ sở để nhận diện, hợp tác với những cá nhân thực sự lan tỏa giá trị tích cực và đáng tin cậy.',
             content: `
               <div class="article-content">
                 <p class="mb-6 leading-relaxed">
-                  Dự án xây dựng Trung tâm Giám sát An ninh mạng quốc gia (National Cybersecurity Monitoring Center - NCMC) là một trong những nhiệm vụ trọng tâm nhằm bảo đảm an toàn, an ninh mạng cho hệ thống thông tin của các cơ quan Đảng, Nhà nước và các hạ tầng thông tin quan trọng quốc gia.
+                  Chương trình “Tín nhiệm người có ảnh hưởng” hướng đến thiết lập hệ thống đánh giá uy tín và trách nhiệm xã hội của KOL/KOC. Hội nghị “KOL với kỷ nguyên vươn mình của dân tộc”, do Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (Bộ Công an) và Hiệp hội An ninh mạng quốc gia phối hợp tổ chức, đã diễn ra sáng 18-8, tại Hà Nội.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  Theo Thiếu tướng Lê Xuân Minh, Cục trưởng Cục An ninh mạng và phòng, chống tội phạm công nghệ cao (A05), KOL trên không gian mạng góp phần định hình nhận thức xã hội, dẫn dắt xu hướng, thúc đẩy sáng tạo và quảng bá, lan tỏa bản sắc giá trị Việt Nam.
                 </p>
                 <div class="my-8">
-                  <img src="/images/project-main-1.jpg" alt="Trung tâm NCMC" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/project/project_1.jpg" alt="Thiếu tướng Lê Xuân Minh" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Thiếu tướng Lê Xuân Minh, Cục trưởng Cục An ninh mạng và phòng, chống tội phạm công nghệ cao phát biểu khai mạc.</p>
                 </div>
+
                 <p class="mb-6 leading-relaxed">
-                  Trung tâm NCMC có chức năng giám sát tập trung, phân tích dữ liệu và đưa ra các cảnh báo sớm về các nguy cơ, cuộc tấn công mạng. Đồng thời, đây là đầu mối điều phối, ứng cứu và khắc phục sự cố an toàn thông tin mạng trên phạm vi toàn quốc.
+                  KOL cần ý thức sâu sắc tác động của mình trong từng phát ngôn, hình ảnh, hành động. Cùng với đó, các cơ quan quản lý, các nền tảng công nghệ... cũng cần chung tay định hướng, đồng hành, hỗ trợ kiến tạo môi trường lành mạnh để KOL nêu cao lòng yêu nước, phát huy sức ảnh hưởng tích cực.
                 </p>
-                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Mục tiêu chiến lược</h3>
-                <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
-                  <li>Xây dựng hệ thống giám sát thời gian thực cho các hạ tầng số trọng yếu.</li>
-                  <li>Phát triển các công cụ phân tích dữ liệu lớn (Big Data) và trí tuệ nhân tạo (AI) để phát hiện mã độc và hành vi bất thường.</li>
-                  <li>Nâng cao năng lực phản ứng nhanh trước các chiến dịch tấn công mạng quy mô lớn.</li>
-                </ul>
+                <div class="my-8">
+                  <img src="/images/project/project_2.jpg" alt="Ca sỹ Tùng Dương" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Ca sỹ Tùng Dương chia sẻ về vai trò của KOL trên mạng xã hội. Ảnh: BTC</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Trung tướng Nguyễn Minh Chính, Phó Chủ tịch thường trực Hiệp hội An ninh mạng quốc gia cho hay, hội nghị là bước khởi đầu cho mạng lưới hợp tác giữa KOL, cơ quan quản lý, doanh nghiệp, nền tảng số và báo chí, hướng tới chuẩn mực ứng xử và môi trường mạng an toàn, lành mạnh. Sự ra đời của Liên minh niềm tin số, quy tụ KOL uy tín, giúp công chúng nhận diện thông tin tích cực, bảo vệ niềm tin số và tăng cường sức mạnh mềm quốc gia.
+                </p>
+                <div class="my-8">
+                  <img src="/images/project/project_3.jpg" alt="Đại biểu hội nghị" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Các đại biểu tham dự hội nghị. Ảnh: T.H</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Phần thảo luận của các diễn giả tập trung vào vấn đề nâng cao trách nhiệm xã hội của KOL, xây dựng môi trường mạng an toàn, lành mạnh, thúc đẩy sáng tạo gắn liền với giá trị nhân văn và tăng cường hợp tác giữa cơ quan quản lý, nền tảng số và cộng đồng KOL. Nhiều nghệ sĩ, gương mặt có ảnh hưởng trong cộng đồng, như MC Khánh Vy, hoa hậu Bảo Ngọc,… đã chia sẻ quan điểm và hành trình trải nghiệm, mong muốn đóng góp vào sự phát triển của xã hội số văn minh.
+                </p>
+                <div class="my-8">
+                  <img src="/images/project/project_4.jpg" alt="MC Trần Khánh Vy" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">MC Trần Khánh Vy, người có ảnh hưởng trên mạng xã hội chia sẻ tại hội nghị. Ảnh: BTC</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Tại phiên tọa đàm với chủ đề “Niềm tin và kỳ vọng”, các đại biểu cũng đã chia sẻ về vai trò, trách nhiệm và cơ hội lan tỏa ảnh hưởng tích cực trong xã hội số; mở ra nhiều góc nhìn đa dạng, từ chính sách quản lý, giải pháp công nghệ, chiến lược truyền thông đến câu chuyện sáng tạo nội dung.
+                </p>
+                <div class="my-8">
+                  <img src="/images/project/project_5.jpg" alt="Ca sỹ Đen Vâu" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Ca sỹ, rapper Đen Vâu tham dự sự kiện. Ảnh: BTC</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Cũng tại hội nghị, Liên minh niềm tin số đã ra mắt. Liên minh tập hợp KOL, cơ quan quản lý, nền tảng, doanh nghiệp và báo chí nhằm chung tay chống lại tin giả, hành vi lừa đảo trực tuyến, quảng cáo kém minh bạch và lan tỏa giá trị tích cực, nhân văn trong cộng đồng. Liên minh được kỳ vọng sẽ trở thành không gian kết nối, chia sẻ kinh nghiệm, đồng thời xây dựng cơ chế tự giám sát nhằm nâng cao tính minh bạch và trách nhiệm xã hội của người có ảnh hưởng.
+                </p>
+                <div class="my-8">
+                  <img src="/images/project/project_6.jpg" alt="Hoa hậu Tiểu Vy" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Hoa hậu Việt Nam 2018 Trần Tiểu Vy tham dự hội nghị. Ảnh: BTC</p>
+                </div>
+
+                <div class="my-8">
+                  <img src="/images/project/project_7.jpg" alt="Rapper nhí" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Rapper nhí tham dự hội nghị sáng nay. Ảnh: T.H</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Cùng với đó, hội nghị cũng công bố chương trình “Tín nhiệm người có ảnh hưởng”, hướng đến việc thiết lập hệ thống đánh giá uy tín và trách nhiệm xã hội của KOL/KOC. Đây sẽ là công cụ quan trọng giúp công chúng, doanh nghiệp và các nền tảng có cơ sở để nhận diện, hợp tác với những cá nhân thực sự lan tỏa giá trị tích cực và đáng tin cậy.
+                </p>
               </div>
             `
           }
@@ -833,7 +1248,7 @@ export const translations = {
           {
             id: 2,
             title: 'Opening Ceremony of "Not Alone" Online Safety Festival',
-            image: '/images/event-main-2.jpg',
+            image: '/images/Images_id_2/image_1.jpg',
             date: 'November 01, 2025',
             summary: 'On the afternoon of November 1, 2025, the "Not Alone" Online Safety Festival was officially opened, working together towards a safe and healthy cyberspace for children and adolescents.',
             content: `
@@ -842,7 +1257,7 @@ export const translations = {
                   The Online Safety Festival is part of the "Not Alone" Campaign initiated by the Digital Trust Alliance, under the auspices of UNODC, UNICEF, and various Vietnamese ministries.
                 </p>
                 <div class="my-8">
-                  <img src="/images/event-2-delegates.jpg" alt="Opening Ceremony Delegates" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/Images_id_2/image_1.jpg" alt="Opening Ceremony Delegates" class="w-full rounded-lg shadow-md" />
                   <p class="text-sm text-gray-600 italic mt-2 text-center">Delegates attending the Opening Ceremony.</p>
                 </div>
                 <p class="mb-6 leading-relaxed">
@@ -854,7 +1269,7 @@ export const translations = {
           {
             id: 3,
             title: 'National KOL Conference: Together for Digital Trust and Positive Impact',
-            image: '/images/event-main-3.jpg',
+            image: '/images/images_id_3/image_1.png',
             date: 'August 18, 2025',
             summary: 'The National KOL Conference took place successfully with the participation of nearly 300 typical KOLs.',
             content: `
@@ -863,10 +1278,299 @@ export const translations = {
                   The conference "KOL with the Era of the Nation's Rise" brought together 300 influencers to discuss their role in building a healthy digital environment.
                 </p>
                 <div class="my-8">
-                  <img src="/images/event-3-opening.jpg" alt="Keynote Speech" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/images_id_3/image_1.png" alt="Keynote Speech" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Major General Nguyen Hong Quan delivering the opening speech.</p>
                 </div>
                 <p class="mb-6 leading-relaxed">
                   Influencers are encouraged to use their impact to spread positive values and combat fake news.
+                </p>
+                <div class="my-8">
+                  <img src="/images/images_id_3/image_2.png" alt="MC Khanh Vy sharing" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">MC Khanh Vy sharing her journey as an influencer.</p>
+                </div>
+                <div class="my-8">
+                  <img src="/images/images_id_3/image_3.png" alt="Businessman Do Quang Vinh sharing" class="w-full rounded-lg shadow-md" />
+                </div>
+                <div class="my-8">
+                  <img src="/images/images_id_3/image_4.png" alt="Artist Xuan Bac sharing" class="w-full rounded-lg shadow-md" />
+                </div>
+                <div class="my-8">
+                  <img src="/images/images_id_3/image_5.png" alt="Digital Trust Alliance Launch" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Delegates launching the Digital Trust Alliance.</p>
+                </div>
+                <div class="my-8">
+                  <img src="/images/images_id_3/image_6.png" alt="Conference Attendees" class="w-full rounded-lg shadow-md" />
+                </div>
+              </div>
+            `
+          },
+          {
+            id: 4,
+            title: 'Government - Community - KOL: "Digital Alliance" Against Fake News',
+            image: '/images/images_id_4.jpg',
+            date: 'August 25, 2025',
+            summary: 'In the digital age, a single click, a manipulated video, or an unverified status is enough to sway public opinion. Faced with the proliferation of fake news, Singapore has found a formula that combines legal toughness, educational persistence, and the "soft" influence of KOLs.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  In the digital age, a single click, a manipulated video, or an unverified status is enough to sway public opinion. Faced with the proliferation of fake news, Singapore has found a formula that combines legal toughness, educational persistence, and the "soft" influence of KOLs. This formula is opening a new direction for other countries: to win the war against fake news, let KOLs participate in protecting digital trust.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Reaching Youth by "Speaking" Their Language</h3>
+
+                <p class="mb-6 leading-relaxed">
+                  Since 2013, the National Library Board (NLB) has launched the S.U.R.E. campaign (Source, Understand, Research, Evaluate), an educational framework that helps people "filter" information. Initially, S.U.R.E. consisted of extracurricular school sessions, but in the TikTok era, the government quickly realized that to reach youth, they needed young faces and social media language.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/images_id_4.jpg" alt="Digital for Life Campaign" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Digital for Life Campaign featuring KOLs and university students. Photo: digitalforlife.gov.sg</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Thus, KOLs were invited to participate. Instead of dry flyers, S.U.R.E. messages were packed into short clips, online challenges, or eye-catching infographics. A 30-second video explaining how to check a news source can attract hundreds of thousands of views, something a mainstream newspaper rarely achieves.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Singapore is not just fighting fake news; it also wants to enhance digital literacy and information analysis for its citizens. Therefore, they launched the Digital for Life (DfL) Campaign. Under DfL, many KOLs along with students from the National University of Singapore (NUS) became "digital coaches" for primary students from low-income families.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Law Alone is Not Enough</h3>
+
+                <p class="mb-6 leading-relaxed">
+                  Singapore is famous for the Protection from Online Falsehoods and Manipulation Act (POFMA). But policymakers know that laws are not fast enough to catch up with the spread of fake news. So, they built a "community shield," such as the CheckMate platform, where volunteers verify information.
+                </p>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 my-6 italic text-gray-700">
+                  "One of the highlights at the recent 'KOL with the Era of the Nation's Rise' conference was the launch of the Digital Trust Alliance (DTA), an initiative gathering KOLs, regulators, platforms, and journalists to joint hands against fake news."
+                </blockquote>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Using Digital Power to Clear the Gray Zones</h3>
+
+                <p class="mb-6 leading-relaxed">
+                  Fake news is considered the gray zone of the digital age. The 2025 general election saw an explosion of deepfakes. To respond, Singapore enacted the Electoral Elections (Integrity of Online Advertising) Act (ELIONA) to prevent the use of deepfakes in elections.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  In Singapore, KOLs are no longer just product promoters, but are actively supporting the Government in spreading public policy and doing meaningful work for the community. They do what mainstream media or legal documents find difficult: making young people listen, understand, and act.
+                </p>
+
+                <p class="text-right font-bold mt-8 text-gray-900 italic">Author: Dat Quoc</p>
+              </div>
+            `
+          },
+          {
+            id: 5,
+            title: 'Cyberspace - A New Ideological Battlefield',
+            image: '/images/image_id_5.png',
+            date: 'August 25, 2025',
+            summary: 'Cyberspace, originally a place for exchange and information sharing, has now become a heated ideological battlefield where hostile forces exploit to spread fake news and impact social perception.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  Cyberspace, originally a place for exchange and information sharing, has now become a heated ideological battlefield where hostile forces exploit to spread fake news and impact social perception.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_5.png" alt="Criminal processing" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Lam Dong Provincial Police taking criminal action against individual D.T.N for spreading anti-state materials.</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">A Hot Battlefield of Digital Ideology</h3>
+                <p class="mb-6 leading-relaxed">
+                  As of March 2025, Vietnam has 79.8 million internet users, accounting for 78.8% of the population. This shows that "digital society" has become an indispensable part of life for the majority of Vietnamese people.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Firmly Protecting Ideological Foundations</h3>
+                <p class="mb-6 leading-relaxed">
+                  The Cyber Security Department has proactively implemented synchronized measures to protect ideological foundations in cyberspace. In just 3 years (2022-2024), the department has handled more than 200 cases of posting false information, including 25 KOLs.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_5(1).jpg" alt="KOL violation processing" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Police handling violations by KOL H.N.M for toxic content and regional discrimination.</p>
+                </div>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 my-6 italic text-gray-700">
+                  "KOLs and social media administrators have become forces with wide-reaching influence, directly impacting the perceptions and attitudes of the community." <br/>
+                  <span class="font-bold">— Colonel Huynh Ngoc Liem, Deputy Director of Lam Dong Provincial Police</span>
+                </blockquote>
+
+                <p class="text-right font-bold mt-8 text-gray-900 italic">Author: Thu Ha</p>
+              </div>
+            `
+          },
+          {
+            id: 6,
+            title: 'KOLs and Responsible Online Lifestyle',
+            image: '/images/image_id_6.webp',
+            date: 'August 24, 2025',
+            summary: 'The recent "KOL with the Era of the Nation\'s Rise" conference has opened new opportunities for KOLs to accompany national development and leverage their influence positively.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  The recent "KOL with the Era of the Nation's Rise" conference has opened new opportunities for KOLs to accompany national development and leverage their influence positively.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_6.webp" alt="KOL and Social Responsibility" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Illustration: DAD</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">The Power and Value of KOLs</h3>
+                <p class="mb-6 leading-relaxed">
+                  The "power" of information from KOLs in digital space is undeniable. A post, a video, or a livestream from famous people with millions of followers can spread information strongly and rapidly.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Ambassadors for Goodness and Kindness</h3>
+                <p class="mb-6 leading-relaxed">
+                  If KOLs use their influence to promote a civilized lifestyle, respect for the law, environmental protection, and national pride, millions of young people will be motivated positively.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                  The era of national rise requires everyone to contribute. For KOLs, contribution is not just about participating in community campaigns, but first and foremost living responsibly with their influence.
+                </p>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 my-6 italic text-gray-700">
+                  "A kind KOL can contribute to spreading positive energy. A profit-driven KOL at any cost can cause deep scars."
+                </blockquote>
+              </div>
+            `
+          },
+          {
+            id: 7,
+            title: 'KOLs and Civic Responsibility in the Digital Era',
+            image: '/images/image_id_7.webp',
+            date: 'August 23, 2025',
+            summary: 'In the digital age, influencers (KOLs) - from singers and actors to entrepreneurs and content creators - possess unprecedented power.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  In the digital age, influencers (KOLs) - from singers and actors to entrepreneurs and content creators - possess unprecedented power. With hundreds of thousands, even millions of followers, every statement and action they take can create trends and strongly impact the community.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_7.webp" alt="KOL and information power" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Influencers (KOLs) possess major advantages.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  KOL influence is clearly double-edged. On one hand, many KOLs have utilized their position to spread positive values: calling for environmental protection, encouraging reading culture, inspiring entrepreneurship, and sharing stories of kindness.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Ultimately, every KOL stands before a choice: to chase short-term glory or to become a steady light illuminating the community. This choice is the answer to whether they want to be a mere celebrity or a responsible citizen for the country's future.
+                </p>
+
+                <p class="text-right font-bold mt-8 text-gray-900 italic">Author: Nguyen Phong Chau (Construction Engineer)</p>
+              </div>
+            `
+          },
+          {
+            id: 8,
+            title: 'Expectations for the Digital Trust Alliance',
+            image: '/images/image_id_8.jpg',
+            date: 'August 23, 2025',
+            summary: 'Cyberspace has now become a "second world" where true and false information intertwine, directly impacting social awareness and behavior. In this context, the birth of the Digital Trust Alliance is expected to contribute to shaping a clean and healthy digital culture based on trust and responsibility.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  The alliance brings together influencers (KOLs), regulators, businesses, and the press to jointly build standards of conduct, direct creative activities, and spread the positive value of information.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_8.jpg" alt="Digital Trust Alliance Launch" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Influencers at the Digital Trust Alliance launch ceremony, August 18, 2025. Photo: Vnexpress</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  International lessons are clear: TV star Kim Kardashian was once fined over $1 million for promoting cryptocurrencies against regulations in the US; many countries have tightened management, forcing KOLs to be transparent about advertising.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  The success of the alliance depends on the joint efforts of policies, KOL awareness, and community attitude. When every word and every share is responsible and valuable, cyberspace will truly become a clean and civilized environment.
+                </p>
+
+                <p class="text-right font-bold mt-8 text-gray-900 italic">Author: Duy Thanh</p>
+              </div>
+            `
+          },
+          {
+            id: 9,
+            title: 'How will celebrities and KOLs be held responsible for false advertising?',
+            image: '/images/image_id_9.avif',
+            date: 'August 23, 2025',
+            summary: 'In modern society, false advertising and using celebrities and KOLs (influencers) to promote products of unknown origin has become a concerning issue. To resolve this, the 2025 Advertising Law set new regulations to enhance responsibility for both influencers and businesses.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  In modern society, false advertising and using celebrities and KOLs (influencers) to promote products of unknown origin has become a concerning issue. To resolve this, the 2025 Advertising Law set new regulations to enhance responsibility for both influencers and businesses.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_9(1).webp" alt="KOL and advertising" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Celebrities and false advertising (Illustration).</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  One of the key updates of the 2025 Advertising Law is the requirement for celebrities and KOLs to be held jointly liable for false advertising content. This fills a long-standing legal gap and increases the accountability of both influencers and businesses.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_9(2).webp" alt="Consumer protection solutions" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">More solutions are needed to protect consumers.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  The law also empowers consumers to file class-action lawsuits through representative organizations. This is a powerful legal tool to increase corporate responsibility and create public pressure against fraudulent advertising practices.
+                </p>
+              </div>
+            `
+          },
+          {
+            id: 10,
+            title: 'National KOL Conference 2025: Spreading Social Responsibility, Confirming Positive Influence',
+            image: '/images/image_id_10.png',
+            date: 'August 22, 2025',
+            summary: 'On August 18, 2025, in Hanoi, the first National KOL Conference organized by the Ministry of Public Security brought together nearly 300 typical faces, emphasizing the role of influencers in social responsibility.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  On August 18, 2025, in Hanoi, the first National KOL Conference organized by the Ministry of Public Security brought together nearly 300 typical faces from 34 provinces across the country. Under the theme "KOL with the era of the nation's rise", the event affirmed the importance of influence linked with social responsibility.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Among the delegates, Mr. Pham Dinh Ngai – Founder of Sokfarm (Tra Vinh) – brought the story of starting up from local coconut nectar, contributing a perspective on the responsibility of influencers in creating good values for the country.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_10(1).png" alt="Mr. Pham Dinh Ngai sharing" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Mr. Pham Dinh Ngai at the National KOL Conference 2025.</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">KOLs and the Story of Social Responsibility</h3>
+                <p class="mb-6 leading-relaxed">
+                  "Influence is not about followers, but about the positive values each individual can spread to the community." For the Sokfarm Founder, the startup journey from Tra Vinh is clear evidence.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Sokfarm: From Coconut Nectar to International Brand</h3>
+                <p class="mb-6 leading-relaxed">
+                  Sokfarm focuses on international standards and social responsibility: creating stable jobs for local people, preserving indigenous knowledge, and investing in community education through the Sok School project.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_10(2).png" alt="Sokfarm Products" class="w-full rounded-lg shadow-md" />
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  According to Mr. Ngai, Sokfarm's activities stem from the belief that a brand is only sustainable when accompanied by community benefits. Those values helped Sokfarm reach demanding markets like the US, EU, and Japan.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/image_id_10(4).png" alt="Spreading Trust" class="w-full rounded-lg shadow-md" />
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  The National KOL Conference 2025 marks a special milestone where individuals, businesses, and content creators discuss the role of influence in building a civilized community and national soft power.
                 </p>
               </div>
             `
@@ -878,20 +1582,59 @@ export const translations = {
         articles: [
           {
             id: 1,
-            title: 'National Cybersecurity Monitoring Center (NCMC) Construction Project',
-            image: '/images/project-main-1.jpg',
-            date: 'December 15, 2025',
-            summary: 'Building a centralized operation center to monitor, detect, and respond to information security incidents on a national scale.',
+            title: 'Announcing the "Influencer Trust" Program',
+            image: '/images/project/project_1.jpg',
+            date: 'August 18, 2025',
+            summary: 'The Digital Trust Alliance announces the "Influencer Trust" program, aiming to establish a reputation and social responsibility assessment system for KOLs/KOCs. This will be an important tool for the public, businesses, and platforms to identify and collaborate with individuals who truly spread positive and reliable values.',
             content: `
               <div class="article-content">
                 <p class="mb-6 leading-relaxed">
-                  The project to build the National Cybersecurity Monitoring Center (NCMC) is one of the key tasks to ensure the cybersecurity of the Party and State systems.
+                  The "Influencer Trust" program aims to establish an assessment system for the reputation and social responsibility of KOLs/KOCs. The conference "KOLs with the era of the nation's rise", organized by the Cybersecurity Bureau (Ministry of Public Security) and the National Cyber Security Association, took place on the morning of August 18 in Hanoi.
                 </p>
                 <div class="my-8">
-                  <img src="/images/project-main-1.jpg" alt="NCMC Center" class="w-full rounded-lg shadow-md" />
+                  <img src="/images/project/project_1.jpg" alt="Major General Le Xuan Minh" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Major General Le Xuan Minh, Director of the Cybersecurity Bureau, gave the opening speech.</p>
                 </div>
+
                 <p class="mb-6 leading-relaxed">
-                  The NCMC center functions as a centralized monitoring unit, analyzing data and providing early warnings of cyber threats and attacks.
+                  KOLs need to be deeply aware of the impact of their every statement, image, and action. At the same time, management agencies and technology platforms need to join hands to orient and support the creation of a healthy environment for KOLs to promote positive influence.
+                </p>
+                <div class="my-8">
+                  <img src="/images/project/project_2.jpg" alt="Singer Tung Duong" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Singer Tung Duong shares the role of KOLs on social networks. Photo: BTC</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  The birth of the Digital Trust Alliance, bringing together prestigious KOLs, helps the public identify positive information and strengthen national soft power.
+                </p>
+                <div class="my-8">
+                  <img src="/images/project/project_3.jpg" alt="Conference delegates" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Delegates attending the conference. Photo: T.H</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Speakers' discussions focused on themes such as improving the social responsibility of KOLs and building a safe and healthy online environment.
+                </p>
+                <div class="my-8">
+                  <img src="/images/project/project_4.jpg" alt="MC Khanh Vy" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">MC Khanh Vy, an influencer sharing at the conference. Photo: BTC</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  The launch of the Digital Trust Alliance aims to combat fake news, online fraud, and opaque advertising while spreading humanitarian values.
+                </p>
+                <div class="my-8">
+                  <img src="/images/project/project_6.jpg" alt="Miss Tieu Vy" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Miss Vietnam 2018 Tran Tieu Vy attending the conference. Photo: BTC</p>
+                </div>
+
+                <div class="my-8">
+                  <img src="/images/project/project_7.jpg" alt="Child rapper" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">A child rapper attending this morning's conference. Photo: T.H</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Along with that, the conference also announced the "Influencer Trust" program, aiming to establish a reputation and social responsibility assessment system for KOLs/KOCs. This will be an important tool for the public, businesses, and platforms to have a basis for identifying and collaborating with individuals who truly spread positive and reliable values.
                 </p>
               </div>
             `
