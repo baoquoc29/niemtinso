@@ -48,7 +48,6 @@ export default function ProjectDetailPage() {
               {/* Nội dung chi tiết dự án */}
               <article className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8">
                 <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{displayProject.title}</h1>
-                <img src={displayProject.image} alt={displayProject.title} className="w-full h-64 object-cover rounded-lg mb-6" />
                 <div
                   className="text-gray-700 leading-relaxed text-base md:text-lg"
                   dangerouslySetInnerHTML={{ __html: displayProject.content }}
