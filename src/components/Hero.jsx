@@ -118,22 +118,22 @@ const Hero = () => {
         <div className="min-h-[calc(100vh-5rem)] flex items-center">
           <div className="max-w-xl py-12 lg:py-20">
             {/* Main Heading */}
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight animate-fade-in-up">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
               {t.hero.title1}
               <br />
               {t.hero.title2}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-sm md:text-base text-white/90 mb-6 max-w-lg leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-base md:text-lg lg:text-xl text-white/90 mb-8 max-w-lg leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {t.hero.subtitle}
             </p>
 
             {/* CTA Button */}
-            <Link to="/register" className="group bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl btn-animate animate-fade-in-up w-fit" style={{ animationDelay: '0.4s' }}>
+            <Link to="/register" className="group bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full font-semibold text-base md:text-lg transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl btn-animate animate-fade-in-up w-fit" style={{ animationDelay: '0.4s' }}>
               <span>{t.hero.button}</span>
               <svg
-                className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"

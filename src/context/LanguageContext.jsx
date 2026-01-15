@@ -19,7 +19,7 @@ export const translations = {
       title1: 'ẢNH HƯỞNG TRÁCH NHIỆM',
       title2: 'DẪN DẮT NIỀM TIN',
       subtitle: 'KIẾN TẠO NIỀM TIN CÙNG LIÊN MINH NIỀM TIN SỐ NGAY HÔM NAY!',
-      button: 'Chi tiết',
+      button: 'Đăng ký',
     },
     // Programs
     programs: {
@@ -31,27 +31,27 @@ export const translations = {
       badge: 'CHƯƠNG TRÌNH',
       action2026: 'HÀNH ĐỘNG 2026',
       program1: {
-        title: 'Hạ tầng Niềm tin số\n& Định danh tin cậy',
+        title: 'Xây dựng Đại sứ Niềm Tin Số\n(Đại sứ AI)',
         items: ['eID, eKYC, Trust Framework', 'Ngân hàng, nền tảng số']
       },
       program2: {
-        title: 'Chuẩn mực Dữ liệu &\nBảo vệ quyền riêng tư',
+        title: 'Chương trình Tín nhiệm\nNgười có Ảnh hưởng',
         items: ['Data Governance, Privacy', 'Doanh nghiệp, cơ quan quản lý']
       },
       program3: {
-        title: 'AI có trách nhiệm &\nMinh bạch thuật toán',
+        title: 'Chương trình\nKiểm chứng Tin giả',
         items: ['Responsible AI, Explainable AI', 'Tổ chức ứng dụng AI']
       },
       program4: {
-        title: 'Niềm tin số trong\nTài chính - Ngân hàng',
+        title: 'Không Một Mình – Cùng nhau\nAn toàn Trực tuyến 2026',
         items: ['Chống gian lận, An ninh mạng', 'Ngân hàng, Fintech']
       },
       program5: {
-        title: 'Nâng cao năng lực &\nNhân thực Niềm tin số',
+        title: 'Hội nghị KOL Toàn quốc lần thứ 2\n(KOLs Summit 2026)',
         items: ['Đào tạo, Truyền thông', 'Nhân sự, Cộng đồng']
       },
       program6: {
-        title: 'Hợp tác - Thí điểm -\nLan tỏa quốc tế',
+        title: 'Digital Trust Awards\nGiải thưởng Niềm Tin Số',
         items: ['Sandbox, Đối tác toàn cầu', 'Trong & ngoài nước']
       },
       ambassador: {

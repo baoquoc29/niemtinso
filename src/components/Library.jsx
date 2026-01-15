@@ -112,9 +112,9 @@ const Library = () => {
             </h2>
             
             {/* View More Button - Absolute positioned on both mobile and desktop */}
-            <Link to="/library" className="absolute top-0 right-0 bg-white hover:bg-gray-50 text-[#3000d9] px-4 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-xs md:text-base transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-2 btn-animate">
+            <Link to="/library" className="absolute top-0 right-0 bg-white hover:bg-gray-50 text-[#3000d9] px-3 py-1.5 md:px-4 md:py-2 rounded-full font-medium text-xs md:text-sm transition-all duration-300 border border-[#3000d9] shadow-sm hover:shadow-md inline-flex items-center gap-1.5 btn-animate">
               <span className="hidden md:inline">{t.library.viewMore}</span>
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
