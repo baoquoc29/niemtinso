@@ -140,6 +140,66 @@ const MembersPage = () => {
       name: 'Trường TH, THCS & THPT B.School',
       logo: '/images/company/Trường TH, THCS & THPT B.School.png',
     },
+    {
+      id: 17,
+      name: 'CyberTrust',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/CyberTrust.jpg',
+    },
+    {
+      id: 18,
+      name: 'Ngân hàng Agribank',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo-Agribank-2.png',
+    },
+    {
+      id: 19,
+      name: 'Công ty Tài chính CP Điện lực (EVN Finance)',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo-Cong-Ty-Tai-Chinh-Cp-Dien-Luc.webp',
+    },
+    {
+      id: 20,
+      name: 'Ngân hàng MB Bank',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_MB_new.png',
+    },
+    {
+      id: 21,
+      name: 'Ngân hàng PVcombank',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_PVcombank.png',
+    },
+    {
+      id: 22,
+      name: 'Ngân hàng SHB',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_SHB.jpeg',
+    },
+    {
+      id: 23,
+      name: 'Báo Pháp luật Việt Nam',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_báo_pháp_luật_Việt_Nam.png',
+    },
+    {
+      id: 24,
+      name: 'Báo Người quan sát',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Người quan sát.jpg',
+    },
+    {
+      id: 25,
+      name: 'Nền tảng TikTok Việt Nam',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Tiktok-logo-icon-vector-PNG.avif',
+    },
+    {
+      id: 26,
+      name: 'Tập đoàn Yeah1',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Yeah1_2022.webp',
+    },
+    {
+      id: 27,
+      name: 'Zeit Media',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Zeit Media.webp',
+    },
+    {
+      id: 28,
+      name: 'Đài Truyền hình Việt Nam (VTV)',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Đài truyền hình VN.svg',
+    },
   ];
 
   const individualMembers = [
