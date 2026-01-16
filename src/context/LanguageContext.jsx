@@ -258,7 +258,9 @@ export const translations = {
         ],
       },
       regulations: {
-        viewDetail: 'Xem thông tin chi tiết tại đây',
+        viewDetail: 'Xem chi tiết tại đây',
+        doc1: 'BẢN TUYÊN BỐ CHUNG',
+        doc2: 'QUY ƯỚC ĐỒNG HÀNH',
       },
     },
     // Activities Page
@@ -1486,6 +1488,8 @@ export const translations = {
       },
       regulations: {
         viewDetail: 'View details here',
+        doc1: 'JOINT DECLARATION',
+        doc2: 'COMPANION CONVENTION',
       },
     },
     // Activities Page

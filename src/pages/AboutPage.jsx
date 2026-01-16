@@ -178,16 +178,56 @@ const AboutPage = () => {
     regulations: {
       title: '',
       content: (
-        <div className="space-y-8">
-          <div className="text-center mb-8 px-4">
-          </div>
-          <div className="w-full bg-[#eeeeee] py-8 md:py-12 lg:py-16 flex flex-col items-center">
-            <div className='cursor-zoom-in hover:scale-[1.02] transition-transform px-4'>
-              <img src="/images/dieu-le-NCA.png" alt="Điều lệ NCA" className="w-full max-w-[320px] md:max-w-[420px] object-contain" />
+        <div className="space-y-8 max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Document 1: TUYÊN BỐ CHUNG */}
+            <div className="flex flex-col items-center bg-gray-50 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all border border-gray-100">
+              <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-sm mb-6 overflow-hidden flex items-center justify-center border border-gray-200">
+                <img
+                  src="/images/tuyenbochungpreview.png"
+                  alt={t.aboutPage.regulations.doc1}
+                  className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-[#3000d9] mb-4 text-center h-14 flex items-center">
+                {t.aboutPage.regulations.doc1}
+              </h3>
               <a
-                href="#"
-                className="block text-center text-blue-600 text-sm mt-6 hover:underline"
+                href="/documents/TUYÊN BỐ CHUNG.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#3000d9] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#3000d9]/90 transition-all btn-animate"
               >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                {t.aboutPage.regulations.viewDetail}
+              </a>
+            </div>
+
+            {/* Document 2: QUY ƯỚC ĐỒNG HÀNH */}
+            <div className="flex flex-col items-center bg-gray-50 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all border border-gray-100">
+              <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-sm mb-6 overflow-hidden flex items-center justify-center border border-gray-200">
+                <img
+                  src="/images/quyuocchungpriview.png"
+                  alt={t.aboutPage.regulations.doc2}
+                  className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-[#3000d9] mb-4 text-center h-14 flex items-center">
+                {t.aboutPage.regulations.doc2}
+              </h3>
+              <a
+                href="/documents/QUY ƯỚC ĐỒNG HÀNH.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#3000d9] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#3000d9]/90 transition-all btn-animate"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
                 {t.aboutPage.regulations.viewDetail}
               </a>
             </div>
