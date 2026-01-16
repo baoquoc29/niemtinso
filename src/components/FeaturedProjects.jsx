@@ -34,51 +34,17 @@ const FeaturedProjects = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
   const [open, setOpen] = useState(false);
 
-  const projects = [
-    {
-      id: 1,
-      image: '/images/KOL_2025-451.jpg',
-      title: t.projects.project1.title,
-      description: t.projects.project1.description,
-      category: 'posts',
-    },
-    {
-      id: 2,
-      image: '/images/k1m.webp',
-      title: t.projects.project2.title,
-      description: t.projects.project2.description,
-      category: 'posts',
-    },
-    {
-      id: 3,
-      image: '/images/conguochanoi/conguochanoi.jpg',
-      title: t.projects.project3.title,
-      description: t.projects.project3.description,
-      category: 'posts',
-    },
-    {
-      id: 4,
-      image: '/images/main.jpg',
-      title: t.projects.project3.title,
-      description: t.projects.project3.description,
-      category: 'initiatives',
-    },
-    {
-      id: 5,
-      image: '/images/main.jpg',
-      title: t.projects.project3.title,
-      description: t.projects.project3.description,
-      category: 'initiatives',
-    },
-    {
-      id: 6,
-      image: '/images/main.jpg',
-      title: t.projects.project3.title,
-      description: t.projects.project3.description,
-      category: 'initiatives',
-    },
+  // Get projects from context
+  const allProjects = t.activitiesPage.projects.articles || [];
 
-  ];
+  // Map our data to the components structure
+  const projects = allProjects.slice(0, 6).map(p => ({
+    id: p.id,
+    image: p.image,
+    title: p.title,
+    description: p.summary,
+    category: p.id === 1 || p.id === 10 ? 'posts' : 'initiatives' // Example categorisation
+  }));
 
   const filteredProjects = activeFilter === 'all'
     ? projects
@@ -104,9 +70,12 @@ const FeaturedProjects = () => {
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">
               {t.projects.title}
             </h2>
-            
+
             {/* View More Button - Absolute positioned on both mobile and desktop */}
-            <button className="absolute top-0 right-0 bg-white hover:bg-gray-50 text-[#3000d9] px-3 py-1.5 md:px-4 md:py-2 rounded-full font-medium text-xs md:text-sm transition-all duration-300 border border-white shadow-sm hover:shadow-md inline-flex items-center gap-1.5 btn-animate">
+            <button
+              onClick={() => window.location.href = '/activities?tab=projects'}
+              className="absolute top-0 right-0 bg-white hover:bg-gray-50 text-[#3000d9] px-3 py-1.5 md:px-4 md:py-2 rounded-full font-medium text-xs md:text-sm transition-all duration-300 border border-white shadow-sm hover:shadow-md inline-flex items-center gap-1.5 btn-animate"
+            >
               <span className="hidden md:inline">{t.projects.viewMore}</span>
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -157,8 +126,9 @@ const FeaturedProjects = () => {
             return (
               <div
                 key={project.id}
-                className={`bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 group hover:-translate-y-2 relative p-1 ${animationClass}`}
+                className={`bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 group hover:-translate-y-2 relative p-1 cursor-pointer ${animationClass}`}
                 style={{ transitionDelay: `${index * 120}ms` }}
+                onClick={() => window.location.href = `/projects/${project.id}`}
               >
                 {/* Image Placeholder */}
                 <div className="relative h-48 md:h-72 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden rounded-xl">

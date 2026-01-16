@@ -31,6 +31,12 @@ const ActivitiesPage = () => {
   const navigate = useNavigate();
   const [headerRef, headerVisible] = useScrollAnimation();
   const [contentRef, contentVisible] = useScrollAnimation();
+  const [visibleFeaturedCount, setVisibleFeaturedCount] = useState(3);
+
+  // Reset count when tab changes
+  useEffect(() => {
+    setVisibleFeaturedCount(3);
+  }, [activeTab]);
 
   const tabs = [
     { id: 'events', label: t.activitiesPage.tabs.events },
@@ -143,10 +149,10 @@ const ActivitiesPage = () => {
 
                     {/* Featured Articles List */}
                     <div className="p-4 space-y-4">
-                      {currentContent.featuredArticles.map((article, index) => (
+                      {currentContent.featuredArticles.slice(0, visibleFeaturedCount).map((article, index) => (
                         <div
                           key={article.id}
-                          className={`flex gap-3 cursor-pointer group ${index !== currentContent.featuredArticles.length - 1 ? 'pb-4 border-b border-gray-100' : ''}`}
+                          className={`flex gap-3 cursor-pointer group ${index !== Math.min(visibleFeaturedCount, currentContent.featuredArticles.length) - 1 ? 'pb-4 border-b border-gray-100' : ''}`}
                           onClick={() => {
                             if (activeTab === 'projects') {
                               navigate(`/projects/${article.id}`);
@@ -179,8 +185,17 @@ const ActivitiesPage = () => {
 
                     {/* View More Button */}
                     <div className="p-4 pt-0">
-                      <button className="w-full bg-white hover:bg-gray-50 border border-[#3000d9] text-[#3000d9] font-semibold py-2 px-4 rounded-lg transition-colors text-sm btn-animate">
-                        {t.activitiesPage.viewMore}
+                      <button
+                        onClick={() => {
+                          if (visibleFeaturedCount >= currentContent.featuredArticles.length) {
+                            setVisibleFeaturedCount(3);
+                          } else {
+                            setVisibleFeaturedCount(prev => prev + 3);
+                          }
+                        }}
+                        className="w-full bg-white hover:bg-gray-50 border border-[#3000d9] text-[#3000d9] font-semibold py-2 px-4 rounded-lg transition-colors text-sm btn-animate"
+                      >
+                        {visibleFeaturedCount >= currentContent.featuredArticles.length ? (t.activitiesPage.viewLess || 'Thu gọn') : t.activitiesPage.viewMore}
                       </button>
                     </div>
                   </div>
