@@ -13,6 +13,7 @@ import LibraryPage from './pages/LibraryPage';
 import RegisterPage from './pages/RegisterPage';
 import ActivityDetailPage from './pages/ActivityDetailPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+import VideoDetailPage from './pages/VideoDetailPage';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/members" element={<MembersPage />} />
             <Route path="/library" element={<LibraryPage />} />
+            <Route path="/library/video/:id" element={<VideoDetailPage />} />
             <Route path="/register" element={<RegisterPage />} />
           </Routes>
           <Footer />

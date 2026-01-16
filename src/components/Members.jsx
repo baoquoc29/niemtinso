@@ -90,14 +90,7 @@ const Members = () => {
       gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/HH_BAO_NGOC.png',
     },
-    {
-      id: 4,
-      name: 'MEICHAN',
-      role: t.members.individual4.role,
-      description: t.members.individual4.description,
-      gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
-      image: '/images/KOL_MEICHAN.png',
-    },
+
     {
       id: 5,
       name: 'MONO',
@@ -111,7 +104,7 @@ const Members = () => {
       id: 6,
       name: 'TIỂU VY',
       role: 'HOA HẬU',
-      description: 'Hoa hậu Việt Nam, biểu tượng sắc đẹp và trí tuệ trẻ.',
+      description: 'Nhan sắc Việt, trí tuệ trẻ',
       gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/Tieu_Vy.png',
       imageStyle: { transform: 'translateX(60px) translateY(30px) scale(0.9)' },
@@ -120,19 +113,19 @@ const Members = () => {
       id: 7,
       name: 'NGUYỄN SĨ TUẤN',
       role: 'KOL',
-      description: 'KOL nổi bật với nhiều hoạt động cộng đồng.',
+      description: 'Nghệ sĩ kết nối cộng đồng',
       gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/Nguyen_Si_Tuan.png',
-      imageStyle: { transform: 'translateX(50px) translateY(20px) scale(0.9)' },
+      imageStyle: { transform: 'translateX(50px) translateY(25px) scale(0.9)' },
     },
     {
       id: 8,
       name: 'ĐỖ ĐĂNG QUANG',
-      role: 'KOL',
-      description: 'KOL trẻ năng động, sáng tạo và truyền cảm hứng.',
+      role: 'BIÊN ĐẠO',
+      description: 'Biên đạo trẻ đầy cảm hứng',
       gradient: 'from-yellow-400 via-yellow-500 to-orange-400',
       image: '/images/Do_Dang_Quang.png',
-      imageStyle: { transform: 'translateX(50px) translateY(-80px) scale(1.5)' },
+      imageStyle: { transform: 'translateX(50px) translateY(-75px) scale(1.6)' },
     },
   ];
 
@@ -282,7 +275,7 @@ const Members = () => {
                   'Khánh Vy',
                   'Đen Vâu',
                   'Bảo Ngọc',
-                  'Meichan',
+
                   'MONO',
                   'TIỂU VY',
                   'NGUYỄN SĨ TUẤN',
@@ -328,10 +321,10 @@ const Members = () => {
                               style={
                                 person.imageStyle ||
                                 (() => {
-                                  if (person.name.includes('Khánh Vy')) return { transform: 'translateX(50px) translateY(20px) scale(0.9)' };
-                                  if (person.name.includes('Đen Vâu')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
-                                  if (person.name.includes('Bảo Ngọc')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
-                                  if (person.name.includes('Meichan')) return { transform: 'translateX(70px) translateY(20px) scale(0.8)' };
+                                  if (person.name.includes('KHÁNH VY')) return { transform: 'translateX(40px) translateY(20px) scale(0.9)' };
+                                  if (person.name.includes('ĐEN VÂU')) return { transform: 'translateX(30px) translateY(30px) scale(0.9)' };
+                                  if (person.name.includes('BẢO NGỌC')) return { transform: 'translateX(80px) translateY(-50px) scale(1.5)' };
+
                                   return {};
                                 })()
                               }

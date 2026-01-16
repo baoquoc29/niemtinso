@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
 
 // Lazy Image Component
 const LazyImage = ({ src, alt, className }) => {
@@ -88,10 +89,20 @@ const LibraryPage = () => {
       { id: 21, image: '/images/main.jpg' },
     ],
     videos: [
-      { id: 1, image: null },
-      { id: 2, image: null },
-      { id: 3, image: null },
-      { id: 4, image: null },
+      {
+        id: 1,
+        title: "Recap Hành trình Không Một Mình 2025",
+        embedUrl: "https://www.youtube.com/embed/4gEob-oGu6g?si=KIUnfYbxR-SBo-Kq",
+        thumbnail: "https://img.youtube.com/vi/4gEob-oGu6g/maxresdefault.jpg",
+        date: "16/01/2026",
+      },
+      {
+        id: 2,
+        title: "Recap Đêm Gala âm nhạc Không Một Mình 2025",
+        embedUrl: "https://www.youtube.com/embed/4oVttisgsyc?si=OTGh-EAcbAPH7pkz",
+        thumbnail: "https://img.youtube.com/vi/4oVttisgsyc/maxresdefault.jpg",
+        date: "15/01/2026",
+      }
     ],
     infographics: [
       { id: 1, image: null },
@@ -126,8 +137,8 @@ const LibraryPage = () => {
                     setShowAll(false);
                   }}
                   className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 btn-animate ${activeTab === tab.id
-                      ? 'bg-[#3000d9] text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
+                    ? 'bg-[#3000d9] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-[#3000d9]/10'
                     }`}
                 >
                   {tab.label}
@@ -147,14 +158,44 @@ const LibraryPage = () => {
           </div>
 
           {/* Image Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+          <div className={`grid grid-cols-2 md:grid-cols-4 ${activeTab === 'videos' ? 'gap-4 md:gap-6' : 'gap-1'}`}>
             {displayedItems.map((item, index) => (
               <div
                 key={item.id}
-                className="relative aspect-[4/3] bg-black overflow-hidden group cursor-pointer card-animate"
+                className={`relative ${activeTab === 'videos' ? 'h-full bg-transparent' : 'aspect-[4/3] bg-black'} overflow-hidden group cursor-pointer card-animate`}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                {item.image ? (
+                {activeTab === 'videos' ? (
+                  <Link to={`/library/video/${item.id}`} className="block w-full h-full bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 flex flex-col">
+                    <div className="relative aspect-video bg-black overflow-hidden rounded-t-xl">
+                      <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-transparent transition-colors">
+                        <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform backdrop-blur-sm">
+                          <svg className="w-5 h-5 text-[#3000d9] ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 flex-1 flex flex-col">
+                      <h3 className="text-sm font-bold text-gray-900 leading-snug line-clamp-2 group-hover:text-[#3000d9] transition-colors mb-auto">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-gray-400 mt-2 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0h6m-6 0a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V9a2 2 0 00-2-2" /></svg>
+                        {item.date}
+                      </p>
+                    </div>
+                  </Link>
+                ) : item.embedUrl ? (
+                  <iframe
+                    src={item.embedUrl}
+                    title={item.title || "Video"}
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                ) : item.image ? (
                   <LazyImage
                     src={item.image}
                     alt={`Ảnh ${index + 1}`}

@@ -217,22 +217,22 @@ const MembersPage = () => {
     },
     {
       id: 3,
-      name: 'Đỗ Quang Đăng',
+      name: 'Biên đạo Đỗ Quang Đăng',
       avatar: '/images/members/do-quang-dang.jpg',
-      avatarStyle: { objectPosition: 'center' },
+      avatarStyle: { objectPosition: 'center', transform: 'scale(1.3)' },
     },
     {
       id: 4,
-      name: 'Nguyễn Sỹ Tuấn',
+      name: 'Nghệ sĩ Nguyễn Sỹ Tuấn',
       avatar: '/images/members/nguyen-sy-tuan.jpg',
-      avatarStyle: { objectPosition: 'center' },
+      avatarStyle: { objectPosition: 'top' },
       zoom: true,
     },
     {
       id: 5,
-      name: 'Nguyễn Việt Hoàng (MONO)',
+      name: 'Ca sĩ Nguyễn Việt Hoàng',
       avatar: '/images/members/nguyen-viet-hoang.jpg',
-      avatarStyle: { objectPosition: 'center top' },
+      avatarStyle: { objectPosition: '70% top', transform: 'scale(1.3)' },
       zoom: true,
     },
     {
@@ -243,7 +243,7 @@ const MembersPage = () => {
     },
     {
       id: 7,
-      name: 'Đen Vâu',
+      name: 'Rapper Đen Vâu',
       avatar: '/images/members/den-vau.jpg',
       avatarStyle: { objectPosition: 'center' },
     },
@@ -303,29 +303,29 @@ const MembersPage = () => {
             </div> */}
           </div>
 
-          {/*/!* Title *!/*/}
-          {/*<h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#3000d9] mb-10 transition-all duration-700 delay-200 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>*/}
-          {/*  {activeTab === 'organization' */}
-          {/*    ? (t.membersPage?.titleOrganization || 'Danh sách Hội viên tổ chức/doanh nghiệp')*/}
-          {/*    : (t.membersPage?.titleIndividual || 'Danh sách Hội viên cá nhân')*/}
-          {/*  }*/}
-          {/*</h1>*/}
+          {/* Title */}
+          <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#4400ff] mb-8 md:mb-12 mt-6 md:mt-8 whitespace-pre-line uppercase transition-all duration-700 delay-200 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            {activeTab === 'organization'
+              ? (t.membersPage?.titleOrganization || 'Danh sách Hội viên tổ chức/doanh nghiệp')
+              : (t.membersPage?.titleIndividual || 'Danh sách Hội viên cá nhân')
+            }
+          </h1>
 
           {/* Organization Members */}
           {activeTab === 'organization' && (
             <>
               <div
                 ref={orgTableRef}
-                className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 ${(orgTableVisible || forceVisible) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 transition-all duration-700 ${(orgTableVisible || forceVisible) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-                {organizationMembers.slice(0, visibleOrgCount).map((member, index) => (
+                {organizationMembers.map((member, index) => (
                   <div
                     key={member.id}
-                    className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 card-animate hover:scale-105"
+                    className="bg-white rounded-xl shadow-md p-3 md:p-4 hover:shadow-xl transition-all duration-300 card-animate hover:scale-105 aspect-square flex flex-col items-center justify-center"
                     style={{ transitionDelay: `${index * 50}ms` }}
                   >
-                    <div className="flex flex-col items-center gap-4 text-center">
-                      <div className="w-20 h-20 bg-gray-50 rounded-xl flex items-center justify-center overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex flex-col items-center gap-2 md:gap-4 text-center w-full">
+                      <div className="w-16 h-16 md:w-24 md:h-24 bg-gray-50 rounded-xl flex items-center justify-center overflow-hidden shadow-sm hover:shadow-md transition-shadow shrink-0">
                         {member.logo ? (
                           <img src={member.logo} alt={member.name} className="w-full h-full object-contain p-2" />
                         ) : (
@@ -334,28 +334,13 @@ const MembersPage = () => {
                           </svg>
                         )}
                       </div>
-                      <h3 className="text-base font-semibold text-gray-900 leading-tight">
+                      <h3 className="text-sm md:text-base font-semibold text-gray-900 leading-tight px-1 line-clamp-2">
                         {member.name}
                       </h3>
                     </div>
                   </div>
                 ))}
               </div>
-
-              {/* Load More Button */}
-              {visibleOrgCount < organizationMembers.length && (
-                <div className="flex justify-end mt-8">
-                  <button
-                    onClick={() => setVisibleOrgCount(prev => prev + 10)}
-                    className="px-8 py-3 bg-[#3000d9] text-white font-medium rounded-full hover:bg-[#2400b3] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center gap-2"
-                  >
-                    <span>{t.activitiesPage.viewMore}</span>
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                </div>
-              )}
             </>
           )}
 
@@ -364,15 +349,15 @@ const MembersPage = () => {
             <>
               <div
                 ref={indTableRef}
-                className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-all duration-700 ${(indTableVisible || forceVisible) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 transition-all duration-700 ${(indTableVisible || forceVisible) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-                {individualMembers.slice(0, visibleIndCount).map((member, index) => (
+                {individualMembers.map((member, index) => (
                   <div
                     key={member.id}
-                    className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:scale-105"
+                    className="bg-white rounded-xl shadow-md p-3 md:p-4 hover:shadow-xl transition-all duration-300 hover:scale-105 aspect-square flex flex-col items-center justify-center"
                   >
-                    <div className="flex flex-col items-center gap-4 text-center">
-                      <div className="w-24 h-24 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden shadow-sm border-2 border-gray-100">
+                    <div className="flex flex-col items-center gap-2 md:gap-3 text-center w-full">
+                      <div className="w-20 h-20 md:w-28 md:h-28 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden shadow-sm border-2 border-gray-100 shrink-0">
                         {member.avatar ? (
                           <img
                             src={member.avatar}
@@ -393,28 +378,13 @@ const MembersPage = () => {
                           </svg>
                         )}
                       </div>
-                      <h3 className="text-base font-semibold text-gray-900 leading-tight">
+                      <h3 className="text-sm md:text-base font-semibold text-gray-900 leading-tight px-1 line-clamp-2">
                         {member.name}
                       </h3>
                     </div>
                   </div>
                 ))}
               </div>
-
-              {/* Load More Button */}
-              {visibleIndCount < individualMembers.length && (
-                <div className="flex justify-end mt-8">
-                  <button
-                    onClick={() => setVisibleIndCount(prev => prev + 10)}
-                    className="px-8 py-3 bg-[#3000d9] text-white font-medium rounded-full hover:bg-[#2400b3] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center gap-2"
-                  >
-                    <span>{t.activitiesPage.viewMore}</span>
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                </div>
-              )}
             </>
           )}
         </div>
