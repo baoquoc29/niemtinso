@@ -238,6 +238,7 @@ export const translations = {
         closeHint: 'Click bên ngoài để đóng',
       },
       management: {
+        title: 'DANH SÁCH HỘI ĐỒNG LÃNH ĐẠO LIÊN MINH NIỀM TIN SỐ',
         table: {
           no: 'STT',
           name: 'Họ và tên',
@@ -255,6 +256,16 @@ export const translations = {
           { id: 8, name: 'Đại tá Nguyễn Anh Tuấn', position: 'Phó Cục trưởng Cục Truyền thông Công an nhân dân, Bộ Công an; Giám đốc Truyền hình CAND - ANTV', role: 'Phó Chủ tịch (Thành viên tiên phong)' },
           { id: 9, name: 'Trung tá Nguyễn Tiến Cường', position: 'Trưởng phòng Cục An ninh mạng và PCTP sử dụng công nghệ cao, Bộ Công an', role: 'Tổng thư ký; Ủy viên thường trực' },
           { id: 10, name: 'Ông Nguyễn Vũ Hoàng An', position: 'Tổng Thư ký Hiệp hội An ninh mạng quốc gia', role: 'Ủy viên thường trực' },
+          { id: 11, name: 'Ông Vũ Hoài Nam', position: 'Tổng biên tập Báo Pháp luật Việt Nam', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 12, name: 'Ông Nguyễn Lâm Thanh', position: 'Đại diện Nền tảng Tiktok tại Việt Nam', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 13, name: 'Ông Chu Hải Công', position: 'Giám đốc Quan hệ công chúng, Ngân hàng TMCP Quân đội (MB Bank)', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 14, name: 'Ông Đỗ Quang Vinh', position: 'Phó Chủ tịch HĐQT, Ngân hàng TMCP Sài Gòn - Hà Nội (SHB)', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 15, name: 'Ông Đinh Hoài Nam', position: 'Thành viên độc lập HĐQT, Công ty CP Tập đoàn Yeah1', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 16, name: 'Bà Lê Thị Kim Tuyến', position: 'Phó Tổng Giám đốc Công ty TNHH ZEIT Media', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 17, name: 'Bà Nguyễn Thị Khánh Vân', position: 'Phó Giám đốc, Công ty CP Cyber Trust', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 18, name: 'Ông Nguyễn Tùng Dương', position: 'Ca sĩ Tùng Dương', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 19, name: 'Ông Nguyễn Đức Cường', position: 'Rapper Đen', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
+          { id: 20, name: 'Bà Lê Nguyễn Bảo Ngọc', position: 'Miss Intercontinental 2022', role: 'Ủy viên thường trực (Thành viên tiên phong)' },
         ],
       },
       regulations: {
@@ -1472,6 +1483,7 @@ export const translations = {
       },
       structure: { hint: 'Click on the image to see details', closeHint: 'Click outside to close' },
       management: {
+        title: 'LIST OF LEADERSHIP BOARD OF DIGITAL TRUST ALLIANCE',
         table: { no: 'No.', name: 'Full Name', position: 'Position', role: 'Role in the Alliance' },
         members: [
           { id: 1, name: 'Lieutenant General Le Xuan Minh', position: 'Director of Department of Cybersecurity and High-Tech Crime Prevention, Ministry of Public Security. Vice President of National Cyber Security Association', role: 'President' },
@@ -1484,6 +1496,16 @@ export const translations = {
           { id: 8, name: 'Colonel Nguyen Anh Tuấn', position: 'Deputy Director of Ministry of Public Security Communications Department; Director of Public Security Television - ANTV', role: 'Vice President (Pioneer Member)' },
           { id: 9, name: 'Lieutenant Colonel Nguyen Tien Cuong', position: 'Head of Division, Department of Cybersecurity and High-Tech Crime Prevention, Ministry of Public Security', role: 'Secretary General; Standing Commissioner' },
           { id: 10, name: 'Mr. Nguyen Vu Hoang An', position: 'Secretary General of National Cyber Security Association', role: 'Standing Commissioner' },
+          { id: 11, name: 'Mr. Vu Hoai Nam', position: 'Editor-in-Chief of Vietnam Law Newspaper', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 12, name: 'Mr. Nguyen Lam Thanh', position: 'TikTok Representative in Vietnam', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 13, name: 'Mr. Chu Hai Cong', position: 'Public Relations Director, Military Commercial Joint Stock Bank (MB Bank)', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 14, name: 'Mr. Do Quang Vinh', position: 'Vice Chairman, Sai Gon - Hanoi Commercial Joint Stock Bank (SHB)', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 15, name: 'Mr. Dinh Hoai Nam', position: 'Independent Member of the Board, Yeah1 Group Corporation', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 16, name: 'Ms. Le Thi Kim Tuyến', position: 'Deputy General Director, ZEIT Media Co., Ltd', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 17, name: 'Ms. Nguyen Thi Khanh Van', position: 'Deputy Director, Cyber Trust JSC', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 18, name: 'Mr. Nguyen Tung Duong', position: 'Singer Tung Duong', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 19, name: 'Mr. Nguyen Duc Cuong', position: 'Rapper Den', role: 'Standing Commissioner (Pioneer Member)' },
+          { id: 20, name: 'Ms. Le Nguyen Bảo Ngọc', position: 'Miss Intercontinental 2022', role: 'Standing Commissioner (Pioneer Member)' },
         ],
       },
       regulations: {
