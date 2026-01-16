@@ -145,32 +145,65 @@ const AboutPage = () => {
       )
     },
     management: {
-      title: '',
+      title: t.aboutPage.management.title,
       content: (
-        <div className="space-y-12">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden mt-8">
+        <div className="space-y-6 md:space-y-12">
+          {/* Desktop Table View */}
+          <div className="hidden md:block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden mt-8 animate-fade-in-up">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[640px]">
+              <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="px-3 py-3 md:px-6 md:py-4 text-left text-xs md:text-sm font-semibold text-blue-600 w-12 md:w-20">{t.aboutPage.management.table.no}</th>
-                    <th className="px-3 py-3 md:px-6 md:py-4 text-left text-xs md:text-sm font-semibold text-blue-600 min-w-[150px] md:min-w-[250px]">{t.aboutPage.management.table.name}</th>
-                    <th className="px-3 py-3 md:px-6 md:py-4 text-left text-xs md:text-sm font-semibold text-blue-600 min-w-[300px] md:min-w-[400px]">{t.aboutPage.management.table.position}</th>
-                    <th className="px-3 py-3 md:px-6 md:py-4 text-left text-xs md:text-sm font-semibold text-blue-600 w-40 md:w-56">{t.aboutPage.management.table.role}</th>
+                  <tr className="bg-gradient-to-r from-gray-50 to-white border-b border-gray-200">
+                    <th className="px-6 py-5 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-20">{t.aboutPage.management.table.no}</th>
+                    <th className="px-6 py-5 text-left text-xs font-bold text-gray-500 uppercase tracking-wider min-w-[200px]">{t.aboutPage.management.table.name}</th>
+                    <th className="px-6 py-5 text-left text-xs font-bold text-gray-500 uppercase tracking-wider min-w-[300px]">{t.aboutPage.management.table.position}</th>
+                    <th className="px-6 py-5 text-left text-xs font-bold text-gray-500 uppercase tracking-wider min-w-[200px]">{t.aboutPage.management.table.role}</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="divide-y divide-gray-100">
                   {t.aboutPage.management.members.map((member, idx) => (
-                    <tr key={member.id} className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
-                      <td className="px-3 py-3 md:px-6 md:py-4 text-xs md:text-sm text-gray-600 text-center">{member.id}</td>
-                      <td className="px-3 py-3 md:px-6 md:py-4 text-xs md:text-sm text-gray-900 font-medium">{member.name}</td>
-                      <td className="px-3 py-3 md:px-6 md:py-4 text-xs md:text-sm text-gray-600 whitespace-pre-line">{member.position}</td>
-                      <td className="px-3 py-3 md:px-6 md:py-4 text-xs md:text-sm text-gray-600">{member.role}</td>
+                    <tr key={member.id} className="hover:bg-blue-50/30 transition-colors group">
+                      <td className="px-6 py-5">
+                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-600 font-bold text-sm group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                          {member.id}
+                        </span>
+                      </td>
+                      <td className="px-6 py-5">
+                        <div className="text-sm font-bold text-gray-900 leading-tight">{member.name}</div>
+                      </td>
+                      <td className="px-6 py-5">
+                        <div className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">{member.position}</div>
+                      </td>
+                      <td className="px-6 py-5">
+                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#3000d9] text-xs font-semibold">
+                          {member.role}
+                        </div>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+          </div>
+
+          {/* Mobile Card View */}
+          <div className="md:hidden space-y-4 mt-6 animate-fade-in-up">
+            {t.aboutPage.management.members.map((member) => (
+              <div key={member.id} className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="w-10 h-10 rounded-full bg-[#3000d9] text-white flex items-center justify-center font-bold">
+                    {member.id}
+                  </span>
+                  <div className="px-3 py-1 rounded-full bg-blue-50 text-[#3000d9] text-[10px] font-bold uppercase tracking-wider">
+                    {member.role}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed italic">{member.position}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )
@@ -267,7 +300,7 @@ const AboutPage = () => {
             </div>
 
             {/* Title */}
-            <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#4400ff] mb-12 mt-8 transition-all duration-700 delay-200 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#4400ff] mb-12 mt-8 whitespace-pre-line transition-all duration-700 delay-200 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {currentContent.title}
             </h1>
 
