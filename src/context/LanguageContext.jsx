@@ -234,6 +234,7 @@ export const translations = {
         },
       },
       structure: {
+        title: 'CẤU TRÚC VẬN HÀNH LIÊN MINH NIỀM TIN SỐ',
         hint: 'Click vào hình ảnh để xem chi tiết',
         closeHint: 'Click bên ngoài để đóng',
       },
@@ -1481,7 +1482,7 @@ export const translations = {
           p5: 'Social Responsibility – Positive Spreading: Members act responsibly towards the community, spread good values, oppose fake news and negative behaviors.',
         },
       },
-      structure: { hint: 'Click on the image to see details', closeHint: 'Click outside to close' },
+      structure: { title: 'OPERATIONAL STRUCTURE OF DIGITAL TRUST ALLIANCE', hint: 'Click on the image to see details', closeHint: 'Click outside to close' },
       management: {
         title: 'LIST OF LEADERSHIP BOARD OF DIGITAL TRUST ALLIANCE',
         table: { no: 'No.', name: 'Full Name', position: 'Position', role: 'Role in the Alliance' },

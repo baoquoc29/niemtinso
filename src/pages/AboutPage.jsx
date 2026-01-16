@@ -125,13 +125,13 @@ const AboutPage = () => {
       )
     },
     structure: {
-      title: '',
+      title: t.aboutPage.structure.title,
       content: (
         <div className="space-y-8">
           <div className="bg-white p-6 md:p-10 rounded-2xl border border-gray-200">
             <div className="text-center">
               <img
-                src={language === 'vi' ? "/images/co_cau_lien_minh.png" : "/images/co_cau_lien_minh.png"} // Assuming same image for now or use separate path if needed
+                src={language === 'vi' ? "/images/co_cau_ban_to_chuc.png" : "/images/co_cau_ban_to_chuc.png"} // Assuming same image for now or use separate path if needed
                 alt={t.aboutPage.tabs.structure}
                 className="max-w-full md:max-w-6xl h-auto mx-auto rounded-lg cursor-pointer hover:shadow-xl transition-all duration-300"
                 onClick={() => setShowModal(true)}
@@ -324,7 +324,7 @@ const AboutPage = () => {
           <div className="relative w-full h-full flex items-center justify-center">
             <div className="relative w-full h-full flex items-center justify-center p-2">
               <img
-                src="/images/co_cau_lien_minh.png"
+                src="/images/co_cau_ban_to_chuc.png"
                 alt="Cơ cấu tổ chức - DTA"
                 className="max-w-full max-h-full w-auto h-auto object-contain shadow-2xl transition-transform duration-300 scale-100"
                 onClick={(e) => e.stopPropagation()}
