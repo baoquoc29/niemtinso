@@ -58,11 +58,11 @@ const Members = () => {
     { id: 21, name: 'PVcombank', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_PVcombank.png' },
     { id: 22, name: 'SHB', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_SHB.jpeg' },
     { id: 23, name: 'Báo Pháp luật Việt Nam', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Logo_báo_pháp_luật_Việt_Nam.png' },
-    { id: 24, name: 'Người quan sát', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Người quan sát.jpg' },
+    { id: 24, name: 'Người quan sát', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Nguoi_quan_sat.jpg' },
     { id: 25, name: 'TikTok', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Tiktok-logo-icon-vector-PNG.avif' },
     { id: 26, name: 'Yeah1', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Yeah1_2022.webp' },
-    { id: 27, name: 'Zeit Media', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Zeit Media.webp' },
-    { id: 28, name: 'VTV', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Đài truyền hình VN.svg' },
+    { id: 27, name: 'Zeit Media', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Zeit_Media.webp' },
+    { id: 28, name: 'VTV', logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Dai_truyen_hinhVTV.svg' },
   ];
 
   const allIndividuals = [

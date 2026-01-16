@@ -895,6 +895,274 @@ export const translations = {
         articles: [
           {
             id: 1,
+            title: 'Dấu ấn Công ước Hà Nội và cuộc chiến toàn cầu chống tội phạm mạng',
+            image: '/images/project_id_1.jpg',
+            date: '28 tháng 12 năm 2025',
+            summary: '(PLVN) - Năm 2025, Công ước Hà Nội được bình chọn là 1 trong 10 Sự kiện về khoa học - công nghệ. Trong kỷ nguyên số, an ninh mạng là một mặt trận, nơi dữ liệu, giao dịch và thông tin di chuyển với tốc độ ánh sáng, nơi lợi ích quốc gia, an ninh con người và niềm tin xã hội cùng tồn tại trong một không gian không biên giới.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  (PLVN) - Năm 2025, Công ước Hà Nội được bình chọn là 1 trong 10 Sự kiện về khoa học - công nghệ. Trong kỷ nguyên số, an ninh mạng là một mặt trận, nơi dữ liệu, giao dịch và thông tin di chuyển với tốc độ ánh sáng, nơi lợi ích quốc gia, an ninh con người và niềm tin xã hội cùng tồn tại trong một không gian không biên giới.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_1.jpg" alt="Ngày hội an toàn trực tuyến Không Một Mình" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Ngày hội an toàn trực tuyến “Không Một Mình”.</p>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-4 text-black">Công ước Hà Nội: Kiến tạo trật tự số bằng luật pháp và niềm tin</h2>
+
+                <p class="mb-6 leading-relaxed">
+                  Cũng chính tại đó, các mối đe dọa an ninh phi truyền thống đang gia tăng chưa từng có. Tội phạm mạng không còn là những hành vi đơn lẻ, mà đã trở thành một ngành công nghiệp ngầm xuyên quốc gia, khai thác triệt để công nghệ cao để đánh cắp dữ liệu, tấn công hạ tầng trọng yếu, thao túng nhận thức xã hội, lừa đảo tài chính và xâm hại nhóm yếu thế.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Hàng trăm nghìn cuộc tấn công mạng được ghi nhận mỗi ngày trên toàn cầu, gây thiệt hại kinh tế lên tới hàng nghìn tỷ USD mỗi năm, nhưng thiệt hại lớn hơn nằm ở sự xói mòn niềm tin số, nền tảng của mọi tiến trình chuyển đổi số. Trong bối cảnh đó, yêu cầu xây dựng một cơ chế hợp tác quốc tế mang tính thống nhất, ràng buộc và hiệu quả để phòng, chống tội phạm mạng đã trở thành mệnh lệnh của thời đại.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Sau nhiều năm đàm phán phức tạp, tháng 12/2024, Đại hội đồng Liên hợp quốc chính thức thông qua Công ước quốc tế về phòng, chống tội phạm mạng. Đặc biệt, Việt Nam được lựa chọn là quốc gia đăng cai Lễ mở ký và Hội nghị cấp cao, tổ chức tại Hà Nội vào ngày 25 - 26/10/2025.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_1(1).avif" alt="Chương trình Diễn tập An ninh mạng quốc gia" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Chương trình Diễn tập An ninh mạng quốc gia năm 2025 góp phần cập nhật các quan điểm, chủ trương của Đảng, chính sách, pháp luật của Nhà nước trên lĩnh vực an ninh mạng, chia sẻ kinh nghiệm ứng cứu, khắc phục sự cố.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Từ thời khắc ấy, Hà Nội không chỉ là nơi diễn ra một sự kiện đối ngoại đa phương, mà trở thành điểm hội tụ của niềm tin và trách nhiệm toàn cầu, nơi cộng đồng quốc tế cùng đặt bút ký cho một trật tự số dựa trên luật pháp, hợp tác và nhân văn.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Công ước Hà Nội gồm 9 chương, 71 điều, là văn kiện pháp lý quốc tế đầu tiên điều chỉnh một cách toàn diện các hành vi phạm tội trên không gian mạng. Điểm đặc biệt của Công ước không chỉ nằm ở phạm vi điều chỉnh rộng, mà ở triết lý cân bằng giữa hai trụ cột: bảo đảm an ninh mạng và bảo vệ quyền con người.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Lần đầu tiên, cộng đồng quốc tế thống nhất cách tiếp cận đối với các hành vi như truy cập trái phép hệ thống dữ liệu, tấn công từ chối dịch vụ, phát tán mã độc, gian lận điện tử, rửa tiền qua mạng, xâm hại trẻ em trực tuyến… Việc hình sự hóa rõ ràng các hành vi này giúp xóa bỏ những “vùng xám” pháp lý, tạo sự nhất quán trong truy tố và hợp tác điều tra xuyên biên giới.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Một bước tiến mang tính đột phá của Công ước là cơ chế xử lý chứng cứ điện tử xuyên biên giới. Trong bối cảnh dữ liệu phân tán toàn cầu, dấu vết tội phạm có thể nằm trên các máy chủ thuộc nhiều quốc gia khác nhau, khiến điều tra dễ rơi vào bế tắc. Công ước Hà Nội tạo hành lang pháp lý cho việc bảo toàn, thu thập và chia sẻ dữ liệu điện tử, đồng thời ràng buộc chặt chẽ các nguyên tắc về quyền riêng tư, bảo vệ dữ liệu cá nhân và sự giám sát của cơ quan tư pháp độc lập.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Hợp tác quốc tế được xác lập là trụ cột trung tâm, với mạng lưới liên lạc 24/7 giữa các quốc gia nhằm bảo đảm phản ứng nhanh khi phát hiện, điều tra hoặc ngăn chặn tội phạm mạng. Công ước khuyến khích sự phối hợp đa tầng giữa cơ quan thực thi pháp luật, tổ chức quốc tế và doanh nghiệp công nghệ - những chủ thể đang nắm giữ phần lớn dữ liệu và hạ tầng số toàn cầu.
+                </p>
+
+                <h3 class="text-xl font-bold mb-4 text-black">Số vụ lừa đảo trực tuyến ở Việt Nam tăng 65%</h3>
+
+                <p class="mb-6 leading-relaxed">
+                  Tại Lễ công bố Chiến dịch truyền thông “Toàn dân chống lừa đảo”, chuyên gia an ninh mạng Ngô Minh Hiếu (Hiếu PC) cho biết, các đường dây lừa đảo hiện hoạt động có tổ chức, không còn là những nhóm nhỏ lẻ. Đồng thời, việc trở thành tội phạm mạng giờ đây dễ dàng hơn bao giờ hết. “Trước đây, muốn phạm tội trên mạng phải biết nhiều thứ như kỹ thuật, cách rửa tiền hay đánh cắp thông tin. Còn ngày nay, bất kỳ ai có điện thoại kết nối được mạng đều có thể trở thành tội phạm mạng, bởi dữ liệu cá nhân và tài khoản ngân hàng được mua bán tràn lan trên mạng”, ông nói.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Ông Hiếu cho biết, tội phạm mạng đang mở rộng kênh tấn công qua nhiều nền tảng như Facebook, TikTok hay Instagram... Sự xuất hiện của công nghệ trí tuệ nhân tạo (AI) khiến chiêu thức lừa đảo ngày càng tinh vi, khó nhận diện.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Không chỉ dừng ở việc chiếm đoạt tài sản, nhiều vụ việc còn liên quan đến nạn buôn người, khi kẻ xấu lợi dụng các lời mời tuyển dụng hoặc học bổng giả để dụ dỗ nạn nhân. Theo ông, khó khăn kinh tế và mức lương thấp là những yếu tố khiến không ít bạn trẻ dễ sa bẫy.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_1(2).avif" alt="Đại tá Hà Văn Bắc" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Đại tá Hà Văn Bắc, Phó Cục trưởng Cục A05 - Bộ Công an. (Ảnh trong bài: NCA)</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Để thực hiện lừa đảo, kẻ xấu thường khai thác dữ liệu cá nhân công khai trên mạng, chẳng hạn như hình ảnh, bằng khen hoặc thông tin trường học. Từ đó, chúng tạo dựng kịch bản lừa đảo nhằm thao túng tâm lý nạn nhân, điển hình là giả danh công an hoặc mạo danh học bổng toàn phần danh giá.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Thực tế, theo thống kê của Cục An ninh mạng và Phòng, chống tội phạm sử dụng công nghệ cao (A05) thuộc Bộ Công an, trong 8 tháng đầu năm, Việt Nam ghi nhận hơn 1.500 vụ lừa đảo qua mạng, tăng 65% so với cùng kỳ năm 2024, với thiệt hại ước tính hơn 1.660 tỷ đồng.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Cùng thời gian này, lực lượng chức năng phát hiện hơn 4.532 tên miền độc hại, tăng khoảng 90%, với các thủ đoạn ngày càng tinh vi như deepfake, lừa đảo tiền ảo, chiếm đoạt OTP, giả danh cơ quan công an hoặc ngân hàng. Những hành vi này không chỉ gây thiệt hại về tài chính mà còn làm xói mòn niềm tin số, ảnh hưởng đến tiến trình chuyển đổi số quốc gia.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Theo ông Hiếu, người dân Việt Nam hiện phản ứng quá nhanh trước các thông tin và hành động trên môi trường trực tuyến, đặc biệt là khi chuyển tiền hoặc nhấp vào các đường link lạ. Ông khuyến nghị nên “sống chậm lại một chút”, dành thời gian kiểm chứng thông tin trước khi thực hiện bất kỳ giao dịch nào.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  “Không có công an nào làm việc qua điện thoại hay trực tuyến, tất cả đều phải làm việc trực tiếp tại trụ sở”, ông nhấn mạnh. Đối với các tổ chức, doanh nghiệp, ông cho rằng điểm yếu đầu tiên nằm ở nhận thức của cán bộ và nhân viên. “Khi người có quyền truy cập cao không được đào tạo bài bản về an ninh mạng, kẻ xấu có thể dễ dàng mua thông tin tài khoản quản trị để xâm nhập và đánh cắp dữ liệu”, ông nói.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Bên cạnh đó, ông cho rằng lỗ hổng thứ hai đến từ hệ thống hạ tầng công nghệ đã quá cũ, không còn đáp ứng được yêu cầu của quá trình chuyển đổi số. Theo ông, an ninh mạng chỉ được bảo đảm khi có sự kết hợp đồng bộ giữa quy trình, công nghệ và con người. “Chỉ cần thiếu một trong ba yếu tố đó, hệ thống sẽ bị hổng và có thể chịu tổn thất lớn”, ông nói.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Từ thực tế này, ông Hiếu khuyến nghị các tổ chức nên làm việc với tư duy phòng ngừa, luôn chuẩn bị cho tình huống “rồi một ngày sẽ bị hack”. Doanh nghiệp cần chủ động “phòng bệnh hơn chữa bệnh”, bằng cách đào tạo nhân viên, áp dụng công nghệ bảo mật hiện đại và đầu tư đồng thời vào phần cứng lẫn phần mềm, nhằm gia cố hệ thống trước khi sự cố xảy ra.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Ông Trịnh Hoài Nam, Giám đốc Trung tâm sản phẩm Công ty an ninh mạng Viettel cho rằng, lừa đảo trực tuyến đang trở thành một trong những vấn đề “nóng” nhất hiện nay. Tập đoàn Viettel cũng đang triển khai nhiều chiến lược cụ thể để giảm thiểu tối đa tình trạng này.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  “Trong thời gian gần đây, người dùng có thể nhận thấy số lượng cuộc gọi spam và scam xuất phát từ mạng Viettel đã giảm đáng kể. Chúng tôi đã triển khai nhiều chiến dịch đồng bộ nhằm hạn chế các cuộc gọi lừa đảo và làm phiền, tận dụng lợi thế công nghệ và dữ liệu của nhà mạng để bảo vệ người dùng”, ông bổ sung.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Tập đoàn cũng đang mở rộng hoạt động nghiên cứu, xây dựng các giải pháp toàn diện nhằm hỗ trợ cộng đồng trong việc phát hiện và ngăn chặn lừa đảo. Khi nghiên cứu kinh nghiệm quốc tế, ông Nam nhận thấy chiến dịch “Toàn dân chống lừa đảo” của Việt Nam có nhiều điểm tương đồng với mô hình tại Singapore. Quốc gia này đã xây dựng một khuôn khổ hợp tác chặt chẽ giữa cơ quan nhà nước, ngân hàng và nhà mạng, nhằm chia sẻ trách nhiệm và phối hợp hiệu quả trong việc xử lý lừa đảo.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Ông Nam cho rằng Việt Nam có thể đi chậm hơn một bước, nhưng chiến dịch đang đi đúng hướng. “Nếu có sự chung tay của lực lượng công an, các nhà mạng và hệ thống tài chính, tôi tin chiến dịch này sẽ đạt kết quả rất tốt”, ông nói.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Thực tế, chiến dịch “Toàn dân chống lừa đảo” ghi dấu sự hợp lực chưa từng có giữa nhiều lực lượng, bao gồm Hiệp hội An ninh mạng quốc gia và Công an các tỉnh, thành phố như TP HCM, Đồng Nai, Tây Ninh, Khánh Hòa, Lâm Đồng, với vai trò là thành viên Ban Chỉ đạo. Bên cạnh đó còn có sự tham gia của các cơ quan quản lý, doanh nghiệp trong lĩnh vực tài chính, chứng khoán và các đối tác truyền thông.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Cùng đó, trong bối cảnh hơn 77% trẻ em Việt Nam sử dụng Internet hằng ngày, Liên minh Niềm Tin Số đã phát động chiến dịch “Không Một Mình” với thông điệp “Cùng nhau an toàn trực tuyến”, nhằm bảo vệ hơn 12 triệu thanh, thiếu niên Việt Nam trước các nguy cơ trên không gian mạng.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Chiến dịch do UNODC, UNICEF, Bộ Công an, Bộ Giáo dục và Đào tạo, Bộ Y tế bảo trợ, được triển khai trong chuỗi hoạt động chào mừng Lễ mở ký Công ước Hà Nội. Hàng nghìn KOL, KOC, nhà sáng tạo nội dung cùng các nền tảng lớn như Google, Meta, TikTok tham gia lan tỏa thông điệp bằng ngôn ngữ gần gũi với giới trẻ. Song song đó, các lớp tập huấn trực tiếp tại 34 tỉnh, thành phố, cùng “Cẩm nang an toàn trực tuyến cho thanh, thiếu niên” giúp chuyển hóa nhận thức thành kỹ năng cụ thể. Chỉ trong chưa đầy một tháng, chiến dịch đã tiếp cận hơn 500 triệu lượt người, thu hút hơn 2.000 trường học tham gia, cho thấy bảo vệ trẻ em trên không gian mạng đã thực sự trở thành mối quan tâm xã hội rộng lớn, không còn là khẩu hiệu.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Đại tá Hà Văn Bắc, Phó Cục trưởng Cục A05 nhấn mạnh: “Khi người dân hiểu và hành động đúng, chúng ta đã thắng một nửa trong cuộc chiến với tội phạm mạng". Cùng quan điểm, ông Vũ Duy Hiền, Phó Tổng Thư ký Hiệp hội An ninh mạng Quốc gia khẳng định: “Không ai có thể an toàn nếu người khác bị tổn thương”.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Việt Nam đăng cai Lễ mở ký Công ước Hà Nội không chỉ là dấu mốc ngoại giao, mà còn thể hiện vai trò kiến tạo niềm tin số. Từ mỗi hành động nhỏ, “chậm lại để kiểm chứng”, “chia sẻ đúng, cảnh báo sớm”, đến sự phối hợp giữa Nhà nước, doanh nghiệp, nền tảng và người dân, một thông điệp mạnh mẽ được khẳng định: Không ai bị bỏ lại phía sau trên không gian mạng.
+                </p>
+
+                <p class="text-right italic font-semibold mt-8 text-gray-600">tác giả Uyên Na</p>
+              </div>
+            `
+          },
+          {
+            id: 2,
+            title: "'Không một mình' trên không gian số",
+            image: '/images/project_id_2.jpg',
+            date: '16 tháng 12 năm 2025',
+            summary: 'GD&TĐ - Trên 120.000 học sinh, sinh viên tỉnh Lâm Đồng đã được trang bị kỹ năng phòng vệ số.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 font-bold">GD&TĐ - Trên 120.000 học sinh, sinh viên tỉnh Lâm Đồng đã được trang bị kỹ năng phòng vệ số.</p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2.jpg" alt="Học sinh hưởng dẫn" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Học sinh hưởng ứng chương trình "Không một mình – Cùng nhau an toàn trực tuyến".</p>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-4 text-black">“Bắt cóc online” thủ đoạn mới nhắm vào học sinh, sinh viên</h2>
+
+                <p class="mb-6 leading-relaxed">
+                  Trưa 10/10, ông L.X.T (trú phường Xuân Hương - Đà Lạt) bất ngờ nhận được cuộc gọi cầu cứu từ con trai là L.X.G.B (SN 2007), tân sinh viên Trường Đại học Yersin Đà Lạt. Ở đầu dây bên kia, giọng nam sinh run rẩy, hoảng loạn, yêu cầu gia đình chuyển gấp 150 triệu đồng vào một tài khoản lạ để “hợp tác điều tra với Công an TP Hà Nội”.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Nhận thấy nhiều dấu hiệu bất thường, nghi con trai rơi vào bẫy lừa đảo, ông T lập tức đến trình báo Công an. Ngay sau đó, lực lượng Cảnh sát hình sự Công an tỉnh Lâm Đồng khẩn trương vào cuộc. Chỉ sau khoảng 30 phút triển khai các biện pháp nghiệp vụ, cơ quan chức năng xác định được vị trí và giải cứu thành công anh B tại một nhà nghỉ trên đường Xô Viết Nghệ Tĩnh, nơi nạn nhân bị các đối tượng chỉ đạo thuê phòng riêng, tự cô lập hoàn toàn với bên ngoài.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Theo lời kể của anh B, sáng cùng ngày, anh đến chơi tại phòng trọ của hai người bạn là P và K, đều là sinh viên Trường Đại học Yersin. Khi cả ba đang trò chuyện, một người đàn ông mặc sắc phục Công an gọi video qua ứng dụng Zoom, tự xưng là cán bộ điều tra Công an TP Hà Nội. Người này liên tục chất vấn, cáo buộc nhóm sinh viên “liên quan đến đường dây rửa tiền, ma túy xuyên quốc gia”.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(1).jpg" alt="Nguy cơ Internet" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Học sinh, sinh viên đang đối mặt với nhiều nguy cơ khi sử dụng Internet.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Ban đầu được xác định là “nhân chứng”, nhưng chỉ sau ít phút, anh B bị các đối tượng quay ngoắt vu khống là đồng phạm. Để “chứng minh vô tội”, nam sinh bị yêu cầu cung cấp toàn bộ thông tin cá nhân, cài đặt ứng dụng “Zoom camera”, đồng thời buộc phải thuê phòng riêng, tuyệt đối không được liên lạc với gia đình, bạn bè hay bất kỳ ai khác với lý do “bảo mật điều tra”.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Từ manh mối này, Công an tỉnh Lâm Đồng tiếp tục mở rộng điều tra, triển khai đồng bộ các biện pháp nghiệp vụ, kịp thời giải cứu hai sinh viên còn lại là P và K tại các cơ sở lưu trú trên đường Xô Viết Nghệ Tĩnh và Trần Khánh Dư (phường Lâm Viên - Đà Lạt).
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Tình huống tương tự xảy ra trước đó vào chiều 5/10, bà Lê Thị Hường (trú tại phường Lâm Viên - Đà Lạt) hốt hoảng khi con gái là L.T.M.N, sinh viên năm cuối Khoa Toán - Tin, Trường Đại học Đà Lạt gọi điện khẩn cầu gia đình chuyển hơn 100 triệu đồng vào tài khoản do một nhóm cung cấp.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  May mắn, bà Hường kịp thời trấn tĩnh và đến trình báo Công an phường Lâm Viên – Đà Lạt. Chỉ trong thời gian ngắn, lực lượng chức năng xác định được nơi chị N bị khống chế online tại một khách sạn, giải cứu thành công nạn nhân trong trạng thái tinh thần hoảng loạn, bị theo dõi, đe dọa chuyển tiền.
+                </p>
+
+                <h2 class="text-2xl font-bold mb-4 text-black">Chung tay dựng lá chắn số</h2>
+
+                <p class="mb-6 leading-relaxed">
+                  Theo thống kê bước đầu của Bộ Công an, từ giữa năm 2024 đến nay, cả nước ghi nhận khoảng 50 vụ việc trẻ em, thanh thiếu niên, chủ yếu trong độ tuổi từ 18 đến 22 rơi vào tình trạng bị lừa đảo, thao túng tâm lý, thậm chí “bắt cóc online”. Điểm chung của vụ việc này đều bắt đầu từ những tương tác tưởng chừng vô hại: một tin nhắn lạ, cuộc gọi video bất thường, một đường link trúng thưởng, hay lời đề nghị “kết bạn” trên mạng xã hội.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(2).jpg" alt="Hành trang số" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Học sinh được trang bị các kỹ năng thiết yếu về “Hành trang số an toàn”.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Riêng tại Lâm Đồng, thời gian qua xuất hiện nhiều vụ việc lừa đảo, tống tiền, xâm hại trẻ em trên môi trường mạng. Các đối tượng thường tiếp cận, dụ dỗ thanh thiếu niên thực hiện hành vi khiêu dâm trực tuyến, ghi hình lại, sau đó sử dụng những hình ảnh này để uy hiếp, cưỡng đoạt tài sản. Đa số nạn nhân là học sinh, sinh viên, những người sử dụng Internet thường xuyên nhưng chưa được trang bị đầy đủ kỹ năng phòng vệ số, đồng thời có tâm lý e ngại, xấu hổ nên không dám chia sẻ khi gặp nguy hiểm.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Trước thực trạng trên, chiến dịch “Không một mình – Cùng nhau an toàn trực tuyến” được phát động tại Lâm Đồng như một lời cảnh báo và cũng là lời kêu gọi hành động từ toàn xã hội.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(3).jpg" alt="Phó Giám đốc Sở GD&ĐT" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Bà Nguyễn Thị Thu, Phó Giám đốc Sở GD&ĐT Lâm Đồng phát biểu tại chương trình “Hành trang số an toàn”.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Bà Nguyễn Thị Thu, Phó Giám đốc Sở GD&ĐT tỉnh Lâm Đồng, cho biết: “Trong kỷ nguyên số, bên cạnh những lợi ích to lớn của Internet, học sinh phải đối mặt với nhiều nguy cơ lừa đảo, "bắt cóc trực tuyến" ngày càng tinh vi. Ngành giáo dục xác định bảo vệ học sinh trên không gian mạng là nhiệm vụ cấp bách, không thể chậm trễ”.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Sau hơn hai tháng triển khai, chiến dịch tạo sức lan tỏa rõ nét. Trên không gian mạng, hơn 35.000 người dân trong tỉnh đồng loạt thay đổi ảnh đại diện hưởng ứng; hơn 1.000 bài viết được đăng tải trên các kênh truyền thông, thu hút trên 4 triệu lượt tương tác.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Ở hoạt động trực tiếp, công tác tuyên truyền được tổ chức tại hơn 220 trường học và khu dân cư, tiếp cận trên 120.000 học sinh, sinh viên, giáo viên và phụ huynh. Nhiều hình thức giáo dục sinh động được áp dụng như sân khấu hóa các tình huống lừa đảo, mô phỏng thủ đoạn “bắt cóc online”, tổ chức đối thoại, hỏi – đáp trực tiếp với chuyên gia an ninh mạng.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(4).jpg" alt="Lan toả chiến dịch" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Lan toả Chiến dịch “Không một mình – Cùng nhau an toàn trực tuyến” trên địa bàn tỉnh Lâm Đồng.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Đáng chú ý, chương trình còn được đưa đến các khu vực vùng sâu, vùng xa, vùng đồng bào dân tộc thiểu số, góp phần bảo đảm mọi học sinh đều có cơ hội tiếp cận kiến thức an toàn số. Qua đó, từng bước xây dựng môi trường học tập số an toàn, lành mạnh, giúp học sinh tự tin học tập, sáng tạo và phát triển toàn diện.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  “Thông qua chiến dịch, chúng tôi mong muốn trang bị cho các em kỹ năng nhận diện rủi ro, cách ứng phó an toàn và khả năng chủ động tự bảo vệ mình trong môi trường số”, bà Thu nhấn mạnh.
+                </p>
+
+                <h2 class="text-2xl font-bold mb-4 text-black">Không ai bị bỏ lại một mình</h2>
+
+                <p class="mb-6 leading-relaxed">
+                  Với Lê Anh Thư, học sinh chuyên Văn, Trường THPT chuyên Trần Hưng Đạo, điều quan trọng nhất khi tham gia chiến dịch là học cách bảo vệ bản thân và giúp bạn bè không bị bỏ lại một mình. “Em từng nhận được vài cuộc gọi lừa đảo, nhưng được gia đình và thầy cô trang bị kỹ năng phòng tránh nên em đã không mắc bẫy. Khi tham gia chiến dịch, em muốn gửi thông điệp đến các bạn rằng: “Không một mình” nghĩa là luôn có những người xung quanh bảo vệ bạn. Khi có dấu hiệu bị lừa đảo, cần thông báo ngay cho người thân, bạn bè, những người bạn tin tưởng để trợ giúp”.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Cùng chung cảm nhận, em Huỳnh Gia Bảo, học sinh Trường THPT Phan Thiết, chia sẻ: “Chiến dịch "Không một mình" giúp chúng em nhận biết và phòng tránh các dạng lừa đảo trực tuyến. Giờ đây, em luôn chủ động hơn, không sợ hãi mà biết cách tự bảo vệ mình”.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(6).jpg" alt="Giao lưu tuyên truyền" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Học sinh tham gia giao lưu trong buổi tuyên truyền "hành trang số an toàn".</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Chia sẻ của Thượng tá Vũ Hoàng Anh, Trưởng phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (Công an tỉnh Lâm Đồng), chiến dịch “Không một mình” là lời cam kết của toàn xã hội rằng mỗi trẻ em đều có quyền được an toàn, yêu thương và đồng hành trong thế giới số. Đó cũng là bước khởi đầu xây dựng niềm tin số quốc gia, nơi mọi công dân, nhất là thế hệ trẻ, có thể lớn lên tự tin, bản lĩnh và được bảo vệ khỏi những góc khuất của không gian mạng.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Bên cạnh chiến dịch tuyên truyền, Sở GD&ĐT tỉnh Lâm Đồng sẽ thiết lập kênh thông tin nóng với Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao. Bất cứ khi nào nhà trường, thầy cô phát hiện học sinh có dấu hiệu bị đe dọa, dụ dỗ trực tuyến, sở sẽ phối hợp với công an xử lý ngay lập tức, quyết không để các em phải đối mặt với nguy hiểm một mình.
+                </p>
+                <p class="text-right italic font-semibold mt-8 text-gray-600">Tác giả: Lê Trang - 16 tháng 12 năm 2025</p>
+              </div>
+            `
+          },
+          {
+            id: 10,
             title: 'Công bố chương trình "Tín nhiệm người có ảnh hưởng"',
             image: '/images/project/project_1.jpg',
             date: '18 tháng 8 năm 2025',
@@ -968,6 +1236,7 @@ export const translations = {
       featured: 'Nổi bật',
       viewMore: 'XEM THÊM',
       noContent: 'Chưa có nội dung',
+      viewLess: 'Thu gọn',
       breadcrumb: {
         home: 'Trang chủ',
         activities: 'Hoạt động',
@@ -1582,6 +1851,202 @@ export const translations = {
         articles: [
           {
             id: 1,
+            title: 'The Legacy of the Hanoi Convention and the Global Fight Against Cybercrime',
+            image: '/images/project_id_1.jpg',
+            date: 'December 28, 2025',
+            summary: '(PLVN) - In 2025, the Hanoi Convention was voted as one of the top 10 science and technology events. In the digital age, cybersecurity is a front line where data, transactions, and information move at the speed of light, where national interests, human security, and social trust coexist in a borderless space.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 leading-relaxed">
+                  (PLVN) - In 2025, the Hanoi Convention was voted as one of the top 10 science and technology events. In the digital age, cybersecurity is a front line where data, transactions, and information move at the speed of light, where national interests, human security, and social trust coexist in a borderless space.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_1.jpg" alt="Not Alone Day" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Online Safety Festival "Not Alone".</p>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-4 text-black">Hanoi Convention: Creating Digital Order through Law and Trust</h2>
+
+                <p class="mb-6 leading-relaxed">
+                  Right there, non-traditional security threats are increasing unprecedentedly. Cybercrime is no longer individual acts but has become a transnational underground industry, fully exploiting high technology to steal data, attack critical infrastructure, manipulate social awareness, commit financial fraud, and harm vulnerable groups.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Hundreds of thousands of cyberattacks are recorded every day globally, causing economic damage of up to trillions of USD annually, but the greater damage lies in the erosion of digital trust, the foundation of all digital transformation processes. In that context, the requirement to build a unified, binding, and effective international cooperation mechanism for preventing and combating cybercrime has become an imperative of the times.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  After many years of complex negotiations, in December 2024, the United Nations General Assembly officially adopted the International Convention on Combating Cybercrime. In particular, Vietnam was selected as the host country for the Opening for Signature and High-level Conference, held in Hanoi on October 25 - 26, 2025.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_1(1).avif" alt="National Cybersecurity Drill" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">The 2025 National Cybersecurity Drill program contributes to updating the Party's perspectives and policies, the State's laws in the field of cybersecurity, and sharing experiences in emergency response and incident recovery.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  From that moment, Hanoi was not only the venue for a multilateral diplomatic event but became a focal point of global trust and responsibility, where the international community together signed for a digital order based on law, cooperation, and humanity.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  The Hanoi Convention consists of 9 chapters and 71 articles, as the first international legal document to comprehensively adjust criminal acts in cyberspace. The special feature of the Convention lies not only in its wide range of regulation but also in the philosophy of balance between two pillars: ensuring cybersecurity and protecting human rights.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                   Global cooperation is established as the central pillar, with a 24/7 communication network between countries to ensure rapid response when detecting, investigating, or preventing cybercrime.
+                </p>
+
+                <h3 class="text-xl font-bold mb-4 text-black">Online Fraud Cases in Vietnam Increase by 65%</h3>
+
+                <p class="mb-6 leading-relaxed">
+                  At the launch of the "All People Against Fraud" communication campaign, cybersecurity expert Ngo Minh Hieu (Hieu PC) said that fraud rings are currently operating in an organized manner.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_1(2).avif" alt="Colonel Ha Van Bac" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Colonel Ha Van Bac, Deputy Director of A05 Department - Ministry of Public Security. (Photo: NCA)</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Statistics from the Cyber Security and High-Tech Crime Prevention Department (A05) under the Ministry of Public Security show that in the first 8 months of the year, Vietnam recorded more than 1,500 online fraud cases, a 65% increase over the same period in 2024.
+                </p>
+                
+                <p class="mb-6 leading-relaxed">
+                  The Digital Trust Alliance launched the "Not Alone" campaign with the message "Safe Together Online" to protect more than 12 million Vietnamese adolescents from threats in cyberspace.
+                </p>
+
+                <p class="text-right italic font-semibold mt-8 text-gray-600">Author: Uyên Na</p>
+              </div>
+            `
+          },
+          {
+            id: 2,
+            title: "'Not Alone' in Cyberspace",
+            image: '/images/project_id_2.jpg',
+            date: 'December 16, 2025',
+            summary: 'GD&TĐ - Over 120,000 students in Lam Dong province have been equipped with digital defense skills.',
+            content: `
+              <div class="article-content">
+                <p class="mb-6 font-bold">GD&TĐ - Over 120,000 students in Lam Dong province have been equipped with digital defense skills.</p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2.jpg" alt="Students Participating" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Students participating in the "Not Alone - Safe Together Online" program.</p>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-4 text-black">'Online Kidnapping' - A new tactic targeting students</h2>
+
+                <p class="mb-6 leading-relaxed">
+                  At noon on October 10, Mr. L.X.T (residing in Xuan Huong Ward - Dalat) suddenly received a distress call from his son L.X.G.B (born 2007), a freshman at Yersin Dalat University. On the other end of the line, the male student's voice was trembling and panicked, requesting the family to urgently transfer 150 million VND to a strange account to 'cooperate in an investigation with the Hanoi City Police'.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Recognizing many unusual signs and suspecting his son had fallen into a fraud trap, Mr. T immediately reported to the Police. Shortly after, the Criminal Police force of Lam Dong Provincial Police urgently intervened. After about 30 minutes of deploying professional measures, the authorities determined the location and successfully rescued B at a motel on Xo Viet Nghe Tinh Street, where the victim was directed by the subjects to rent a private room and completely isolate himself from the outside.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  According to B's account, on the morning of the same day, he visited the boarding room of two friends, P and K, both students at Yersin University. While the three were chatting, a man wearing a police uniform made a video call via the Zoom application, claiming to be an investigative officer from the Hanoi City Police. This person continuously questioned and accused the group of students of 'being involved in a transnational money laundering and drug ring'.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(1).jpg" alt="Internet Risks" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Students are facing many risks when using the Internet.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Initially identified as 'witnesses', but after only a few minutes, B was suddenly falsely accused as an accomplice. To 'prove innocence', the male student was required to provide all personal information, install the 'Zoom camera' application, and was forced to rent a private room, absolutely forbidden from contacting family, friends, or anyone else for the reason of 'investigative security'.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  From this clue, Lam Dong Provincial Police continued to expand the investigation, deploying professional measures synchronously, and promptly rescued the remaining two students, P and K, at accommodation establishments on Xo Viet Nghe Tinh and Tran Khanh Du streets (Lam Vien Ward - Dalat).
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  A similar situation occurred earlier on the afternoon of October 5, Mrs. Le Thi Huong (residing in Lam Vien Ward - Dalat) was panicked when her daughter L.T.M.N, a final-year student in the Faculty of Mathematics and Informatics at Da Lat University, called and pleaded for the family to transfer more than 100 million VND to an account provided by a group.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Fortunately, Mrs. Huong calmed down in time and reported to the Lam Vien Ward Police - Dalat. In a short time, authorities identified where N was being controlled online at a hotel, successfully rescuing the victim in a state of panic, being monitored and threatened to transfer money.
+                </p>
+
+                <h2 class="text-2xl font-bold mb-4 text-black">Joining hands to build a digital shield</h2>
+
+                <p class="mb-6 leading-relaxed">
+                  According to initial statistics from the Ministry of Public Security, from mid-2024 to now, the whole country has recorded about 50 cases of children and adolescents, mainly aged 18 to 22, falling into situations of being defrauded, psychologically manipulated, and even 'online kidnapped'. The common point of these cases all start from interactions that seem harmless: a strange message, an unusual video call, a prize link, or a 'friend request' on social networks.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(2).jpg" alt="Digital Gear" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Students are equipped with essential skills on 'Safe Digital Gear'.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  In Lam Dong specifically, there have been many cases of fraud, extortion, and child abuse in the cyber environment. The subjects often approach and entice adolescents to perform online pornographic acts, record them, and then use these images to threaten and extort property. Most victims are students who use the Internet frequently but have not been fully equipped with digital defense skills, and have a mentality of apprehension and shame, so they do not dare to share when in danger.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  In view of the above situation, the 'Not Alone - Safe Together Online' campaign was launched in Lam Dong as a warning and also a call for action from the whole society.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(3).jpg" alt="Deputy Director" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Mrs. Nguyen Thi Thu, Deputy Director of Lam Dong Department of Education and Training, speaking at the 'Safe Digital Gear' program.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Mrs. Nguyen Thi Thu, Deputy Director of the Department of Education and Training of Lam Dong province, stated: "In the digital age, alongside the enormous benefits of the Internet, students face increasingly sophisticated risks of fraud and 'online kidnapping'. The education sector identifies protecting students in cyberspace as an urgent and non-delayable task."
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  After more than two months of implementation, the campaign has created a clear spreading effect. In cyberspace, more than 35,000 residents in the province simultaneously changed their profile pictures in support; more than 1,000 articles were posted on media channels, attracting over 4 million interactions.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  In direct activities, propaganda work was organized at more than 220 schools and residential areas, reaching over 120,000 students, teachers, and parents. Many vivid educational forms were applied, such as dramatizing fraud situations, simulating 'online kidnapping' tactics, and organizing direct dialogues and Q&A sessions with cybersecurity experts.
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(4).jpg" alt="Spreading the Campaign" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Spreading the "Not Alone - Safe Together Online" Campaign in Lam Dong province.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  Notably, the program was also brought to remote and mountainous areas, contributing to ensuring that all students have the opportunity to access digital safety knowledge. Thereby, step by step building a safe and healthy digital learning environment, helping students study, create, and develop comprehensively with confidence.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  "Through the campaign, we hope to equip them with skills to identify risks, safe response methods, and the ability to proactively protect themselves in the digital environment," Mrs. Thu emphasized.
+                </p>
+
+                <h2 class="text-2xl font-bold mb-4 text-black">No One Is Left Alone</h2>
+
+                <p class="mb-6 leading-relaxed">
+                  For Le Anh Thu, a literature major at Tran Hung Dao Gifted High School, the most important thing when participating in the campaign is learning how to protect herself and helping friends not be left alone. "I once received several fraudulent calls, but being equipped with prevention skills by my family and teachers, I did not fall into the trap. When participating in the campaign, I want to send a message to you that: 'Not Alone' means there are always people around to protect you. When there are signs of being defrauded, you need to immediately notify relatives, friends, or people you trust for help."
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  Sharing the same feeling, Huynh Gia Bao, a student at Phan Thiet High School, said: "The 'Not Alone' campaign helps us recognize and avoid types of online fraud. Now, I am always more proactive, not afraid, and know how to protect myself."
+                </p>
+
+                <div class="my-8">
+                  <img src="/images/project_id_2(6).jpg" alt="Educational Session" class="w-full rounded-lg shadow-md" />
+                  <p class="text-sm text-gray-600 italic mt-2 text-center">Students participate in an exchange during a "Safe Digital Gear" propaganda session.</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed">
+                  According to Senior Colonel Vu Hoang Anh, Head of the Department of Cybersecurity and High-Tech Crime Prevention (Lam Dong Provincial Police), the "Not Alone" campaign is a commitment of the whole society that every child has the right to be safe, loved, and accompanied in the digital world. It is also the beginning of building national digital trust, where every citizen, especially the younger generation, can grow up confident, resilient, and protected from the shadows of cyberspace.
+                </p>
+
+                <p class="mb-6 leading-relaxed">
+                  In addition to the propaganda campaign, the Lam Dong Department of Education and Training will establish a hotline with the Department of Cybersecurity and High-Tech Crime Prevention. Whenever schools or teachers detect students showing signs of being threatened or enticed online, the department will coordinate with the police to handle it immediately, determined not to let them face danger alone.
+                </p>
+                <p class="text-right italic font-semibold mt-8 text-gray-600">Author: Le Trang - December 16, 2025</p>
+              </div>
+            `
+          },
+          {
+            id: 10,
             title: 'Announcing the "Influencer Trust" Program',
             image: '/images/project/project_1.jpg',
             date: 'August 18, 2025',
@@ -1644,6 +2109,7 @@ export const translations = {
       featured: 'Featured',
       viewMore: 'VIEW MORE',
       noContent: 'No content available',
+      viewLess: 'View Less',
       breadcrumb: {
         home: 'Home',
         activities: 'Activities',

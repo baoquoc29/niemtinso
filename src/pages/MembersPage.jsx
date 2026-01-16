@@ -178,7 +178,7 @@ const MembersPage = () => {
     {
       id: 24,
       name: 'Báo Người quan sát',
-      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Người quan sát.jpg',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Nguoi_quan_sat.jpg',
     },
     {
       id: 25,
@@ -193,12 +193,12 @@ const MembersPage = () => {
     {
       id: 27,
       name: 'Zeit Media',
-      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Zeit Media.webp',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Zeit_Media.webp',
     },
     {
       id: 28,
       name: 'Đài Truyền hình Việt Nam (VTV)',
-      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Đài truyền hình VN.svg',
+      logo: '/images/BỔ SUNG THÀNH VIÊN DOANH NGHIỆP/Dai_truyen_hinhVTV.svg',
     },
   ];
 
@@ -207,45 +207,45 @@ const MembersPage = () => {
       id: 1,
       name: 'MC Khánh Vy',
       avatar: '/images/members/khanh-vy.jpg',
-      avatarStyle: { objectPosition: 'center ', width: '70px', height: '60px', borderRadius: '12px' },
+      avatarStyle: { objectPosition: 'center' },
     },
     {
       id: 2,
-      name: 'Bảo Ngọc',
+      name: 'Hoa hậu Bảo Ngọc',
       avatar: '/images/members/bao-ngoc.webp',
-      avatarStyle: { objectPosition: 'center', width: '60px', height: '80px', borderRadius: '16px' },
+      avatarStyle: { objectPosition: 'center' },
     },
     {
       id: 3,
       name: 'Đỗ Quang Đăng',
       avatar: '/images/members/do-quang-dang.jpg',
-      avatarStyle: { objectPosition: 'center', width: '80px', height: '60px', borderRadius: '8px' },
+      avatarStyle: { objectPosition: 'center' },
     },
     {
       id: 4,
       name: 'Nguyễn Sỹ Tuấn',
       avatar: '/images/members/nguyen-sy-tuan.jpg',
-      avatarStyle: { objectPosition: 'center', width: '70px', height: '70px', borderRadius: '50%', transition: 'transform 0.4s' },
+      avatarStyle: { objectPosition: 'center' },
       zoom: true,
     },
     {
       id: 5,
-      name: 'Nguyễn Việt Hoàng',
+      name: 'Nguyễn Việt Hoàng (MONO)',
       avatar: '/images/members/nguyen-viet-hoang.jpg',
-      avatarStyle: { objectPosition: 'center top', width: '70px', height: '70px', borderRadius: '16px', transition: 'transform 0.4s' },
+      avatarStyle: { objectPosition: 'center top' },
       zoom: true,
     },
     {
       id: 6,
-      name: 'Tiểu Vy',
+      name: 'Hoa hậu Tiểu Vy',
       avatar: '/images/members/tieu-vy.jpg',
-      avatarStyle: { objectPosition: 'center', width: '70px', height: '70px', borderRadius: '12px' },
+      avatarStyle: { objectPosition: 'center' },
     },
     {
       id: 7,
       name: 'Đen Vâu',
       avatar: '/images/members/den-vau.jpg',
-      avatarStyle: { objectPosition: 'center', width: '80px', height: '60px', borderRadius: '8px' },
+      avatarStyle: { objectPosition: 'center' },
     },
   ];
 
@@ -372,7 +372,7 @@ const MembersPage = () => {
                     className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:scale-105"
                   >
                     <div className="flex flex-col items-center gap-4 text-center">
-                      <div className="w-24 h-24 bg-gray-50 rounded-2xl flex items-center justify-center overflow-hidden shadow-sm">
+                      <div className="w-24 h-24 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden shadow-sm border-2 border-gray-100">
                         {member.avatar ? (
                           <img
                             src={member.avatar}
